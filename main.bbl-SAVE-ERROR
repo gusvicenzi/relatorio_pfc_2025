@@ -247,35 +247,6 @@
       \field{year}{2003}
       \true{nocite}
     \endentry
-    \entry{Fowler02}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=c3035fa4fc8a043ebf2ea4bff39adda1}{%
-           family={Fowler},
-           familyi={F\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Addison-Wesley}%
-      }
-      \strng{namehash}{c3035fa4fc8a043ebf2ea4bff39adda1}
-      \strng{fullhash}{c3035fa4fc8a043ebf2ea4bff39adda1}
-      \strng{fullhashraw}{c3035fa4fc8a043ebf2ea4bff39adda1}
-      \strng{bibnamehash}{c3035fa4fc8a043ebf2ea4bff39adda1}
-      \strng{authorbibnamehash}{c3035fa4fc8a043ebf2ea4bff39adda1}
-      \strng{authornamehash}{c3035fa4fc8a043ebf2ea4bff39adda1}
-      \strng{authorfullhash}{c3035fa4fc8a043ebf2ea4bff39adda1}
-      \strng{authorfullhashraw}{c3035fa4fc8a043ebf2ea4bff39adda1}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Patterns of Enterprise Application Architecture}
-      \field{year}{2002}
-    \endentry
     \entry{ibge2016}{book}{}{}
       \name{author}{1}{}{%
         {{hash=3898f1ceb6fdd56f963db7f9326130e4}{%
@@ -378,36 +349,6 @@
       \verb{url}
       \verb http://biblioteca.ibge.gov.br/visualizacao/livros/liv23907.pdf
       \endverb
-    \endentry
-    \entry{Martin17}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=83cf6f49063e3f390fde6923b87f950c}{%
-           family={{Robert C. Martin}},
-           familyi={R\bibinitperiod},
-           given={Dean\bibnamedelima Wampler},
-           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Pearson}%
-      }
-      \strng{namehash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{fullhash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{fullhashraw}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{bibnamehash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{authorbibnamehash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{authornamehash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{authorfullhash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{authorfullhashraw}{83cf6f49063e3f390fde6923b87f950c}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{0134494164}
-      \field{title}{Clean Architecture: A Craftsman's Guide to Software Structure and Design}
-      \field{year}{2017}
     \endentry
   \enddatalist
 \endrefsection

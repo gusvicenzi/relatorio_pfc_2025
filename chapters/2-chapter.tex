@@ -134,3 +134,40 @@ De acordo com \textcite{ibge1993}, tabela é uma forma não discursiva de aprese
 	\end{tabular}
 	\fonte{\textcite{ibge2016}.}
 \end{table}
+
+\section{APIs e APIs Restful}
+\section{IoT}
+\section{Protocolos Wifi e Zigbee}
+\section{Software as a Service (SaaS)}
+\section{Conteineres}
+\section{Arquitetura em Camadas}
+
+A arquitetura em camadas é um modelo amplamente adotado no desenvolvimento de aplicações modernas, proporcionando uma estrutura clara e organizada que facilita a manutenção, escalabilidade e reutilização de código. Esta abordagem divide a aplicação em camadas distintas, cada uma com responsabilidades específicas e bem definidas. No desenvolvimento da aplicação, a arquitetura em camadas é utilizada para separar as preocupações, garantindo que cada componente funcione de forma independente e coesa. \cite{Fowler02} descreve a arquitetura em camadas como uma abordagem fundamental para a construção de aplicações corporativas, destacando sua popularidade e uso extensivo em aplicações empresariais. Cada uma das camadas é apresentada da \autoref{subsec:camada_apresentacao} à \autoref{subsec:camada_banco_de_dados}.
+
+\subsection{Camada de Apresentação}\label{subsec:camada_apresentacao}
+
+A camada de apresentação é responsável pela interface com o usuário final e pode ser desenvolvida utilizando diversas tecnologias e frameworks, como Next.js com a biblioteca React.js, Vue.js, Angular.js, HTML e CSS entre outros. O Next.js, por exemplo, com sua capacidade de renderização híbrida (SSR e SSG), oferece uma experiência de usuário rápida e otimizada para SEO, enquanto o React possibilita a criação de componentes reutilizáveis e uma interface dinâmica e responsiva. Nesta camada, as interações do usuário são capturadas e encaminhadas para a camada de aplicação geralmente através de chamadas HTTP a APIs RESTful, garantindo uma separação clara entre a interface e a lógica de negócios, porém outros protocolos podem ser usados para a comunicação.
+
+\subsection{Camada de Aplicação}
+
+A camada de aplicação atua como intermediária entre a interface do usuário e a lógica de negócios. Executando no servidor, esta camada gerencia a lógica de controle e orquestra as operações entre a camada de apresentação e a camada de negócios. Diversas tecnologias podem ser usadas para o desenvolvimento da aplicação tais como Node.js, Nest.js, Java, Spring, C\#, .NET, PHP, Python entre outros. Nesta camada, são definidos controladores que lidam com as requisições recebidas, e as enchaminham para a camada de negócios adequada para o processamento dos dados.
+
+\subsection{Camada de Negócios}
+
+A camada de negócios encapsula a lógica principal do sistema, garantindo que as regras de negócios sejam aplicadas de forma consistente. Esta camada é responsável pela implementação das regras de autenticação e autorização de usuários, além de toda a lógica necessária para o funcionamento adequado da aplicação. Ao concentrar as regras de negócio nesta camada, a aplicação assegura que todas as operações críticas são tratadas de forma centralizada e independente das outras camadas, simplificando o desenvolvimento, manutenção e melhoria do código da aplicação.
+
+\subsection{Camada de Persistência}
+
+A camada de persistência é responsável por gerenciar a interação com o banco de dados de forma abstrata ou direta. Pode-se utilizar tecnologias como TypeORM e Prisma nesta camada para abstrair a comunicação ou usar diretamente as \textit{queries} para interação com o banco de dados, permitindo realizar operações de criação, leitura, atualização e exclusão de dados de forma simplificada e eficiente.
+
+\subsection{Camada de Banco de Dados}\label{subsec:camada_banco_de_dados}
+
+A camada de banco de dados é o próprio sistema de armazenameto escolhido para o projeto, podendo ser um banco de dados estruturado (como PostgreSQL, MySQL, Oracle entre outro) ou não (como MongoDB, Cassandran InfluxDB, etc ). Esta camada é responsável por armazenar e recuperar os dados persistidos pela camada de persistência. A escolha adequada de um sistema de banco de dados garante a escalabilidade, consistência e disponibilidade dos dados, além de permitir o uso de recursos avançados para otimizar o desempenho.
+
+\subsection{Benefícios da Arquitetura em Camadas}
+
+A arquitetura em camadas traz vários benefícios para o desenvolvimento desta aplicação. A separação de preocupações facilita a manutenção do código, permitindo que alterações em uma camada específica não afetem diretamente as demais. Isso também melhora a escalabilidade da aplicação, pois novas funcionalidades podem ser adicionadas ou modificadas de forma isolada. Além disso, a modularização contribui para uma melhor reutilização de componentes, tornando o desenvolvimento mais eficiente e ágil. \cite{Martin17} discute como a arquitetura em camadas permite uma divisão clara de responsabilidades, promovendo independência no desenvolvimento e manutenção.
+
+Portanto a adoção de uma arquitetura em camadas proporciona uma estrutura organizada e clara, que facilita o desenvolvimento, manutenção e evolução da aplicação. Cada camada desempenha um papel essencial, garantindo que a aplicação seja robusta, escalável e fácil de manter. A utilização desta abordagem, aliada às tecnologias escolhidas, assegura a entrega de um sistema eficiente, confiável e alinhado às melhores práticas do desenvolvimento de software moderno.
+
+\section{Arquitetura Modular}

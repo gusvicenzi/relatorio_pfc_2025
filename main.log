@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.20)  20 JAN 2025 20:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.20)  21 JAN 2025 20:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1540,11 +1540,13 @@ Overfull \hbox (5.20578pt too wide) in alignment at lines 227--227
 
 
 
-] (main.toc)
+] (main.toc
 
 [14
 
 ])
+
+[15])
 \openout2 = `chapters/1-chapter.aux'.
 
  (chapters/1-chapter.tex
@@ -1558,35 +1560,35 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[15
+[16
 
 
 
 ]
 
-[16])
+[17])
 
-[17]
+[18]
 \openout2 = `chapters/2-chapter.aux'.
 
  (chapters/2-chapter.tex
 
-[18
+[19
 
 
 
 
 ]
-<images/imagem.pdf, id=223, 248.73004pt x 186.69357pt>
+<images/imagem.pdf, id=257, 248.73004pt x 186.69357pt>
 File: images/imagem.pdf Graphic file (type pdf)
 <use images/imagem.pdf>
 Package pdftex.def Info: images/imagem.pdf  used on input line 50.
 (pdftex.def)             Requested size: 248.72943pt x 186.69312pt.
 
 
-[19 <./images/imagem.pdf>]
+[20 <./images/imagem.pdf>]
 
-[20]
+[21]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 126.
 
@@ -1614,14 +1616,20 @@ Overfull \hbox (3.33853pt too wide) in paragraph at lines 126--135
 [][] 
  []
 
-)
 
-[21]
+
+[22]
+
+[23]
+
+[24])
+
+[25]
 \openout2 = `chapters/3-chapter.aux'.
 
  (chapters/3-chapter.tex)
 
-[22
+[26
 
 
 
@@ -1631,22 +1639,26 @@ Overfull \hbox (3.33853pt too wide) in paragraph at lines 126--135
 
  (chapters/4-chapter.tex
 
-[23
+[27
 
 
 
 
 ]
 
-[24]
-
-[25]
-
-[26]
-
-[27])
-
 [28]
+
+[29]
+
+[30]
+
+[31]
+
+[32]
+
+[33])
+
+[34]
 \openout2 = `chapters/5-chapter.aux'.
 
  (chapters/5-chapter.tex
@@ -1656,7 +1668,7 @@ Overfull \hbox (26.62846pt too wide) in paragraph at lines 19--20
 
 )
 
-[29
+[35
 
 
 
@@ -1666,24 +1678,24 @@ Overfull \hbox (26.62846pt too wide) in paragraph at lines 19--20
 
  (chapters/6-chapter.tex)
 
-[30
+[36
 
 
 
 
 ] (aftertext/apendice_a.tex
 
-[31
+[37
 
 
 
 ]) (aftertext/anexo_a.tex
 
-[32
+[38
 
 ])
 
-[33
+[39
 
 ]
 \tf@lof=\write6
@@ -1712,17 +1724,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35849 strings out of 473898
- 645044 string characters out of 5726479
- 1641138 words of memory out of 5000000
- 57878 multiletter control sequences out of 15000+600000
+ 35899 strings out of 473898
+ 645769 string characters out of 5726479
+ 1643380 words of memory out of 5000000
+ 57905 multiletter control sequences out of 15000+600000
  604113 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,17n,117p,2492b,4447s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\gusta\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (34 pages, 364679 bytes).
+Output written on main.pdf (40 pages, 389179 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
- 45895 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 670 PDF objects out of 1000 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
+ 46015 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -2497,6 +2497,8 @@
     <bcf:citekey order="17" intorder="1">ibge2016</bcf:citekey>
     <bcf:citekey order="18" intorder="1">ibge2016</bcf:citekey>
     <bcf:citekey order="19" intorder="1">ibge2016</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Fowler02</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Martin17</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
