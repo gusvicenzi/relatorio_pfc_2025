@@ -247,6 +247,79 @@
       \field{year}{2003}
       \true{nocite}
     \endentry
+    \entry{Erl2013}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5606702d875163ff65690170e545c0b8}{%
+           family={Erl},
+           familyi={E\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97207283f40a8070709670b154b9a150}{%
+           family={Puttini},
+           familyi={P\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad44e7e4994050c31a07cde9b3088895}{%
+           family={Mahmood},
+           familyi={M\bibinitperiod},
+           given={Zaigham},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{fullhash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{fullhashraw}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{bibnamehash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{authorbibnamehash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{authornamehash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{authorfullhash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{authorfullhashraw}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780133387520}
+      \field{title}{Cloud Computing: Concepts, Technology & Architecture}
+      \field{year}{2013}
+      \field{pages}{528}
+      \range{pages}{1}
+    \endentry
+    \entry{fielding2000}{dissertation}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=489e3655cdca151facfb40953b9759f8}{%
+           family={Fielding},
+           familyi={F\bibinitperiod},
+           given={Roy\bibnamedelima T},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {UNIVERSITY OF CALIFORNIA, IRVINE}%
+      }
+      \strng{namehash}{489e3655cdca151facfb40953b9759f8}
+      \strng{fullhash}{489e3655cdca151facfb40953b9759f8}
+      \strng{fullhashraw}{489e3655cdca151facfb40953b9759f8}
+      \strng{bibnamehash}{489e3655cdca151facfb40953b9759f8}
+      \strng{authorbibnamehash}{489e3655cdca151facfb40953b9759f8}
+      \strng{authornamehash}{489e3655cdca151facfb40953b9759f8}
+      \strng{authorfullhash}{489e3655cdca151facfb40953b9759f8}
+      \strng{authorfullhashraw}{489e3655cdca151facfb40953b9759f8}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Architectural styles and the design of network-based software architectures}
+      \field{year}{2000}
+    \endentry
     \entry{Fowler02}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c3035fa4fc8a043ebf2ea4bff39adda1}{%
@@ -275,6 +348,49 @@
       \field{labeltitlesource}{title}
       \field{title}{Patterns of Enterprise Application Architecture}
       \field{year}{2002}
+    \endentry
+    \entry{gokhale2018introduction}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=64a5fa16b3524f6c179c35c0e37e3a18}{%
+           family={Gokhale},
+           familyi={G\bibinitperiod},
+           given={Pradyumna},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=1f54f6facf757a4434761faad4a6dc06}{%
+           family={Bhat},
+           familyi={B\bibinitperiod},
+           given={Omkar},
+           giveni={O\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=b7be288be96c8bf4e29f04f2b9b168ae}{%
+           family={Bhat},
+           familyi={B\bibinitperiod},
+           given={Sagar},
+           giveni={S\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{fullhash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{fullhashraw}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{bibnamehash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{authorbibnamehash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{authornamehash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{authorfullhash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{authorfullhashraw}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Advanced Research Journal in Science, Engineering and Technology}
+      \field{number}{1}
+      \field{title}{Introduction to IOT}
+      \field{volume}{5}
+      \field{year}{2018}
+      \field{pages}{41\bibrangedash 44}
+      \range{pages}{4}
     \endentry
     \entry{ibge2016}{book}{}{}
       \name{author}{1}{}{%
@@ -379,28 +495,61 @@
       \verb http://biblioteca.ibge.gov.br/visualizacao/livros/liv23907.pdf
       \endverb
     \endentry
+    \entry{martin2000design}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=6f41df64eb0dc4855be70172368604c2}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima C},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhashraw}{6f41df64eb0dc4855be70172368604c2}
+      \strng{bibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorbibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authornamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhashraw}{6f41df64eb0dc4855be70172368604c2}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Object Mentor}
+      \field{number}{34}
+      \field{title}{Design principles and design patterns}
+      \field{volume}{1}
+      \field{year}{2000}
+      \field{pages}{597}
+      \range{pages}{1}
+    \endentry
     \entry{Martin17}{book}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=83cf6f49063e3f390fde6923b87f950c}{%
-           family={{Robert C. Martin}},
-           familyi={R\bibinitperiod},
-           given={Dean\bibnamedelima Wampler},
-           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
+        {{un=2,uniquepart=given,hash=6f41df64eb0dc4855be70172368604c2}{%
+           family={Martin},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=2}}%
       }
       \list{publisher}{1}{%
         {Pearson}%
       }
-      \strng{namehash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{fullhash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{fullhashraw}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{bibnamehash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{authorbibnamehash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{authornamehash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{authorfullhash}{83cf6f49063e3f390fde6923b87f950c}
-      \strng{authorfullhashraw}{83cf6f49063e3f390fde6923b87f950c}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \strng{namehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{fullhashraw}{6f41df64eb0dc4855be70172368604c2}
+      \strng{bibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorbibnamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authornamehash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhash}{6f41df64eb0dc4855be70172368604c2}
+      \strng{authorfullhashraw}{6f41df64eb0dc4855be70172368604c2}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -408,6 +557,81 @@
       \field{isbn}{0134494164}
       \field{title}{Clean Architecture: A Craftsman's Guide to Software Structure and Design}
       \field{year}{2017}
+    \endentry
+    \entry{masse2011rest}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d17b34343fbf45b0a0ec9962f1ac0431}{%
+           family={Masse},
+           familyi={M\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{fullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{fullhashraw}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{bibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorbibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authornamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorfullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorfullhashraw}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{REST API design rulebook}
+      \field{year}{2011}
+    \endentry
+    \entry{1236470}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=789294120135bd6c707cb8a088bd1635}{%
+           family={Turner},
+           familyi={T\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d00f431cf6ba32dfa8eb5db1cfe169ce}{%
+           family={Budgen},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bbf03a2ed81e6fdfade52a07b39227a}{%
+           family={Brereton},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{fullhash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{fullhashraw}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{bibnamehash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{authorbibnamehash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{authornamehash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{authorfullhash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{authorfullhashraw}{aeb6f9508d2e3b642946335e71836a50}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer}
+      \field{number}{10}
+      \field{title}{Turning software into a service}
+      \field{volume}{36}
+      \field{year}{2003}
+      \field{pages}{38\bibrangedash 44}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/MC.2003.1236470
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
