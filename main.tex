@@ -35,6 +35,21 @@
 	]{abntex2}
 
 \usepackage{setup/ufscthesisA4-alf}
+
+% \DeclareBibliographyDriver{dissertation}{%
+%   \usebibmacro{bibindex}%
+%   \usebibmacro{begentry}%
+%   \printnames{author}%
+%   \newunit\newblock
+%   \printfield{title}%
+%   \newunit\newblock
+%   \printfield{type}%
+%   \newunit\newblock
+%   \printfield{institution}%
+%   \newunit\newblock
+%   \printfield{year}%
+%   \usebibmacro{finentry}%
+% }
 \addbibresource{aftertext/references.bib} % Seus arquivos de referências
 
 % ---
@@ -86,7 +101,7 @@
 % \subtitulo{Integração com dispositivos IoT}
 % FIXME Substituir 'XXXXXX' pelo nome do seu
 % orientador.
-\orientador{Prof. Carlos Barros Montez, Dr.}
+\orientador{Prof.\ Carlos Barros Montez, Dr.}
 % FIXME Se for orientado por uma mulher, comente a linha acima e descomente a linha a seguir.
 % \orientador[Orientadora]{Nome da orientadora, Dra.}
 % FIXME Substituir 'XXXXXX' pelo nome do seu
@@ -155,7 +170,7 @@
 \siglalista{IoT}{Internet of Things}
 \siglalista{URL}{Uniform Resource Locator}
 \siglalista{RFID}{Radio Frequency Identification}
-
+\siglalista{MVP}{Minimum Viable Product}
 
 % Declaração dos simbolos
 \simbololista{C}{\ensuremath{C}}{Circunferência de um círculo}
@@ -247,14 +262,14 @@
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
-\postextual
+\postextual{}
 % ----------------------------------------------------------
 
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
 \begingroup
-    \printbibliography[title=REFERÊNCIAS]
+	\printbibliography[title=REFERÊNCIAS]
 \endgroup
 
 % ----------------------------------------------------------
