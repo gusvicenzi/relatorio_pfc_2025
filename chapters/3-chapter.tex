@@ -2,28 +2,107 @@
 \chapter{Descrição do Problema e Requisitos Técnicos}\label{cap:descricao_problema_e_requisitos}
 % ----------------------------------------------------------
 
-\textbf{Instruções da Coordenação do PFC:}
+% \textbf{Instruções da Coordenação do PFC:}
 
-Neste capítulo, deve-se apresentar (de forma mais detalhada e aprofundada tecnicamente que na Introdução):
-\begin{itemize}
-	\item O contexto e a motivação do PFC;
-	\item Descrição da empresa/instituto de pesquisa (histórico, clientes, produtos, serviços, projetos, etc) em que o PFC foi realizado e do projeto global da empresa em que o PFC está inserido (se for o caso);
-     \item Descrição do problema tratado no PFC;
-     \item Requisitos técnicos (funcionais e não-funcionais).
-\end{itemize}
+% Neste capítulo, deve-se apresentar (de forma mais detalhada e aprofundada tecnicamente que na Introdução):
+% \begin{itemize}
+% 	\item O contexto e a motivação do PFC;
+% 	\item Descrição da empresa/instituto de pesquisa (histórico, clientes, produtos, serviços, projetos, etc) em que o PFC foi realizado e do projeto global da empresa em que o PFC está inserido (se for o caso);
+%      \item Descrição do problema tratado no PFC;
+%      \item Requisitos técnicos (funcionais e não-funcionais).
+% \end{itemize}
 
-Procure utilizar equações, tabelas, diagramas e fluxogramas para ilustrar e explicar melhor as ideias.
+% Procure utilizar equações, tabelas, diagramas e fluxogramas para ilustrar e explicar melhor as ideias.
 
+Ao longo deste capítulo, será abordado a contextualização dos desafios enfrentados pelas empresas de aluguel de quadras esportivas, a descrição do problema tratado no PFC, os requisitos técnicos a serem atendidos, além da solução proposta pelo autor para o problema.
 
 \section{Contextualização}
 
-Agora começarei o capítulo de descrição do problema e requisitos técnicos. Neste capítulo, deve-se apresentar (de forma mais detalhada e aprofundada tecnicamente que na Introdução:
-O contexto e a motivação do PFC;
-Descrição da empresa/instituto de pesquisa (histórico, clientes, produtos, serviços, projetos, etc) em que o PFC foi realizado e do projeto global da empresa em que o PFC está inserido (se for o caso);
-Descrição do problema tratado no PFC;
-Requisitos técnicos (funcionais e não-funcionais)
+As empresas que operam no setor de aluguel de quadras esportivas enfrentam uma série de desafios relacionados à gestão de reservas, manutenção das instalações e otimização de recursos. Em um mercado cada vez mais competitivo, a eficiência na administração dos espaços torna-se um diferencial essencial para a satisfação dos clientes e a sustentabilidade financeira do empreendimento.
 
-A primeira seção será de contextualização
-\section{Descrição do problema}
-\section{solução proposta}
-\section{Requisitos Técnicos a serem atendidos}
+Um dos principais desafios enfrentados é a necessidade de um sistema confiável e automatizado para o agendamento de reservas das quadras. Muitos estabelecimentos ainda utilizam processos manuais, como anotações em papel ou planilhas eletrônicas, o que aumenta o risco de erros, como agendamentos duplicados ou conflitos de horários. Essa falta de automação também dificulta a visualização em tempo real da disponibilidade das quadras, tornando a experiência do cliente menos eficiente e satisfatória.
+
+Manter os clientes informados e atualizados quanto aos horários disponíveis para cada quadra é outro desafio significativo. Sem um sistema centralizado e integrado, os usuários precisam entrar em contato diretamente com a administração do estabelecimento para verificar a disponibilidade, o que consome tempo e pode resultar na perda de reservas devido à demora na resposta. A falta de uma plataforma acessível que permita consultas e reservas instantâneas compromete a conveniência e a eficiência operacional do negócio.
+
+Outro aspecto crítico é o desperdício de recursos energéticos e humanos na gestão das quadras. A iluminação e os sistemas de climatização das quadras precisam ser ligados e desligados de acordo com o uso, mas, muitas vezes, essa tarefa é realizada manualmente pelos funcionários, resultando em inconsistências, desperdício de energia e custos operacionais elevados. Quadras que permanecem iluminadas ou climatizadas mesmo sem uso impactam diretamente nas despesas mensais da empresa e no consumo desnecessário de energia, causando impacto ambiental negativo.
+
+Diante desses desafios, a automação e digitalização do processo de gerenciamento de quadras esportivas tornam-se fundamentais para garantir maior eficiência, redução de custos operacionais e melhor experiência do usuário. A adoção de um sistema integrado para reservas, comunicação com os clientes e controle de dispositivos IoT apresenta-se como a solução mais eficaz para modernizar o setor e tornar a gestão mais inteligente e automatizada.
+
+\section{Descrição do Problema}
+
+Com base nos desafios apresentados, identifica-se a necessidade de um sistema capaz de otimizar a gestão de reservas de quadras esportivas, garantindo maior controle sobre a disponibilidade dos espaços e facilitando a comunicação com os clientes. A ausência de uma plataforma centralizada impede que os usuários realizem reservas de maneira prática e intuitiva, resultando em processos administrativos demorados e suscetíveis a erros. Além disso, a falta de automação nos processos operacionais aumenta os custos e impacta negativamente na sustentabilidade do negócio.
+
+A inexistência de um controle eficiente sobre o uso de iluminação e climatização das quadras contribui para o desperdício de recursos, elevando os custos operacionais e causando impacto ambiental. A dependência de funcionários para gerenciar manualmente esses dispositivos aumenta a possibilidade de falhas, como equipamentos ligados sem necessidade ou desligados em momentos inadequados. Dessa forma, a implementação de uma solução tecnológica que integre a gestão de reservas e o controle de dispositivos IoT torna-se essencial para melhorar a eficiência operacional e reduzir desperdícios.
+
+Portanto, a ausência de uma solução integrada e automatizada afeta diretamente a operação das empresas que alugam quadras esportivas, limitando seu crescimento e impactando a experiência do usuário. A implementação de um sistema completo e eficiente, que contemple reservas online e controle automatizado de dispositivos IoT, surge como a resposta para superar esses desafios e proporcionar uma administração mais moderna e eficaz.
+
+
+\section{Requisitos Técnicos a Serem Atendidos}
+
+O desenvolvimento de uma solução para esses problemas exige a definição clara de requisitos técnicos que devem ser atendidos para garantir a entrega de uma solução eficiente, robusta e alinhada às necessidades do negócio. Estes requisitos estão divididos em funcionais dispostos na \autoref{subsec:requisitos_funcionais} e não-funcionais na \autoref{subsec:requisitos_nao_funcionais}, cobrindo tanto as funcionalidades esperadas quanto os atributos de qualidade do sistema. Além disso, alguns casos de uso ilustram as principais interações previstas na aplicação.
+
+\subsection{Requisitos Funcionais}\label{subsec:requisitos_funcionais}
+
+\begin{enumerate}
+     \item O sistema deve permitir o cadastro de empresas no formato multi-tenant, onde cada empresa terá um ambiente isolado para suas configurações e dados.
+     \item Deve ser possível configurar os horários de funcionamento das quadras de forma personalizada para cada dia da semana.
+     \item O sistema deve oferecer uma interface para os clientes visualizarem a disponibilidade das quadras em tempo real.
+     \item Deve ser possível realizar reservas de quadras, com confirmação imediata e registro dos dados no sistema.
+     \item O administrador deve poder cadastrar, editar e excluir quadras do sistema.
+     \item A integração com a API eWeLink deve permitir o controle de dispositivos IoT, como iluminação e climatização, associados às quadras.
+     \item Deve ser possível configurar comandos automáticos para ligar e desligar dispositivos IoT no início e no final das reservas.
+     \item Deve haver suporte para diferentes níveis de acesso, como administradores, funcionários e clientes.
+     \item Um usuário deve poder ter diferentes papéis em empresas distintas.
+     \item O sistema deve ser capaz de ignorar comandos automáticos para o mesmo dispositivo em caso de reservas seguidas, evitando ligações e desligamentos desnecessários.
+\end{enumerate}
+
+
+\subsection{Requisitos Não-Funcionais}\label{subsec:requisitos_nao_funcionais}
+
+\begin{itemize}
+     \item O sistema deve ser desenvolvido como uma aplicação web baseada em cloud, garantindo disponibilidade e escalabilidade.
+     \item O backend deve ser implementado em Nest.js, utilizando TypeScript, e o frontend em Next.js/React.
+     \item O banco de dados utilizado será o PostgreSQL, com o TypeORM gerenciando a camada de persistência.
+     \item A aplicação deve suportar múltiplos usuários simultâneos sem comprometimento de desempenho.
+     \item Deve ser garantida a segurança dos dados por meio de autenticação e autorização robustas.
+     \item O sistema deve apresentar uma interface intuitiva, responsiva e compatível com dispositivos móveis.
+     \item Deve ser possível integrar novos dispositivos IoT de forma escalável e sem necessidade de modificações significativas no código.
+     \item O sistema deve manter logs de eventos críticos, como reservas realizadas e comandos enviados a dispositivos IoT.
+     \item O tempo de resposta das principais operações deve ser inferior a 2 segundos.
+     \item A aplicação deve ser documentada para facilitar a manutenção e futuras expansões.
+\end{itemize}
+
+
+\subsection{Casos de Uso}\label{subsect:casos_de_uso}
+
+\subsubsection*{Caso de Uso 1: Reserva de Quadra}
+\begin{itemize}
+     \item Ator: Cliente
+     \item Descrição: O cliente acessa o sistema através, visualiza as quadras disponíveis para uma data e horário específicos, seleciona a quadra desejada e realiza a reserva. O sistema confirma a reserva e atualiza a disponibilidade em tempo real.     
+\end{itemize}
+
+\subsubsection*{Caso de Uso 2: Configuração de Quadras e Dispositivos IoT}
+\begin{itemize}
+     \item Ator: Administrador
+     \item Descrição: O administrador acessa o painel de administração, adiciona novas quadras e associa dispositivos IoT configurados na plataforma eWeLink. Define comandos automáticos, como ligar/desligar iluminação e climatização, para os horários das reservas.     
+\end{itemize}
+
+\subsubsection*{Caso de Uso 3: Consulta de Disponibilidade de Quadras}
+\begin{itemize}
+     \item Ator: Cliente
+     \item Descrição: O cliente acessa a aplicação, seleciona uma empresa e consulta a disponibilidade de quadras para uma data específica. As informações são apresentadas em tempo real, considerando as reservas existentes.     
+\end{itemize}
+
+\subsubsection*{Caso de Uso 4: Configuração de Preços Dinâmicos}
+\begin{itemize}
+     \item Ator: Administrador
+     \item Descrição: O administrador acessa a interface de configuração de preços, ajusta os valores para horários de pico e dias específicos, garantindo flexibilidade na gestão financeira das quadras.     
+\end{itemize}
+
+\subsubsection*{Caso de Uso 5: Notificação Automática de Reservas}
+\begin{itemize}
+     \item Ator: Sistema
+     \item Descrição: Após a confirmação de uma reserva, o sistema envia automaticamente um e-mail ou mensagem ao cliente com os detalhes da reserva e instruções para cancelamento, caso necessário.     
+\end{itemize}
+
+Com esses requisitos e casos de uso bem definidos, a aplicação está preparada para atender às necessidades do mercado, oferecendo uma solução moderna, eficiente e alinhada às expectativas dos usuários e administradores.

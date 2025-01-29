@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.27)  28 JAN 2025 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.27)  28 JAN 2025 23:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1557,14 +1557,7 @@ File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 
 ]
 
-[15]
-
-LaTeX Warning: Reference `cap:analise_resultados' on page 16 undefined on input line 88.
-
-
-LaTeX Warning: Reference `cap:conclusão' on page 16 undefined on input line 88.
-
-)
+[15])
 
 [16]
 \openout2 = `chapters/2-chapter.aux'.
@@ -1588,7 +1581,7 @@ LaTeX Warning: Reference `cap:conclusão' on page 16 undefined on input line 88.
 
 [22]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 222.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 223.
 
 
 [23]
@@ -1600,7 +1593,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 [26]
 \openout2 = `chapters/3-chapter.aux'.
 
- (chapters/3-chapter.tex)
+ (chapters/3-chapter.tex
 
 [27
 
@@ -1608,50 +1601,53 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 
 
 ]
+
+[28]
+
+[29]
+
+[30])
+
+[31]
 \openout2 = `chapters/4-chapter.aux'.
 
  (chapters/4-chapter.tex
 
-[28
+[32
 
 
 
 
-]
-
-[29]
-
-[30]
-
-[31]
-
-[32]
+])
 
 [33]
-
-[34])
-
-[35]
 \openout2 = `chapters/5-chapter.aux'.
 
  (chapters/5-chapter.tex
-Overfull \hbox (26.62846pt too wide) in paragraph at lines 19--20
-[]\T1/phv/m/n/12 (-10) Impacto dos re-sul-ta-dos ob-ti-dos nos pro-ces-sos/projetos/produtos/servi�os/clientes
- []
 
-)
-
-[36
+[34
 
 
 
 
 ]
+
+[35]
+
+[36]
+
+[37]
+
+[38]
+
+[39])
+
+[40]
 \openout2 = `chapters/6-chapter.aux'.
 
  (chapters/6-chapter.tex)
 
-[37
+[41
 
 
 
@@ -1663,17 +1659,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  (aftertext/apendice_a.tex
 
-[38
+[42
 
 
 
 ]) (aftertext/anexo_a.tex
 
-[39
+[43
 
 ])
 
-[40
+[44
 
 ]
 \tf@lof=\write6
@@ -1697,25 +1693,22 @@ L3 programming layer <2020/03/25>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36066 strings out of 473535
- 647887 string characters out of 5714935
- 1648561 words of memory out of 5000000
- 58465 multiletter control sequences out of 15000+600000
- 598754 words of font info for 175 fonts, out of 8000000 for 9000
+ 36102 strings out of 473535
+ 648353 string characters out of 5714935
+ 1649801 words of memory out of 5000000
+ 58476 multiletter control sequences out of 15000+600000
+ 599005 words of font info for 177 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,17n,117p,2446b,4447s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\gusta\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (41 pages, 241642 bytes).
+Output written on main.pdf (45 pages, 256827 bytes).
 PDF statistics:
- 553 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 40882 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 605 PDF objects out of 1000 (max. 8388607)
+ 135 named destinations out of 1000 (max. 500000)
+ 40906 words of extra memory for PDF output out of 42996 (max. 10000000)
 
