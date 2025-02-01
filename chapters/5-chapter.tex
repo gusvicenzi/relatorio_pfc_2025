@@ -1,6 +1,7 @@
 % ----------------------------------------------------------
 \chapter{Desenvolvimento e Análise dos Resultados Obtidos}\label{cap:desenvolvimento_e_analise_resultados}
 % ----------------------------------------------------------
+Este capítulo apresenta o processo de desenvolvimento do projeto de fim de curso relativo ao desenvolvimento de um sistema de gerenciamento de reservas e controle automatizado de dispositivos IoT para quadras esportivas. Na \autoref{sec:ferramentas_tecnologias} são apresentadas as ferramentas e tecnologias utilizadas no desenvolvimento do sistema. A \autoref{sec:desenvolvimento} apresenta o processo de desenvolvimento do PFC e a \autoref{sec:analise_resultados} dispõe dos resultados alcançados ao fim do processo.
 
 % \textbf{Instruções da Coordenação do PFC:}
 
@@ -31,17 +32,17 @@ Alguns pontos que serão explicados nesse capítulo:
 	\item \textbf{Arquitetura da solução}: A arquitetura utilizada na implementação da solução proposta, como monolítica, microsserviços, cliente-servidor, etc.
 	\item \textbf{Modelagem do banco de dados}: O modelo utilizado para representar os dados da aplicação, incluindo as entidades, relacionamentos, atributos, etc.
 	\item \textbf{Backend}: A parte da solução que lida com a manipulação dos dados e a regra de negócio da aplicação.
-	\subitem \textbf{Registro e autenticação de usuários}: Como o backend implementa a funcionalidade de registro e autenticação de usuários, incluindo validações, segurança, etc.
-	\subitem \textbf{Autorização de usuários}: Como o backend implementa a funcionalidade de autorização de usuários, incluindo permissões, roles, etc.
-	\subitem \textbf{Rotas da aplicação}: Como o backend implementa as rotas da aplicação, incluindo endpoints de CRUD para tenanants, quadras, agendamentos de horários e credenciais de acesso a API relacionada à internet das coisas (IoT).
-	\subitem \textbf{Detalhamento do agendamentos de horários}: Como o backend implementa a funcionalidade de agendamentos de horários de quadras, incluindo informações sobre os locais, os tipos de atividades, as datas e as horas.
-	\subitem \textbf{Detalhamento da integração com IoT}: Como o backend implementa a integração com dispositivos IoT e comanda o acionamento e desligamento de acordo com os agendamentos feitos pelosus usuários.
+	\subitem{\textbf{Registro e autenticação de usuários}: Como o backend implementa a funcionalidade de registro e autenticação de usuários, incluindo validações, segurança, etc.}
+	\subitem{\textbf{Autorização de usuários}: Como o backend implementa a funcionalidade de autorização de usuários, incluindo permissões, roles, etc.}
+	\subitem{\textbf{Rotas da aplicação}: Como o backend implementa as rotas da aplicação, incluindo endpoints de CRUD para tenanants, quadras, agendamentos de horários e credenciais de acesso a API relacionada à internet das coisas (IoT).}
+	\subitem{\textbf{Detalhamento do agendamentos de horários}: Como o backend implementa a funcionalidade de agendamentos de horários de quadras, incluindo informações sobre os locais, os tipos de atividades, as datas e as horas.}
+	\subitem{\textbf{Detalhamento da integração com IoT}: Como o backend implementa a integração com dispositivos IoT e comanda o acionamento e desligamento de acordo com os agendamentos feitos pelosus usuários.}
 	\item \textbf{Análise de resultados}: Análise dos resultados obtidos com o desenvolvimento da aplicação. Detalhando os principais aspesctos relevantes, como a eficiência do agendamento de horários, a segurança das informações e a integração com IoT.
 \end{itemize}
 
 \section{Ferramentas e Tecnologias Utilizadas}\label{sec:ferramentas_tecnologias}
 
-A seção de ferramentas e tecnologias utilizadas no desenvolvimento deste projeto apresenta um panorama detalhado dos recursos técnicos empregados para a construção do sistema de gerenciamento de reservas e controle automatizado de dispositivos IoT para quadras esportivas. 
+A seção de ferramentas e tecnologias utilizadas no desenvolvimento deste projeto apresenta um panorama detalhado dos recursos técnicos empregados para a construção da aplicação de servidor do sistema de gerenciamento de reservas e controle automatizado de dispositivos IoT para quadras esportivas. 
 % O projeto foi desenvolvido utilizando uma stack moderna e robusta, com o backend implementado em Nest.js, um framework eficiente e escalável para Node.js, e o frontend será desenvolvido em React, a fim de proporcionar uma experiência de usuário dinâmica e responsiva. Além disso, o banco de dados relacional PostgreSQL foi utilizado para garantir a integridade e a consistência dos dados, enquanto a integração com a plataforma eWeLink permitiu o controle automatizado de dispositivos IoT, agregando um nível adicional de automação e inovação ao sistema. Este conjunto de ferramentas foi escolhido com o objetivo de garantir um desenvolvimento ágil, eficiente e que atendesse às necessidades específicas do projeto.
 
 \subsection{Git}
@@ -121,3 +122,80 @@ O Postman é amplamente utilizado para testar, documentar e monitorar APIs, ofer
 As vantagens do Postman incluem sua interface intuitiva, que reduz a complexidade do teste de APIs, e suas capacidades avançadas de automação e documentação. Comparado a outras ferramentas, como cURL ou alternativas mais básicas, o Postman oferece uma experiência mais integrada e acessível, especialmente para equipes que precisam colaborar em projetos complexos. No desenvolvimento deste projeto, o Postman foi escolhido por sua facilidade de uso e suas capacidades de automação de testes, o que contribui para um processo de desenvolvimento mais eficiente e menos propenso a erros.
 
 Portanto o Postman se consolida como uma ferramenta essencial para o desenvolvimento e manutenção de APIs, oferecendo funcionalidades abrangentes que facilitam o trabalho de desenvolvedores e equipes de qualidade. Sua utilização neste projeto destaca a importância de ferramentas que otimizam o fluxo de trabalho, garantindo maior eficiência e qualidade no desenvolvimento de sistemas modernos.
+
+
+\section{Desenvolvimento}\label{sec:desenvolvimento}
+
+Após apresentadas as ferramentas e tecnologias selecionadas na \autoref{sec:ferramentas_tecnologias}, esta seção tratará do desenvolvimento do projeto backend da aplicação.
+
+\subsection{Configuração Inicial do Projeto}\label{subsec:configuracao_inicial}
+
+A primeira etapa do projeto se deu pela configuração do ambiente de desenvolvimento. Para isso, foi o inicializado um novo projeto Nest.js com os comandos
+
+\begin{verbatim}
+	nest new sports
+\end{verbatim}
+e instaladas as dependências necessárias. Algumas das bibliotecas usadas estão listadas no \autoref{qua:bibliotecas}.
+
+\begin{quadro}[htb]
+	\centering
+	\caption{\label{qua:bibliotecas}Bibliotecas utilizadas.}	
+	\begin{tabular}{|l|p{4cm}|}
+		\hline
+		\textbf{Nome} & \textbf{versão} \\ \hline
+    \text{@nestjs/cache-manager} & 2.0.1 \\ \hline
+    \text{@nestjs/common} & 10.0.0 \\ \hline
+    \text{@nestjs/jwt} & 10.1.0 \\ \hline
+    \text{@nestjs/platform-express} & 10.0.0 \\ \hline
+    \text{@nestjs/schedule} & 4.1.2 \\ \hline
+    \text{@nestjs/typeorm} & 10.0.0 \\ \hline
+    \text{bcrypt} & 5.1.1 \\ \hline
+    \text{class-transformer} & 0.5.1 \\ \hline
+    \text{class-validator} & 0.14.0 \\ \hline
+    \text{colors} & 1.4.0 \\ \hline
+    \text{dotenv} & 16.0.3 \\ \hline
+    \text{ewelink-api-next} & 1.0.4 \\ \hline
+    \text{moment} & 2.30.1 \\ \hline
+    \text{pg} & 8.11.3 \\ \hline
+    \text{reflect-metadata} & 0.1.13 \\ \hline
+    \text{rxjs} & 7.8.1 \\ \hline
+    \text{typeorm} & 0.3.17 \\ \hline
+    \text{uuid} & 9.0.1 \\ \hline
+	\end{tabular}
+	\fonte{Autor.}
+\end{quadro}
+
+Em seguida os cointêneres Docker foram configurados para executar o banco de dados PostgreSQL e o PgAdmin (Interface Gráfica para gerenciar o banco de dados PostgreSQL) através de um arquivo docker-compose. Com o ambiente de desenvolvimento configurado, foi realizada a configuração da conexão da aplicação com o banco de dados PostgreSQL com auxílio da biblioteca TypeOrm. O TypeORM é uma biblioteca ORM (Object-Relational Mapping) para TypeScript e JavaScript, que facilita a interação com bancos de dados relacionais. Ele permite a abstração do banco de dados, permitindo que os desenvolvedores se concentrem na manipulação dos dados em vez da implementação detalhada das operações SQL.
+
+\subsection{Implementação das Funcionalidades}\label{subsec:implementacao_funcionalidades}
+
+Nessa seção serão detalhadas as implementações das funcionalidades do sistema. Serão abordados os modelos de dados \ref{subsubsec:modelagem_banco_dados}, autenticação e autorização \ref{subsubsec:autenticacao_autorizacao}, módulos de usuários \ref{subsubsec:modulo_usuarios}, tenants \ref{subsubsec:modulo_tenants}, quadras \ref{subsubsec:modulo_quadras}, disponibilidade de quadras \ref{subsubsec:modulo_disponibilidade_quadras}, integração com a API eWeLink \ref{subsubsec:integacao_ewelink}, quadras-dispositivos \ref{subsubsec:modulo_quadras_dispositivos}, reservas e comandos IoT \ref{subsubsec:modulo_reservas} e envio de comandos aos dispositivos IoT \ref{subsubsec:envio_comandos_iot}.
+\subsubsection{Modelagem do Banco de Dados}\label{subsubsec:modelagem_banco_dados}
+
+\begin{figure}[htp]
+	\caption{\label{fig:modelagem_banco_dados}Modelagem do Banco de Dados.}
+	\begin{center}
+	  \includegraphics[scale=0.38]{images/cap5/modelage_banco_dados.png}
+	\end{center}
+	\fonte{Autor.}
+\end{figure}
+
+\subsubsection{Módulo de Usuarios}\label{subsubsec:modulo_usuarios}
+
+\subsubsection{Autenticação e Autorização}\label{subsubsec:autenticacao_autorizacao}
+
+\subsubsection{Módulo de Tenants}\label{subsubsec:modulo_tenants}
+
+\subsubsection{Módulo de Quadras}\label{subsubsec:modulo_quadras}
+
+\subsubsection{Módulo de Disponibilidade de Quadras}\label{subsubsec:modulo_disponibilidade_quadras}
+
+\subsubsection{Integração com eWeLink}\label{subsubsec:integacao_ewelink}
+
+\subsubsection{Módulo de Quadras-Dispositivos}\label{subsubsec:modulo_quadras_dispositivos}
+
+\subsubsection{Módulo de Reservas e Comandos IoT}\label{subsubsec:modulo_reservas}
+
+\subsubsection{Envio de Comandos IoT}\label{subsubsec:envio_comandos_iot}
+
+\section{Análise de Resultados}\label{sec:analise_resultados}

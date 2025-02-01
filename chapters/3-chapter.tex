@@ -39,14 +39,14 @@ Portanto, a ausência de uma solução integrada e automatizada afeta diretament
 
 \section{Requisitos Técnicos a Serem Atendidos}
 
-O desenvolvimento de uma solução para esses problemas exige a definição clara de requisitos técnicos que devem ser atendidos para garantir a entrega de uma solução eficiente, robusta e alinhada às necessidades do negócio. Estes requisitos estão divididos em funcionais dispostos na \autoref{subsec:requisitos_funcionais} e não-funcionais na \autoref{subsec:requisitos_nao_funcionais}, cobrindo tanto as funcionalidades esperadas quanto os atributos de qualidade do sistema. Além disso, alguns casos de uso ilustram as principais interações previstas na aplicação.
+O desenvolvimento de uma solução para esses problemas exige a definição clara de requisitos técnicos que devem ser atendidos para garantir a entrega de uma solução eficiente, robusta e alinhada às necessidades do negócio. Estes requisitos estão divididos em funcionais dispostos na \autoref{subsec:requisitos_funcionais} e não-funcionais na \autoref{subsec:requisitos_nao_funcionais}, cobrindo tanto as funcionalidades esperadas quanto os atributos de qualidade do sistema. Além disso, alguns casos de uso ilustram as principais interações previstas na aplicação na \autoref{subsec:casos_de_uso}. Como o foco deste PFC é a implementação do servidor, os requisitos técnicos estão mais voltados para a arquitetura e as funcionalidades do sistema, deixando a interface de usuário para um desenvolvimento futuro.
 
 \subsection{Requisitos Funcionais}\label{subsec:requisitos_funcionais}
 
 \begin{enumerate}
      \item O sistema deve permitir o cadastro de empresas no formato multi-tenant, onde cada empresa terá um ambiente isolado para suas configurações e dados.
      \item Deve ser possível configurar os horários de funcionamento das quadras de forma personalizada para cada dia da semana.
-     \item O sistema deve oferecer uma interface para os clientes visualizarem a disponibilidade das quadras em tempo real.
+     \item O sistema deve oferecer uma interface para visualizar os horários configurados de uma quadra para todos os dias da semana.
      \item Deve ser possível realizar reservas de quadras, com confirmação imediata e registro dos dados no sistema.
      \item O administrador deve poder cadastrar, editar e excluir quadras do sistema.
      \item A integração com a API eWeLink deve permitir o controle de dispositivos IoT, como iluminação e climatização, associados às quadras.
@@ -56,53 +56,46 @@ O desenvolvimento de uma solução para esses problemas exige a definição clar
      \item O sistema deve ser capaz de ignorar comandos automáticos para o mesmo dispositivo em caso de reservas seguidas, evitando ligações e desligamentos desnecessários.
 \end{enumerate}
 
-
 \subsection{Requisitos Não-Funcionais}\label{subsec:requisitos_nao_funcionais}
 
 \begin{itemize}
      \item O sistema deve ser desenvolvido como uma aplicação web baseada em cloud, garantindo disponibilidade e escalabilidade.
-     \item O backend deve ser implementado em Nest.js, utilizando TypeScript, e o frontend em Next.js/React.
-     \item O banco de dados utilizado será o PostgreSQL, com o TypeORM gerenciando a camada de persistência.
+     \item O aplicação deve ser desenvolvida em uma linguagem consolidada no mercado e com tipagem de dados, afim de simplificar futuras manutenções e melhorias.
+     \item O banco de dados utilizado deve ser relacional, garantindo consistência e integridade dos dados.
      \item A aplicação deve suportar múltiplos usuários simultâneos sem comprometimento de desempenho.
      \item Deve ser garantida a segurança dos dados por meio de autenticação e autorização robustas.
-     \item O sistema deve apresentar uma interface intuitiva, responsiva e compatível com dispositivos móveis.
-     \item Deve ser possível integrar novos dispositivos IoT de forma escalável e sem necessidade de modificações significativas no código.
+     \item O administrador da empresa deve ter a possibilidade de vincular sua conta eWelink de forma prática.
+     \item O administrador da empresa deve ser capaz de adicionar novos dispositivos IoT mesmo sem ter conhecimento técnico avançado.
      \item O sistema deve manter logs de eventos críticos, como reservas realizadas e comandos enviados a dispositivos IoT.
      \item O tempo de resposta das principais operações deve ser inferior a 2 segundos.
      \item A aplicação deve ser documentada para facilitar a manutenção e futuras expansões.
 \end{itemize}
 
 
-\subsection{Casos de Uso}\label{subsect:casos_de_uso}
+\subsection{Casos de Uso}\label{subsec:casos_de_uso}
 
 \subsubsection*{Caso de Uso 1: Reserva de Quadra}
 \begin{itemize}
      \item Ator: Cliente
-     \item Descrição: O cliente acessa o sistema através, visualiza as quadras disponíveis para uma data e horário específicos, seleciona a quadra desejada e realiza a reserva. O sistema confirma a reserva e atualiza a disponibilidade em tempo real.     
+     \item Descrição: O cliente acessa o sistema através de um navegador, visualiza as quadras disponíveis para uma data e horário específicos, seleciona a quadra desejada e realiza a reserva. O sistema confirma a reserva e cria os comandos para ligar e desligar as luzes da quadra no início e fim da reserva.
 \end{itemize}
 
 \subsubsection*{Caso de Uso 2: Configuração de Quadras e Dispositivos IoT}
 \begin{itemize}
      \item Ator: Administrador
-     \item Descrição: O administrador acessa o painel de administração, adiciona novas quadras e associa dispositivos IoT configurados na plataforma eWeLink. Define comandos automáticos, como ligar/desligar iluminação e climatização, para os horários das reservas.     
+     \item Descrição: O usuário faz login na plataforma e cria uma nova empresa. Esse usuário se torna administrador automaticamente para essa empresa. Ele acessa o painel de administração da empresa, adiciona uma nova quadra e associa um dispositivo IoT e um comando de \"ligar\" ao início dos agendamentos dessa quadra.
 \end{itemize}
 
 \subsubsection*{Caso de Uso 3: Consulta de Disponibilidade de Quadras}
 \begin{itemize}
      \item Ator: Cliente
-     \item Descrição: O cliente acessa a aplicação, seleciona uma empresa e consulta a disponibilidade de quadras para uma data específica. As informações são apresentadas em tempo real, considerando as reservas existentes.     
+     \item Descrição: O cliente acessa a aplicação, seleciona uma empresa e uma consulta a disponibilidade de uma quadra para um dia específico. As informações da disponibilidade do dia da semana para a quadra selecionada são exibidas. Os horários indisponíveis devem ser apresentados a partir dos agendametos confirmados nessa quadra.
 \end{itemize}
 
-\subsubsection*{Caso de Uso 4: Configuração de Preços Dinâmicos}
+\subsubsection*{Caso de Uso 4: Cancelamento de Reserva de Quadra}
 \begin{itemize}
-     \item Ator: Administrador
-     \item Descrição: O administrador acessa a interface de configuração de preços, ajusta os valores para horários de pico e dias específicos, garantindo flexibilidade na gestão financeira das quadras.     
-\end{itemize}
-
-\subsubsection*{Caso de Uso 5: Notificação Automática de Reservas}
-\begin{itemize}
-     \item Ator: Sistema
-     \item Descrição: Após a confirmação de uma reserva, o sistema envia automaticamente um e-mail ou mensagem ao cliente com os detalhes da reserva e instruções para cancelamento, caso necessário.     
+     \item Ator: Cliente
+     \item Descrição: O cliente acessa a aplicação e escolhe ver as reservas que tem para uma determinada empresa. O sistema busca todas as quadras desse empresa e busca as reservas do cliente para cada quadra. O cliente seleciona a reserva que deseja cancelar e o sistema confirma o cancelamento, liberando a quadra para novas reservas.
 \end{itemize}
 
 Com esses requisitos e casos de uso bem definidos, a aplicação está preparada para atender às necessidades do mercado, oferecendo uma solução moderna, eficiente e alinhada às expectativas dos usuários e administradores.
