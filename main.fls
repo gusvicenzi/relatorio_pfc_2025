@@ -550,6 +550,7 @@ INPUT .\images\cap5\modelage_banco_dados.png
 INPUT .\images\cap5\modelage_banco_dados.png
 INPUT .\images\cap5\modelage_banco_dados.png
 INPUT .\images\cap5\modelage_banco_dados.png
+INPUT C:\Users\gusta\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1000.tfm
 INPUT .\chapters\6-chapter.tex
 INPUT .\chapters\6-chapter.tex
 OUTPUT chapters\6-chapter.aux
@@ -591,6 +592,8 @@ INPUT .\chapters\6-chapter.aux
 INPUT chapters\6-chapter.aux
 INPUT main.run.xml
 OUTPUT main.run.xml
+INPUT C:\Users\gusta\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
+INPUT C:\Users\gusta\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
 INPUT C:\Users\gusta\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\gusta\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\gusta\AppData\Local\Programs\MiKTeX\fonts\type1\urw\helvetic\uhvb8a.pfb

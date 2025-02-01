@@ -169,8 +169,10 @@ Em seguida os cointêneres Docker foram configurados para executar o banco de da
 
 \subsection{Implementação das Funcionalidades}\label{subsec:implementacao_funcionalidades}
 
-Nessa seção serão detalhadas as implementações das funcionalidades do sistema. Serão abordados os modelos de dados \ref{subsubsec:modelagem_banco_dados}, autenticação e autorização \ref{subsubsec:autenticacao_autorizacao}, módulos de usuários \ref{subsubsec:modulo_usuarios}, tenants \ref{subsubsec:modulo_tenants}, quadras \ref{subsubsec:modulo_quadras}, disponibilidade de quadras \ref{subsubsec:modulo_disponibilidade_quadras}, integração com a API eWeLink \ref{subsubsec:integacao_ewelink}, quadras-dispositivos \ref{subsubsec:modulo_quadras_dispositivos}, reservas e comandos IoT \ref{subsubsec:modulo_reservas} e envio de comandos aos dispositivos IoT \ref{subsubsec:envio_comandos_iot}.
+Nessa seção serão detalhadas as implementações das funcionalidades do sistema. Serão abordados os modelos de dados \ref{subsubsec:modelagem_banco_dados}, autenticação e autorização \ref{subsubsec:autenticacao_autorizacao}, módulos de usuários \ref{subsubsec:modulo_usuarios}, tenants \ref{subsubsec:modulo_tenants}, quadras \ref{subsubsec:modulo_quadras}, disponibilidade de quadras \ref{subsubsec:modulo_disponibilidade_quadras}, integração com a API eWeLink \ref{subsubsec:integacao_ewelink}, quadras-dispositivos \ref{subsubsec:modulo_quadras_dispositivos}, reservas e comandos IoT \ref{subsubsec:modulo_reservas} e envio de comandos aos dispositivos IoT \ref{subsubsec:envio_comandos_iot}. Algumas rotas e implementações serão mostradas e detalhadas como exemplo e outras ocultadas a fim de reduzir a extensão do texto.
+
 \subsubsection{Modelagem do Banco de Dados}\label{subsubsec:modelagem_banco_dados}
+A primeira etapa do desenvolvimento do sistema é a modelagem do banco de dados. Nesta etapa, são criados os diagramas entidade-relacionamento (ER) que representam as entidades e seus relacionamentos. O diagrama ER é uma representação visual das tabelas do banco de dados e dos relacionamentos entre elas e está apresentado na \autoref{fig:modelagem_banco_dados}.
 
 \begin{figure}[htp]
 	\caption{\label{fig:modelagem_banco_dados}Modelagem do Banco de Dados.}
@@ -180,17 +182,489 @@ Nessa seção serão detalhadas as implementações das funcionalidades do siste
 	\fonte{Autor.}
 \end{figure}
 
-\subsubsection{Módulo de Usuarios}\label{subsubsec:modulo_usuarios}
+\textbf{tenant (Locatário/Empresa)}\\
+Armazena informações das empresas que utilizam o sistema. Cada empresa tem um ambiente isolado para suas configurações e dados.\\
+Relacionamentos:
+\begin{itemize}
+	\item Relaciona-se com \texttt{field} (uma empresa pode ter várias quadras).
+	\item Relaciona-se com \texttt{user\_tenant\_roles} (definição de papéis dos usuários dentro da empresa).
+	\item Relaciona-se com \texttt{ewelink\_credential} (armazenamento de credenciais IoT por empresa).
+	\item Relaciona-se com \texttt{company\_operating\_hours} (definição do horário de funcionamento da empresa).
+\end{itemize}
+
+\textbf{user (Usuário do Sistema)}\\
+Cadastra usuários na plataforma, permitindo o acesso e gestão de informações dos usuários em diferentes locatários. \\
+Relacionamentos: 
+\begin{itemize} 
+	\item Relaciona-se com \texttt{use\_tenant\_roles} (um usuário pode ter diferentes papéis em empresas distintas). 
+	\item Relaciona-se com \texttt{booking} (usuários realizam reservas de quadras). 
+\end{itemize}
+
+\textbf{user\textunderscore tenant\textunderscore roles (Papéis de Usuário na Empresa)}\\
+Define os papéis dos usuários em diferentes locatários, garantindo acesso e permissões personalizadas para cada perfil. \\
+Relacionamentos: 
+
+\begin{itemize} 
+	\item Relaciona-se com \texttt{user} (indica o usuário). 
+	\item Relaciona-se com \texttt{tenant} (indica a empresa onde o usuário tem um papel). 
+\end{itemize}
+
+
+\textbf{company\textunderscore operating\textunderscore hours (Horários de Funcionamento da Empresa)}\\
+Define os horários de funcionamento das empresas, permitindo customização e gestão do tempo disponível para operações em cada locatário. \\
+Relacionamentos: 
+
+\begin{itemize} 
+	\item Relaciona-se com \texttt{tenant} (cada locatário tem seus próprios horários de funcionamento). 
+\end{itemize}
+
+
+\textbf{field (Quadras Esportivas)}\\
+Armazena as quadras disponíveis para reservas, relacionadas ao locatário que as possui e contendo informações específicas sobre cada quadra. \\
+Relacionamentos: 
+
+\begin{itemize} 
+	\item Relaciona-se com \texttt{tenant} (cada locatário pode ter várias quadras). 
+	\item Relaciona-se com \texttt{field\_availability} (definição de horários disponíveis para a quadra). 
+	\item Relaciona-se com \texttt{field\_device} (dispositivos IoT associados à quadra). 
+	\item Relaciona-se com \texttt{booking} (quadras podem ser reservadas). 
+\end{itemize}
+
+
+\textbf{field\textunderscore availability (Disponibilidade da Quadra)}\\
+Determina os horários disponíveis para cada quadra, indicando o período de tempo em que a mesma fica aberta e quanto custa o uso dela. \\
+Relacionamentos: 
+
+\begin{itemize} 
+	\item Relaciona-se com \texttt{field} (define a disponibilidade para cada quadra). 
+\end{itemize}
+
+
+\textbf{booking (Reservas de Quadras)}\\
+Registra as reservas feitas pelos usuários, associando-as ao locatário que possui a quadra reservada e outros detalhes sobre o horário, usuário e status da reserva. \\
+Relacionamentos: 
+
+\begin{itemize} 
+	\item Relaciona-se com \texttt{user} (quem fez a reserva). 
+	\item Relaciona-se com \texttt{field} (qual quadra foi reservada). 
+\end{itemize}
+
+
+\textbf{ewelink\textunderscore credential (Credenciais para Controle IoT via eWeLink)}\\
+Armazena informações de autenticação da integração entre o sistema e dispositivos IoT, como tokens de acesso e gerenciamento de recursos. \\
+Relacionamentos: 
+
+\begin{itemize} 
+	\item Relaciona-se com \texttt{tenant} (cada locatário pode ter credenciais IoT). 
+\end{itemize}
+
+
+\textbf{field\textunderscore device (Dispositivos IoT Associados às Quadras)}\\
+Registra os dispositivos IoT instalados em cada quadra, indicando seu tipo de funcionalidade, comando a ser executado e outros detalhes relevantes para o gerenciamento. \\
+Relacionamentos: 
+
+\begin{itemize} 
+	\item Relaciona-se com \texttt{field} (cada quadra pode ter vários dispositivos IoT). 
+\end{itemize}
+
+
+\textbf{device\textunderscore command (Comandos Enviados a Dispositivos IoT)}\\
+Armazena os comandos programados ou executados para dispositivos IoT, associados às reservas e que devem ser executados conforme a agenda de reservas. \\
+Relacionamentos: 
+
+\begin{itemize} 
+	\item Relaciona-se com \texttt{booking} (comandos são acionados conforme reservas). 
+	\item Relaciona-se com \texttt{field\_device} (cada comando pertence a um dispositivo IoT). 
+\end{itemize}
 
 \subsubsection{Autenticação e Autorização}\label{subsubsec:autenticacao_autorizacao}
 
+\textbf{Visão Geral}\\
+O módulo de autenticação é responsável por garantir a segurança e o controle de acesso ao sistema multi-tenant. Ele permite que os usuários se autentiquem utilizando credenciais seguras e fornece mecanismos para gerenciamento de tokens de acesso e renovação de sessão. O sistema utiliza autenticação baseada em tokens JWT (\textit{JSON Web Token}) e cookies para armazenar \textit{refresh tokens} com segurança.
+
+A autenticação dos usuários é fundamental para garantir que apenas indivíduos autorizados tenham acesso aos recursos do sistema. Além disso, o módulo gerencia o login, o registro de novos usuários (inicialmente sem vínculo com nenhum \textit{tenant}), a renovação de tokens e o logout seguro, invalidando tokens de sessão comprometidos.
+
+\textbf{Fluxo das Rotas}\\
+O controlador de autenticação (\texttt{auth.controller.ts}) define os endpoints responsáveis pelo login, registro de novos usuários, renovação de tokens e logout. Ele interage com o serviço de autenticação (\texttt{auth.service.ts}), que contém a lógica de geração e validação de tokens, verificação de credenciais e manipulação segura de sessões.
+
+\subsubsubsection{Autenticação de Usuário}
+\begin{itemize}
+	\item \textbf{Rota:} \texttt{POST /auth/login}
+	\item \textbf{Descrição:} Permite que um usuário se autentique utilizando seu e-mail e senha. Retorna um \textit{access token} e um \textit{refresh token}.
+	\item \textbf{Fluxo:}
+	\begin{enumerate}
+		\item O controlador recebe as credenciais do usuário.
+		\item O serviço de autenticação busca o usuário no banco de dados e valida a senha.
+		\item Se as credenciais forem válidas, um novo \textit{access token} e um \textit{refresh token} são gerados e retornados.
+	\end{enumerate}
+\end{itemize}
+
+O código construído para o \textit{controller} e  o \textit{service} estão disponíveis no \autoref{cod:create-user-controller} e  no \autoref{cod:create-user-service}, respectivamente, e servirão de exemplo para os demais \textit{controllers} e \textit{services}.
+
+\begin{lstlisting}[caption={Exemplo de \textit{controller} para \textit{login}.},label={cod:login-controller}]
+	@Post('login')
+  async login(
+    @Res({ passthrough: true }) res: Response,
+    @Body() { email, password }: AuthenticateDto
+  ) {
+    const { loggedUser, accessToken, refreshToken } =
+      await this.authService.login(email, password)
+
+    res.cookie('jwt', refreshToken, {
+      httpOnly: true,
+      sameSite: 'none',
+      secure: true,
+      maxAge: 24 * 60 * 60 * 1000
+    })
+    res.status(201)
+    return { accessToken, ...loggedUser }
+  }
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Exemplo de \textit{service} para \textit{login}.},label={cod:login-service}]
+	async login(email: string, insertedPassword: string) {
+    try {
+      const foundUser = await this.userService.searchForEmail(email)
+
+      const userWasAuthenticated = await bcrypt.compare(
+        insertedPassword,
+        foundUser.password
+      )
+
+      if (!userWasAuthenticated)
+        throw new UnauthorizedException('E-mail e/ou senha incorretos.')
+
+      const payload: UserPayload = {
+        sub: foundUser.id,
+        email: foundUser.email,
+        name: foundUser.name
+      }
+
+      const newRefreshToken = await this.createRefreshToken(payload)
+      const newAccessToken = await this.createAccessToken(payload)
+
+      await this.updateRefreshToken(newRefreshToken, {
+        sub: foundUser.id,
+        ...foundUser
+      })
+
+      return {
+        accessToken: newAccessToken,
+        refreshToken: newRefreshToken,
+        loggedUser: payload
+      }
+    } catch (e) {
+      if (e?.status === 404 || e?.status === 401)
+        throw new UnauthorizedException('E-mail e/ou senha incorretos.')
+
+      console.log('Erro interno:', e)
+      throw new InternalServerErrorException(
+        'Erro interno no servidor. ' + e?.message
+      )
+    }
+  }
+\end{lstlisting}
+
+\subsubsubsection{Registro de Usuário}
+\begin{itemize}
+	\item \textbf{Rota:} \texttt{POST /auth/register}
+	\item \textbf{Descrição:} Permite criar um novo usuário no sistema sem vinculação com nenhuma empresa, armazenando suas credenciais de forma segura.
+	\item \textbf{Fluxo:}
+	\begin{enumerate}
+		\item O controlador recebe os dados do novo usuário.
+		\item A senha é criptografada antes de ser salva no banco de dados.
+		\item O usuário é criado e retornado na resposta.
+	\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Renovação de Token}
+\begin{itemize}
+	\item \textbf{Rota:} \texttt{GET /auth/refresh}
+	\item \textbf{Descrição:} Permite gerar um novo \textit{access token} utilizando um \textit{refresh token} válido armazenado em um cookie.
+	\item \textbf{Fluxo:}
+	\begin{enumerate}
+		\item O controlador verifica a presença do \textit{refresh token} nos cookies da requisição.
+		\item O serviço valida o token e gera um novo \textit{access token}.
+		\item O novo token é retornado na resposta.
+	\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Logout}
+\begin{itemize}
+	\item \textbf{Rota:} \texttt{GET /auth/logout}
+	\item \textbf{Descrição:} Invalida a sessão do usuário removendo seu \textit{refresh token} armazenado.
+	\item \textbf{Fluxo:}
+	\begin{enumerate}
+		\item O controlador verifica o \textit{refresh token} armazenado no cookie da requisição.
+		\item O serviço de autenticação invalida o token no banco de dados.
+		\item O cookie é removido da resposta e a sessão é encerrada.
+	\end{enumerate}
+\end{itemize}
+
 \subsubsection{Módulo de Tenants}\label{subsubsec:modulo_tenants}
 
-\subsubsection{Módulo de Quadras}\label{subsubsec:modulo_quadras}
+\textbf{Visão Geral} \\
+O módulo de \textit{tenants} é responsável por gerenciar múltiplos locatários dentro do sistema, permitindo a criação, consulta, atualização e remoção de \textit{tenants}. Esse módulo é essencial para suportar um ambiente multi-tenant, onde cada empresa ou cliente pode operar de forma isolada dentro da mesma aplicação.
 
-\subsubsection{Módulo de Disponibilidade de Quadras}\label{subsubsec:modulo_disponibilidade_quadras}
+As principais funcionalidades deste módulo incluem:
+
+\begin{itemize}
+    \item Criação de um \textit{tenant}, associando-o a um usuário administrador.
+    \item Consulta de \textit{tenants}, tanto de forma individual quanto em lista.
+    \item Atualização das informações de um \textit{tenant}.
+    \item Remoção de um \textit{tenant}.
+    \item Controle de permissões para diferentes níveis de usuário dentro de um \textit{tenant}.
+\end{itemize}
+
+O acesso às rotas do módulo é protegido por um sistema de autenticação e autorização baseado em \textit{roles}, garantindo que apenas usuários autorizados possam executar determinadas ações.
+
+\textbf{Fluxo das Rotas} \\
+As rotas do módulo de \textit{tenants} são definidas no \texttt{TenantsController}, garantindo a estruturação adequada dos endpoints da API. A seguir, apresentamos o fluxo de duas das principais operações: criação e busca de \textit{tenants}.
+
+\subsubsubsection{Criação de um Tenant}
+\begin{itemize}
+	\item \textbf{Rota:} \texttt{POST /tenants}
+	\item \textbf{Descrição:} Criação de um novo \textit{tenant}.
+	\item \textbf{Fluxo:}
+	\begin{enumerate}
+    \item O usuário autenticado envia uma requisição contendo os dados do novo \textit{tenant}.
+    \item O serviço verifica se o usuário tem permissão para criar um \textit{tenant}.
+    \item Se autorizado, os dados do \textit{tenant} são persistidos no banco de dados.
+    \item O usuário criador recebe automaticamente o papel de administrador dentro do novo \textit{tenant}.
+    \item A resposta retorna uma mensagem de sucesso e os detalhes do \textit{tenant} criado.
+	\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Consulta de um Tenant}
+\begin{itemize}
+	\item \textbf{Rota:} \texttt{GET /tenants/:id}
+	\item \textbf{Descrição:} Buscar um \textit{tenant} específico.
+	\item \textbf{Fluxo:}
+	\begin{enumerate}
+    \item O usuário faz uma requisição com o identificador do \textit{tenant} desejado.
+    \item O serviço consulta o banco de dados para localizar o \textit{tenant} correspondente.
+    \item Se encontrado, os detalhes do \textit{tenant} são retornados na resposta.
+    \item Se o \textit{tenant} não for encontrado, uma exceção é lançada informando o erro.
+	\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Outras Operações}
+
+Além das rotas descritas acima, o módulo também disponibiliza endpoints para listar todos os \textit{tenants}, atualizar informações e remover um \textit{tenant}. Estas operações são protegidas por um sistema de autenticação e autorização baseado em \textit{roles}, garantindo que apenas usuários com as permissões adequadas possam realizá-las.
+
+\subsubsection{Módulo de Usuarios}\label{subsubsec:modulo_usuarios}
+
+\textbf{Visão Geral}\\
+O módulo de usuários é responsável por gerenciar os perfis de usuários dentro do sistema multi-tenant. Ele permite o cadastro, consulta, edição e remoção de usuários (vinculados a uma empresa específica), além de possibilitar a gestão de papéis dentro de diferentes empresas. O sistema suporta diferentes níveis de acesso e autenticação baseada em tokens.
+
+Os usuários podem pertencer a múltiplas empresas e ter diferentes papéis em cada uma delas. Isso permite um controle granular das permissões e acesso às funcionalidades do sistema.
+
+\textbf{Fluxo das Rotas}\\
+O controlador de usuários (\texttt{users.controller.ts}) define os endpoints para interação com o serviço de usuários (\texttt{users.service.ts}), que contém a lógica de negócio. O código construído para o \textit{controller} e  o \textit{service} estão disponíveis no \autoref{cod:create-user-controller} e  no \autoref{cod:create-user-service}, respectivamente, e servirão de exemplo para os demais \textit{controllers} e \textit{services}.
+
+\subsubsubsection{Criação de Usuário}
+\begin{itemize}
+	\item \textbf{Rota:} \texttt{POST /users}
+	\item \textbf{Descrição:} Permite criar um novo usuário, recebendo os dados básicos no corpo da requisição. Caso seja informado um \texttt{tenantId}, o usuário é vinculado a essa empresa.
+	\item \textbf{Fluxo:}
+	\begin{enumerate}
+		\item O controlador recebe os dados do novo usuário.
+		\item O serviço cria a entidade e a salva no banco.
+		\item O usuário é retornado na resposta.
+	\end{enumerate}
+\end{itemize}
+
+\begin{lstlisting}[caption={Exemplo de \textit{controller} para criação de usuário.},label={cod:create-user-controller}]
+	@Post()
+  async createUser(
+    @Body() { password, ...userData }: CreateUserDTO,
+    @Body('password', HashingPasswordPipe) hashedPassword: string
+  ) {
+    const createdUser = await this.userService.createUser({
+      ...userData,
+      password: hashedPassword
+    })
+
+    return {
+      message: 'Usuario criado!',
+      user: new ListUserDTO({ id: createdUser.id, name: createdUser.name })
+    }
+  }
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Exemplo de \textit{service} para criação de usuário.},label={cod:create-user-service}]
+	async createUser(userData: CreateUserDTO, tenantId?: string) {
+    const userEntity = new User()
+
+    Object.assign(userEntity, userData as User)
+    const createdUser = await this.userRepository.save(userEntity)
+
+    console.log('Create relation to tenant: ', tenantId)
+
+    return createdUser
+  }
+\end{lstlisting}
+
+\subsubsubsection{Consulta de Usuário por ID}
+\begin{itemize}
+	\item \textbf{Rota:} \texttt{GET /users/:id}
+	\item \textbf{Descrição:} Retorna as informações detalhadas de um usuário, incluindo seus papéis nas empresas.
+	\item \textbf{Fluxo:}
+	\begin{enumerate}
+		\item O controlador recebe o \texttt{id} do usuário via parâmetro de rota.
+		\item O serviço busca o usuário no banco, carregando as relações necessárias.
+		\item Caso não seja encontrado, retorna erro.
+		\item Se encontrado, retorna os dados do usuário.
+	\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Listagem de Usuários de uma Empresa}
+\begin{itemize}
+	\item \textbf{Rota:} \texttt{GET /users}
+	\item \textbf{Descrição:} Retorna uma lista de usuários vinculados a uma empresa.
+	\item \textbf{Fluxo:}
+	\begin{enumerate}
+		\item O controlador recebe o \texttt{tenantId} como um parâmetro.
+		\item O serviço busca os usuários que possuem relação com essa empresa.
+		\item Retorna a lista formatada.
+	\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Outras Operações}
+
+Além das rotas descritas acima, o módulo também disponibiliza endpoints para buscar e remover um usuário específico, atualizar informações do usuário e papel do usuário em uma empresa.
+
+Esse módulo é essencial para a gestão dos usuários do sistema, garantindo que cada um tenha acesso adequado aos recursos da empresa em que está vinculado. As regras de permissão asseguram que apenas usuários autorizados possam modificar informações sensíveis, proporcionando segurança e integridade aos dados.
+
+\subsubsection{Módulos de Quadras e Disponibilidade de Quadras}\label{subsubsec:modulos_quadras_disponibilidade_quadras}
+
+\textbf{Visão Geral}\\
+Os módulos de \textit{quadras} e \textit{disponibilidade de quadras} são responsáveis pelo gerenciamento dos espaços esportivos disponíveis para reserva dentro do sistema. O módulo de quadras gerencia a criação, consulta, atualização e remoção das quadras cadastradas, enquanto o módulo de disponibilidade de quadras permite definir os horários disponíveis para cada quadra em dias específicos da semana.
+
+As principais funcionalidades destes módulos incluem:
+
+\begin{itemize}
+    \item Criação e gerenciamento das quadras dentro de um \textit{tenant}.
+    \item Definição de horários disponíveis para cada quadra.
+    \item Consulta das quadras e suas disponibilidades.
+    \item Atualização e remoção de quadras e horários disponíveis.
+\end{itemize}
+
+\textbf{Fluxo das Rotas}\\
+As rotas desses módulos são definidas nos controladores \texttt{FieldsController} e \texttt{FieldAvailabilitiesController}. A seguir, estão dispostos os fluxos das operações de criação e consulta de quadras e disponibilidade.
+
+\subsubsubsection{Criação de uma Quadra}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{POST /tenants/:tenantId/fields}
+    \item \textbf{Descrição:} Criar uma nova quadra dentro de um \textit{tenant}.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário autenticado com permissão faz uma requisição contendo os dados da nova quadra.
+        \item O serviço verifica se o \textit{tenant} informado existe.
+        \item Se autorizado, os dados da quadra são persistidos no banco de dados.
+        \item A resposta retorna uma mensagem de sucesso e os detalhes da quadra criada.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Consulta de uma Quadra}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{GET /tenants/:tenantId/fields/:id}
+    \item \textbf{Descrição:} Buscar uma quadra específica dentro de um \textit{tenant}.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário faz uma requisição com o identificador da quadra e do \textit{tenant}.
+        \item O serviço consulta o banco de dados para localizar a quadra correspondente.
+        \item Se encontrada, os detalhes da quadra são retornados na resposta.
+        \item Se a quadra não for encontrada, uma exceção é lançada informando o erro.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Criação de Disponibilidade de Quadra}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{POST /tenants/:tenantId/fields/:fieldId/field-availabilities}
+    \item \textbf{Descrição:} Criar um ou mais horários disponíveis para uma quadra específica.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário autenticado com permissão faz uma requisição contendo os horários disponíveis para uma quadra.
+        \item O serviço verifica se a quadra informada existe.
+        \item Se validado, os horários são armazenados no banco de dados.
+        \item A resposta retorna a confirmação da criação dos horários.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Consulta de Disponibilidade de Quadra}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{GET /tenants/:tenantId/fields/:fieldId/field-availabilities/:id}
+    \item \textbf{Descrição:} Buscar um horário de disponibilidade específico de uma quadra.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário faz uma requisição com o identificador da disponibilidade e da quadra correspondente.
+        \item O serviço consulta o banco de dados para localizar o horário correspondente.
+        \item Se encontrado, os detalhes da disponibilidade são retornados na resposta.
+        \item Se o horário não for encontrado, uma exceção é lançada informando o erro.
+    \end{enumerate}
+\end{itemize}
+
+\textbf{Outras Operações}\\
+Além das rotas descritas acima, os módulos também disponibilizam endpoints para listar todas as quadras, atualizar informações e remover quadras e horários disponíveis.
 
 \subsubsection{Integração com eWeLink}\label{subsubsec:integacao_ewelink}
+
+\textbf{Visão Geral}\\
+
+O módulo de integração com a API eWeLink é responsável por permitir a conexão entre o sistema e dispositivos IoT suportados pela plataforma eWeLink. Ele possibilita que os administradores das empresas associem sua conta à plataforma, consultem os seus dispositivos e interajam de forma automatizada com os equipamentos cadastrados.
+
+As principais funcionalidades deste módulo incluem:
+
+\begin{itemize}
+    \item Autenticação de usuários na API eWeLink via OAuth2.0 para permitir o gerenciamento dos dispositivos pela plataforma.
+    \item Consulta e listagem dos dispositivos vinculados a um determinado \textit{tenant}.
+    \item Atualização e renovação automática dos tokens de acesso à API eWeLink.
+    \item Controle seguro de permissões, garantindo que apenas administradores possam gerenciar dispositivos.
+\end{itemize}
+
+\textbf{Fluxo das Rotas}\\
+
+As rotas deste módulo são definidas no \texttt{EwelinkController} e interagem com o serviço de autenticação e gerenciamento de dispositivos eWeLink, fornecido pelo \texttt{EwelinkService}. A seguir, apresenta-se o fluxo das operações de autenticação e listagem de dispositivos.
+
+\subsubsubsection{Autenticação na API eWeLink}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{GET /tenants/:tenantId/ewelink/login}
+    \item \textbf{Descrição:} Redireciona o usuário para a página de autenticação da eWeLink.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário autenticado faz uma requisição para iniciar a autenticação com a API eWeLink.
+        \item O serviço gera uma URL de autenticação e redireciona o usuário para a página de login da eWeLink.
+        \item Após a autenticação bem-sucedida, a eWeLink redireciona o usuário de volta ao sistema com um código de autorização.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Obtenção do Token de Acesso eWeLink}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{GET /ewelink/redirectUrl}
+    \item \textbf{Descrição:} Recebe o código de autorização da eWeLink e gera um token de acesso.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário é redirecionado da eWeLink para o sistema com um código de autorização.
+        \item O sistema utiliza esse código para obter um token de acesso e um token de atualização.
+        \item As credenciais são armazenadas no banco de dados para permitir interações futuras com a API.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Listagem de Dispositivos eWeLink}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{POST /tenants/:tenantId/ewelink/listAllThings}
+    \item \textbf{Descrição:} Lista todos os dispositivos associados a um determinado \textit{tenant}.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário autenticado com permissão faz uma requisição para listar os dispositivos.
+        \item O serviço verifica as credenciais e atualiza os tokens se necessário.
+        \item O serviço consulta a API eWeLink e retorna a lista de dispositivos cadastrados.
+    \end{enumerate}
+\end{itemize}
+
+\textbf{Outras Operações}\\
+Além das rotas descritas acima, o módulo também inclui funcionalidades para atualização de tokens de acesso, controle de status dos dispositivos e integração com eventos IoT.
 
 \subsubsection{Módulo de Quadras-Dispositivos}\label{subsubsec:modulo_quadras_dispositivos}
 

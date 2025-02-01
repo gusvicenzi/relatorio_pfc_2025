@@ -59,6 +59,82 @@ nopostdot  % Não é colocado ponto ao final da entrada
 \RequirePackage{amsmath}
 \RequirePackage{bm}
 % ---
+% código em javascript
+
+\renewcommand{\lstlistingname}{Código}% Listing -> Algorithm
+% \renewcommand{\lstlistlistingname}{Lista de  \lstlistingname s}% List of Listings -> List of Algorithms
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={abstract, any, as, boolean, break, case, catch, class, console, 
+    const, continue, debugger, declare, default, delete, do, else, enum, export, 
+    extends, false, finally, for, from, function, get, if, implements, import, in, 
+    infer, instanceof, interface, keyof, let, module, namespace, never, new, null, 
+    number, object, package, private, protected, public, readonly, require, return, 
+    set, static, string, super, switch, symbol, this, throw, true, try, type, typeof, 
+    undefined, unique, unknown, var, void, while, with, yield},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+% Configuração do listings para TypeScript
+% \lstdefinelanguage{TypeScript}{
+%   keywords={class, export, boolean, throw, implements, import, this, declare, module, private, protected, public, interface, enum, static, async, await, as, new, any, void, extends, from, of, let, const, type},
+%   keywordstyle=\color{blue}\bfseries,
+%   ndkeywords={true, false, null, undefined, number, string},
+%   ndkeywordstyle=\color{red}\bfseries,
+%   identifierstyle=\color{black},
+%   sensitive=false,
+%   comment=[l]{//},
+%   morecomment=[s]{/*}{*/},
+%   commentstyle=\color{gray}\ttfamily,
+%   stringstyle=\color{green}\ttfamily,
+%   morestring=[b]',
+%   morestring=[b]"
+% }
+
+% \lstset{
+%   language=TypeScript,
+%   extendedchars=true,
+%   basicstyle=\footnotesize\ttfamily,
+%   showstringspaces=false,
+%   showspaces=false,
+%   numbers=left,
+%   numberstyle=\footnotesize,
+%   numbersep=5pt,
+%   tabsize=2,
+%   breaklines=true,
+%   showtabs=false,
+%   captionpos=b
+% }
+
 
 % ---
 % Pacotes de citações

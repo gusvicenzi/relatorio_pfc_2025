@@ -19,78 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{abntex2classe}{manual}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=3ebd20695bd75494918b0830766ddb8a}{%
-           family={Araujo},
-           familyi={A\bibinitperiod},
-           given={Lauro\bibnamedelima César},
-           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{organization}{1}{%
-        {Equipe abnTeX2}%
-      }
-      \strng{namehash}{3ebd20695bd75494918b0830766ddb8a}
-      \strng{fullhash}{3ebd20695bd75494918b0830766ddb8a}
-      \strng{fullhashraw}{3ebd20695bd75494918b0830766ddb8a}
-      \strng{bibnamehash}{3ebd20695bd75494918b0830766ddb8a}
-      \strng{authorbibnamehash}{3ebd20695bd75494918b0830766ddb8a}
-      \strng{authornamehash}{3ebd20695bd75494918b0830766ddb8a}
-      \strng{authorfullhash}{3ebd20695bd75494918b0830766ddb8a}
-      \strng{authorfullhashraw}{3ebd20695bd75494918b0830766ddb8a}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{Modelo canônico de trabalhos acadêmicos brasileiros compatível com as normas ABNT NBR 14724:2011, ABNT NBR 6024:2012 e outras}
-      \field{title}{A classe abntex2}
-      \field{urlday}{16}
-      \field{urlmonth}{8}
-      \field{urlyear}{2019}
-      \field{year}{2015}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://www.abntex.net.br/
-      \endverb
-      \verb{url}
-      \verb http://www.abntex.net.br/
-      \endverb
-    \endentry
-    \entry{NBR10520:2002}{manual}{}{}
-      \name{shortauthor}{1}{}{%
-        {{un=0,uniquepart=base,hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
-           family={ABNT},
-           familyi={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Rio de Janeiro}%
-      }
-      \list{organization}{1}{%
-        {Associação Brasileira de Normas Técnicas}%
-      }
-      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \field{extraname}{1}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{shortauthor}
-      \field{labeltitlesource}{title}
-      \field{month}{08}
-      \field{subtitle}{Informação e documentação --- Citações em documentos --- Apresentação}
-      \field{title}{{NBR} 10520}
-      \field{year}{2002}
-      \true{nocite}
-    \endentry
     \entry{NBR14724:2011}{manual}{}{}
       \name{shortauthor}{1}{}{%
         {{un=0,uniquepart=base,hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
@@ -109,7 +37,6 @@
       \strng{shortauthornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
       \strng{shortauthorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
       \strng{shortauthorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \field{extraname}{2}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
@@ -121,131 +48,78 @@
       \field{title}{{NBR} 14724}
       \field{year}{2011}
     \endentry
-    \entry{NBR6023:2002}{manual}{}{}
-      \name{shortauthor}{1}{}{%
-        {{un=0,uniquepart=base,hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
-           family={ABNT},
-           familyi={A\bibinitperiod}}}%
+    \entry{Erl2013}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5606702d875163ff65690170e545c0b8}{%
+           family={Erl},
+           familyi={E\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97207283f40a8070709670b154b9a150}{%
+           family={Puttini},
+           familyi={P\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad44e7e4994050c31a07cde9b3088895}{%
+           family={Mahmood},
+           familyi={M\bibinitperiod},
+           given={Zaigham},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
       }
-      \list{location}{1}{%
-        {Rio de Janeiro}%
+      \list{publisher}{1}{%
+        {Pearson}%
       }
-      \list{organization}{1}{%
-        {Associação Brasileira de Normas Técnicas}%
-      }
-      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \field{extraname}{3}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradate}{2}
+      \strng{namehash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{fullhash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{fullhashraw}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{bibnamehash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{authorbibnamehash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{authornamehash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{authorfullhash}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \strng{authorfullhashraw}{8ca25684306b364b9a7e8ce0a0b8d5dc}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \field{labelnamesource}{shortauthor}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{08}
-      \field{subtitle}{Informação e documentação --- Referências --- Apresentação}
-      \field{title}{{NBR} 6023}
-      \field{year}{2002}
-      \true{nocite}
+      \field{isbn}{9780133387520}
+      \field{title}{Cloud Computing: Concepts, Technology \& Architecture}
+      \field{year}{2013}
+      \field{pages}{528}
+      \range{pages}{1}
     \endentry
-    \entry{NBR6024:2012}{manual}{}{}
-      \name{shortauthor}{1}{}{%
-        {{un=0,uniquepart=base,hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
-           family={ABNT},
-           familyi={A\bibinitperiod}}}%
+    \entry{fielding2000}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=489e3655cdca151facfb40953b9759f8}{%
+           family={Fielding},
+           familyi={F\bibinitperiod},
+           given={Roy\bibnamedelima T},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
       }
-      \list{location}{1}{%
-        {Rio de Janeiro}%
+      \list{publisher}{1}{%
+        {UNIVERSITY OF CALIFORNIA, IRVINE}%
       }
-      \list{organization}{1}{%
-        {Associação Brasileira de Normas Técnicas}%
-      }
-      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \field{extraname}{4}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradate}{1}
+      \strng{namehash}{489e3655cdca151facfb40953b9759f8}
+      \strng{fullhash}{489e3655cdca151facfb40953b9759f8}
+      \strng{fullhashraw}{489e3655cdca151facfb40953b9759f8}
+      \strng{bibnamehash}{489e3655cdca151facfb40953b9759f8}
+      \strng{authorbibnamehash}{489e3655cdca151facfb40953b9759f8}
+      \strng{authornamehash}{489e3655cdca151facfb40953b9759f8}
+      \strng{authorfullhash}{489e3655cdca151facfb40953b9759f8}
+      \strng{authorfullhashraw}{489e3655cdca151facfb40953b9759f8}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \field{labelnamesource}{shortauthor}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{02}
-      \field{subtitle}{Informação e documentação --- Numeração progressiva das seções de um documento escrito --- Apresentação}
-      \field{title}{{NBR} 6024}
-      \field{year}{2012}
-    \endentry
-    \entry{NBR6027:2012}{manual}{}{}
-      \name{shortauthor}{1}{}{%
-        {{un=0,uniquepart=base,hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
-           family={ABNT},
-           familyi={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Rio de Janeiro}%
-      }
-      \list{organization}{1}{%
-        {Associação Brasileira de Normas Técnicas}%
-      }
-      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \field{extraname}{5}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{shortauthor}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{subtitle}{Informação e documentação --- Sumário --- Apresentação}
-      \field{title}{{NBR} 6027}
-      \field{year}{2012}
-      \true{nocite}
-    \endentry
-    \entry{NBR6028:2003}{manual}{}{}
-      \name{shortauthor}{1}{}{%
-        {{un=0,uniquepart=base,hash=25e485c3f2fbdf1b897e6899dd1f8bef}{%
-           family={ABNT},
-           familyi={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Rio de Janeiro}%
-      }
-      \list{organization}{1}{%
-        {Associação Brasileira de Normas Técnicas}%
-      }
-      \strng{namehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{bibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorbibnamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthornamehash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhash}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \strng{shortauthorfullhashraw}{25e485c3f2fbdf1b897e6899dd1f8bef}
-      \field{extraname}{6}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{shortauthor}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{subtitle}{Informação e documentação --- Resumo --- Apresentação}
-      \field{title}{{NBR} 6028}
-      \field{year}{2003}
-      \true{nocite}
+      \field{title}{Architectural styles and the design of network-based software architectures}
+      \field{year}{2000}
     \endentry
     \entry{Fowler02}{book}{}{}
       \name{author}{1}{}{%
@@ -276,108 +150,48 @@
       \field{title}{Patterns of Enterprise Application Architecture}
       \field{year}{2002}
     \endentry
-    \entry{ibge2016}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=3898f1ceb6fdd56f963db7f9326130e4}{%
-           family={IBGE},
-           familyi={I\bibinitperiod}}}%
+    \entry{gokhale2018introduction}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=64a5fa16b3524f6c179c35c0e37e3a18}{%
+           family={Gokhale},
+           familyi={G\bibinitperiod},
+           given={Pradyumna},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=1f54f6facf757a4434761faad4a6dc06}{%
+           family={Bhat},
+           familyi={B\bibinitperiod},
+           given={Omkar},
+           giveni={O\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=b7be288be96c8bf4e29f04f2b9b168ae}{%
+           family={Bhat},
+           familyi={B\bibinitperiod},
+           given={Sagar},
+           giveni={S\bibinitperiod},
+           givenun=1}}%
       }
-      \name{shortauthor}{1}{}{%
-        {{un=0,uniquepart=base,hash=3898f1ceb6fdd56f963db7f9326130e4}{%
-           family={IBGE},
-           familyi={I\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Rio de Janeiro}%
-      }
-      \list{organization}{1}{%
-        {Instituto Brasileiro de Geografia e Estatística}%
-      }
-      \strng{namehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{fullhash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{fullhashraw}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{bibnamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{authorbibnamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{authornamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{authorfullhash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{authorfullhashraw}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{shortauthorbibnamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{shortauthornamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{shortauthorfullhash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{shortauthorfullhashraw}{3898f1ceb6fdd56f963db7f9326130e4}
-      \field{extraname}{1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \strng{namehash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{fullhash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{fullhashraw}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{bibnamehash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{authorbibnamehash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{authornamehash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{authorfullhash}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \strng{authorfullhashraw}{b7b5e930975cda39fb1bef3fb9dd64fa}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \field{labelnamesource}{shortauthor}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{2}
-      \field{title}{Arranjos populacionais e concentrações urbanas no Brasil}
-      \field{urlday}{16}
-      \field{urlmonth}{8}
-      \field{urlyear}{2019}
-      \field{year}{2016}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://biblioteca.ibge.gov.br/visualizacao/livros/liv99700.pdf
-      \endverb
-      \verb{url}
-      \verb https://biblioteca.ibge.gov.br/visualizacao/livros/liv99700.pdf
-      \endverb
-    \endentry
-    \entry{ibge1993}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=3898f1ceb6fdd56f963db7f9326130e4}{%
-           family={IBGE},
-           familyi={I\bibinitperiod}}}%
-      }
-      \name{shortauthor}{1}{}{%
-        {{un=0,uniquepart=base,hash=3898f1ceb6fdd56f963db7f9326130e4}{%
-           family={IBGE},
-           familyi={I\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Rio de Janeiro}%
-      }
-      \list{organization}{1}{%
-        {Fundação Instituto Brasileiro de Geografia e Estatística}%
-      }
-      \list{publisher}{1}{%
-        {Centro de Documentação e Disseminação de Informações.}%
-      }
-      \strng{namehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{fullhash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{fullhashraw}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{bibnamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{authorbibnamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{authornamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{authorfullhash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{authorfullhashraw}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{shortauthorbibnamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{shortauthornamehash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{shortauthorfullhash}{3898f1ceb6fdd56f963db7f9326130e4}
-      \strng{shortauthorfullhashraw}{3898f1ceb6fdd56f963db7f9326130e4}
-      \field{extraname}{2}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{shortauthor}
-      \field{labeltitlesource}{title}
-      \field{edition}{3}
-      \field{title}{Normas de apresentação tabular}
-      \field{urlday}{16}
-      \field{urlmonth}{8}
-      \field{urlyear}{2019}
-      \field{year}{1993}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://biblioteca.ibge.gov.br/visualizacao/livros/liv23907.pdf
-      \endverb
-      \verb{url}
-      \verb http://biblioteca.ibge.gov.br/visualizacao/livros/liv23907.pdf
-      \endverb
+      \field{journaltitle}{International Advanced Research Journal in Science, Engineering and Technology}
+      \field{number}{1}
+      \field{title}{Introduction to IOT}
+      \field{volume}{5}
+      \field{year}{2018}
+      \field{pages}{41\bibrangedash 44}
+      \range{pages}{4}
     \endentry
     \entry{martin2000design}{article}{}{}
       \name{author}{1}{}{%
@@ -441,6 +255,81 @@
       \field{isbn}{0134494164}
       \field{title}{Clean Architecture: A Craftsman's Guide to Software Structure and Design}
       \field{year}{2017}
+    \endentry
+    \entry{masse2011rest}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d17b34343fbf45b0a0ec9962f1ac0431}{%
+           family={Masse},
+           familyi={M\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {" O'Reilly Media, Inc."}%
+      }
+      \strng{namehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{fullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{fullhashraw}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{bibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorbibnamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authornamehash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorfullhash}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \strng{authorfullhashraw}{d17b34343fbf45b0a0ec9962f1ac0431}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{REST API design rulebook}
+      \field{year}{2011}
+    \endentry
+    \entry{1236470}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=789294120135bd6c707cb8a088bd1635}{%
+           family={Turner},
+           familyi={T\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d00f431cf6ba32dfa8eb5db1cfe169ce}{%
+           family={Budgen},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bbf03a2ed81e6fdfade52a07b39227a}{%
+           family={Brereton},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{fullhash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{fullhashraw}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{bibnamehash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{authorbibnamehash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{authornamehash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{authorfullhash}{aeb6f9508d2e3b642946335e71836a50}
+      \strng{authorfullhashraw}{aeb6f9508d2e3b642946335e71836a50}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer}
+      \field{number}{10}
+      \field{title}{Turning software into a service}
+      \field{volume}{36}
+      \field{year}{2003}
+      \field{pages}{38\bibrangedash 44}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/MC.2003.1236470
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

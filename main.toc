@@ -54,29 +54,46 @@
 \contentsline {subsection}{\numberline {5.2.1}Configuração Inicial do Projeto}{43}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Implementação das Funcionalidades}{44}{subsection.5.2.2}%
 \contentsline {subsubsection}{\numberline {5.2.2.1}Modelagem do Banco de Dados}{44}{subsubsection.5.2.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}Módulo de Usuarios}{45}{subsubsection.5.2.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.3}Autenticação e Autorização}{45}{subsubsection.5.2.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.2.4}Módulo de Tenants}{45}{subsubsection.5.2.2.4}%
-\contentsline {subsubsection}{\numberline {5.2.2.5}Módulo de Quadras}{45}{subsubsection.5.2.2.5}%
-\contentsline {subsubsection}{\numberline {5.2.2.6}Módulo de Disponibilidade de Quadras}{45}{subsubsection.5.2.2.6}%
-\contentsline {subsubsection}{\numberline {5.2.2.7}Integração com eWeLink}{45}{subsubsection.5.2.2.7}%
-\contentsline {subsubsection}{\numberline {5.2.2.8}Módulo de Quadras-Dispositivos}{45}{subsubsection.5.2.2.8}%
-\contentsline {subsubsection}{\numberline {5.2.2.9}Módulo de Reservas e Comandos IoT}{45}{subsubsection.5.2.2.9}%
-\contentsline {subsubsection}{\numberline {5.2.2.10}Envio de Comandos IoT}{45}{subsubsection.5.2.2.10}%
-\contentsline {section}{\numberline {5.3}Análise de Resultados}{45}{section.5.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Autenticação e Autorização}{47}{subsubsection.5.2.2.2}%
+\contentsline {paragraph}{\numberline {5.2.2.2.1}Autenticação de Usuário}{47}{paragraph.5.2.2.2.1}%
+\contentsline {paragraph}{\numberline {5.2.2.2.2}Registro de Usuário}{49}{paragraph.5.2.2.2.2}%
+\contentsline {paragraph}{\numberline {5.2.2.2.3}Renovação de Token}{49}{paragraph.5.2.2.2.3}%
+\contentsline {paragraph}{\numberline {5.2.2.2.4}Logout}{49}{paragraph.5.2.2.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}Módulo de Tenants}{50}{subsubsection.5.2.2.3}%
+\contentsline {paragraph}{\numberline {5.2.2.3.1}Criação de um Tenant}{50}{paragraph.5.2.2.3.1}%
+\contentsline {paragraph}{\numberline {5.2.2.3.2}Consulta de um Tenant}{51}{paragraph.5.2.2.3.2}%
+\contentsline {paragraph}{\numberline {5.2.2.3.3}Outras Operações}{51}{paragraph.5.2.2.3.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}Módulo de Usuarios}{51}{subsubsection.5.2.2.4}%
+\contentsline {paragraph}{\numberline {5.2.2.4.1}Criação de Usuário}{52}{paragraph.5.2.2.4.1}%
+\contentsline {paragraph}{\numberline {5.2.2.4.2}Consulta de Usuário por ID}{53}{paragraph.5.2.2.4.2}%
+\contentsline {paragraph}{\numberline {5.2.2.4.3}Listagem de Usuários de uma Empresa}{53}{paragraph.5.2.2.4.3}%
+\contentsline {paragraph}{\numberline {5.2.2.4.4}Outras Operações}{53}{paragraph.5.2.2.4.4}%
+\contentsline {subsubsection}{\numberline {5.2.2.5}Módulos de Quadras e Disponibilidade de Quadras}{53}{subsubsection.5.2.2.5}%
+\contentsline {paragraph}{\numberline {5.2.2.5.1}Criação de uma Quadra}{54}{paragraph.5.2.2.5.1}%
+\contentsline {paragraph}{\numberline {5.2.2.5.2}Consulta de uma Quadra}{54}{paragraph.5.2.2.5.2}%
+\contentsline {paragraph}{\numberline {5.2.2.5.3}Criação de Disponibilidade de Quadra}{55}{paragraph.5.2.2.5.3}%
+\contentsline {paragraph}{\numberline {5.2.2.5.4}Consulta de Disponibilidade de Quadra}{55}{paragraph.5.2.2.5.4}%
+\contentsline {subsubsection}{\numberline {5.2.2.6}Integração com eWeLink}{55}{subsubsection.5.2.2.6}%
+\contentsline {paragraph}{\numberline {5.2.2.6.1}Autenticação na API eWeLink}{56}{paragraph.5.2.2.6.1}%
+\contentsline {paragraph}{\numberline {5.2.2.6.2}Obtenção do Token de Acesso eWeLink}{56}{paragraph.5.2.2.6.2}%
+\contentsline {paragraph}{\numberline {5.2.2.6.3}Listagem de Dispositivos eWeLink}{57}{paragraph.5.2.2.6.3}%
+\contentsline {subsubsection}{\numberline {5.2.2.7}Módulo de Quadras-Dispositivos}{57}{subsubsection.5.2.2.7}%
+\contentsline {subsubsection}{\numberline {5.2.2.8}Módulo de Reservas e Comandos IoT}{57}{subsubsection.5.2.2.8}%
+\contentsline {subsubsection}{\numberline {5.2.2.9}Envio de Comandos IoT}{57}{subsubsection.5.2.2.9}%
+\contentsline {section}{\numberline {5.3}Análise de Resultados}{57}{section.5.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Conclusão}}{46}{chapter.6}%
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Conclusão}}{58}{chapter.6}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{REFERÊNCIAS}{47}{section*.22}%
+\contentsline {chapter}{REFERÊNCIAS}{59}{section*.22}%
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Descrição 1}}{48}{appendix.A}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Descrição 1}}{60}{appendix.A}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Descrição 2}}{49}{appendix.anexochapback.1}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Descrição 2}}{61}{appendix.anexochapback.1}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.27)  31 JAN 2025 21:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.27)  1 FEB 2025 19:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1216,11 +1216,11 @@ Package biblatex Info: ... and expl3
  (C:\Users\gusta\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 117.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 193.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/helvet/m/n on input line 117.
+(Font)                  OMX/cmex/m/n --> OMX/helvet/m/n on input line 193.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/helvet/m/n on input line 117.
+(Font)                  OMX/cmex/m/n --> OMX/helvet/m/n on input line 193.
 \c@quadro=\count537
 \c@loqdepth=\count538
 \cftbeforequadroskip=\skip296
@@ -1640,7 +1640,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 \openout2 = `chapters/4-chapter.aux'.
 
  (chapters/4-chapter.tex
-<images/cap4/arquitetura_geral.png, id=366, 697.10437pt x 686.565pt>
+<images/cap4/arquitetura_geral.png, id=400, 697.10437pt x 686.565pt>
 File: images/cap4/arquitetura_geral.png Graphic file (type png)
 <use images/cap4/arquitetura_geral.png>
 Package pdftex.def Info: images/cap4/arquitetura_geral.png  used on input line 29.
@@ -1685,39 +1685,89 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
+LaTeX Warning: Reference `subsubsec:modulo_quadras' on page 43 undefined on input line 172.
+
+
+LaTeX Warning: Reference `subsubsec:modulo_disponibilidade_quadras' on page 43 undefined on input line 172.
+
+
+
 [43]
-<images/cap5/modelage_banco_dados.png, id=431, 1153.30875pt x 603.75563pt>
+<images/cap5/modelage_banco_dados.png, id=464, 1153.30875pt x 603.75563pt>
 File: images/cap5/modelage_banco_dados.png Graphic file (type png)
 <use images/cap5/modelage_banco_dados.png>
-Package pdftex.def Info: images/cap5/modelage_banco_dados.png  used on input line 178.
+Package pdftex.def Info: images/cap5/modelage_banco_dados.png  used on input line 180.
 (pdftex.def)             Requested size: 438.26189pt x 229.42952pt.
-)
+
 
 [44 <./images/cap5/modelage_banco_dados.png>]
 
 [45]
+
+[46]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 304.
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 307.
+
+
+[47]
+
+[48]
+
+[49]
+
+[50]
+
+[51]
+
+[52]
+
+[53]
+Overfull \hbox (135.75749pt too wide) in paragraph at lines 553--555
+\T1/phv/m/n/12 (-10) As ro-tas des-ses mó-du-los são de-fi-ni-das nos con-tro-la-do-res \T1/cmtt/m/n/12 FieldsController \T1/phv/m/n/12 (-10) e \T1/cmtt/m/n/12 FieldAvailabilitiesController\T1/phv/m/n/12 (-10) .
+ []
+
+
+
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
+
+ []
+
+
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
+
+ []
+
+
+
+[56])
+
+[57]
 \openout2 = `chapters/6-chapter.aux'.
 
  (chapters/6-chapter.tex)
 
-[46
+[58
 
 
 
 
 ] (aftertext/apendice_a.tex
 
-[47
+[59
 
 
 
 ]) (aftertext/anexo_a.tex
 
-[48
+[60
 
 ])
 
-[49
+[61
 
 ]
 \tf@lof=\write6
@@ -1741,22 +1791,25 @@ L3 programming layer <2020/03/25>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37568 strings out of 473535
- 670575 string characters out of 5714935
- 1673312 words of memory out of 5000000
- 59900 multiletter control sequences out of 15000+600000
- 599353 words of font info for 181 fonts, out of 8000000 for 9000
+ 38195 strings out of 473535
+ 677161 string characters out of 5714935
+ 1830368 words of memory out of 5000000
+ 60345 multiletter control sequences out of 15000+600000
+ 600419 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,17n,117p,2446b,4447s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\gusta\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (50 pages, 460912 bytes).
+ <C:\Users\gusta\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\gusta\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (62 pages, 553021 bytes).
 PDF statistics:
- 747 PDF objects out of 1000 (max. 8388607)
- 159 named destinations out of 1000 (max. 500000)
- 41036 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1159 PDF objects out of 1200 (max. 8388607)
+ 331 named destinations out of 1000 (max. 500000)
+ 41684 words of extra memory for PDF output out of 42996 (max. 10000000)
 
