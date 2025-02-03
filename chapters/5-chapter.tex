@@ -135,11 +135,11 @@ A primeira etapa do projeto se deu pela configuração do ambiente de desenvolvi
 \begin{verbatim}
 	nest new sports
 \end{verbatim}
-e instaladas as dependências necessárias. Algumas das bibliotecas usadas estão listadas no \autoref{qua:bibliotecas}.
+e instaladas as dependências necessárias. Algumas das bibliotecas usadas estão listadas na \autoref{tab:bibliotecas}.
 
-\begin{quadro}[htb]
+\begin{table}[htb]
 	\centering
-	\caption{\label{qua:bibliotecas}Bibliotecas utilizadas.}	
+	\caption{\label{tab:bibliotecas}Bibliotecas utilizadas.}	
 	\begin{tabular}{|l|p{4cm}|}
 		\hline
 		\textbf{Nome} & \textbf{versão} \\ \hline
@@ -163,9 +163,21 @@ e instaladas as dependências necessárias. Algumas das bibliotecas usadas estã
     \text{uuid} & 9.0.1 \\ \hline
 	\end{tabular}
 	\fonte{Autor.}
-\end{quadro}
+\end{table}
 
 Em seguida os cointêneres Docker foram configurados para executar o banco de dados PostgreSQL e o PgAdmin (Interface Gráfica para gerenciar o banco de dados PostgreSQL) através de um arquivo docker-compose. Com o ambiente de desenvolvimento configurado, foi realizada a configuração da conexão da aplicação com o banco de dados PostgreSQL com auxílio da biblioteca TypeOrm. O TypeORM é uma biblioteca ORM (Object-Relational Mapping) para TypeScript e JavaScript, que facilita a interação com bancos de dados relacionais. Ele permite a abstração do banco de dados, permitindo que os desenvolvedores se concentrem na manipulação dos dados em vez da implementação detalhada das operações SQL.
+
+\subsection{Arquitetura de Pastas}\label{subsec:arquitetura_pastas}
+
+A arquitetura do projeto foi dividida em pastas para organizar o código fonte e facilitar a manutenção, seguindo a metodologia de arquitetura modular e de camadas. A pasta "src" contém todos os arquivos do projeto, divididos em pastas para cada funcionalidade ou recurso do sistema. As principais pastas são "config" (configuração do TypeORM com PostgreSQL) , "db" (configuração da conexão do banco PostgreSQL), "modules" (módulos dos recursos da aplicação, como \textit{tenants}, \textit{users} e etc.) e "resources" (como funções de manipulação de dados, \textit{pipes} para criptografia de senhas, \textit{interceptors} para logs de informações e \textit{filters} para tratamento de erros).
+
+\begin{figure}[htp]
+	\caption{\label{fig:arquitetura_pastas}Arquitetura de pastas da aplicação backend.}
+	\begin{center}
+	  \includegraphics[scale=0.5]{images/cap5/arq_pastas.png}
+	\end{center}
+	\fonte{Autor.}
+\end{figure}
 
 \subsection{Implementação das Funcionalidades}\label{subsec:implementacao_funcionalidades}
 
@@ -299,7 +311,7 @@ O controlador de autenticação (\texttt{auth.controller.ts}) define os endpoint
 	\end{enumerate}
 \end{itemize}
 
-O código construído para o \textit{controller} e  o \textit{service} estão disponíveis no \autoref{cod:create-user-controller} e  no \autoref{cod:create-user-service}, respectivamente, e servirão de exemplo para os demais \textit{controllers} e \textit{services}.
+O código construído para o \textit{controller} e  o \textit{service} estão disponíveis no \autoref{cod:login-controller} e  no \autoref{cod:login-service}, respectivamente, e servirão de exemplo para os demais \textit{controllers} e \textit{services}.
 
 \begin{lstlisting}[caption={Exemplo de \textit{controller} para \textit{login}.},label={cod:login-controller}]
 	@Post('login')
@@ -419,7 +431,7 @@ As principais funcionalidades deste módulo incluem:
 O acesso às rotas do módulo é protegido por um sistema de autenticação e autorização baseado em \textit{roles}, garantindo que apenas usuários autorizados possam executar determinadas ações.
 
 \textbf{Fluxo das Rotas} \\
-As rotas do módulo de \textit{tenants} são definidas no \texttt{TenantsController}, garantindo a estruturação adequada dos endpoints da API. A seguir, apresentamos o fluxo de duas das principais operações: criação e busca de \textit{tenants}.
+As rotas do módulo de \textit{tenants} são definidas no \texttt{TenantsController}, garantindo a estruturação adequada dos endpoints da API. A seguir, estão dispostos os fluxos de duas das principais operações: criação e busca de \textit{tenants}.
 
 \subsubsubsection{Criação de um Tenant}
 \begin{itemize}
@@ -448,8 +460,7 @@ As rotas do módulo de \textit{tenants} são definidas no \texttt{TenantsControl
 	\end{enumerate}
 \end{itemize}
 
-\subsubsubsection{Outras Operações}
-
+\textbf{Outras Operações} \\
 Além das rotas descritas acima, o módulo também disponibiliza endpoints para listar todos os \textit{tenants}, atualizar informações e remover um \textit{tenant}. Estas operações são protegidas por um sistema de autenticação e autorização baseado em \textit{roles}, garantindo que apenas usuários com as permissões adequadas possam realizá-las.
 
 \subsubsection{Módulo de Usuarios}\label{subsubsec:modulo_usuarios}
@@ -464,7 +475,7 @@ O controlador de usuários (\texttt{users.controller.ts}) define os endpoints pa
 
 \subsubsubsection{Criação de Usuário}
 \begin{itemize}
-	\item \textbf{Rota:} \texttt{POST /users}
+	\item \textbf{Rota:} \texttt{POST /tenant/:tenantId/users}
 	\item \textbf{Descrição:} Permite criar um novo usuário, recebendo os dados básicos no corpo da requisição. Caso seja informado um \texttt{tenantId}, o usuário é vinculado a essa empresa.
 	\item \textbf{Fluxo:}
 	\begin{enumerate}
@@ -507,7 +518,7 @@ O controlador de usuários (\texttt{users.controller.ts}) define os endpoints pa
 
 \subsubsubsection{Consulta de Usuário por ID}
 \begin{itemize}
-	\item \textbf{Rota:} \texttt{GET /users/:id}
+	\item \textbf{Rota:} \texttt{GET /tenant/:tenantId/users/:id}
 	\item \textbf{Descrição:} Retorna as informações detalhadas de um usuário, incluindo seus papéis nas empresas.
 	\item \textbf{Fluxo:}
 	\begin{enumerate}
@@ -520,7 +531,7 @@ O controlador de usuários (\texttt{users.controller.ts}) define os endpoints pa
 
 \subsubsubsection{Listagem de Usuários de uma Empresa}
 \begin{itemize}
-	\item \textbf{Rota:} \texttt{GET /users}
+	\item \textbf{Rota:} \texttt{GET /tenant/:tenantId/users}
 	\item \textbf{Descrição:} Retorna uma lista de usuários vinculados a uma empresa.
 	\item \textbf{Fluxo:}
 	\begin{enumerate}
@@ -530,10 +541,50 @@ O controlador de usuários (\texttt{users.controller.ts}) define os endpoints pa
 	\end{enumerate}
 \end{itemize}
 
-\subsubsubsection{Outras Operações}
+\subsubsubsection{Atualização de Usuário}
+\begin{itemize}
+  \item \textbf{Rota:} \texttt{PATCH /tenant/:tenantId/users/:id}
+  \item \textbf{Descrição:} Permite a edição dos dados cadastrais de um usuário.
+  \item \textbf{Fluxo:}
+  \begin{enumerate}
+    \item O controlador recebe o \texttt{id} e os novos dados do usuário.
+    \item O serviço verifica se o usuário existe.
+    \item Caso não exista, retorna erro.
+    \item Atualiza os dados e os salva no banco.
+    \item Retorna os novos dados do usuário.
+  \end{enumerate}
+\end{itemize}
 
-Além das rotas descritas acima, o módulo também disponibiliza endpoints para buscar e remover um usuário específico, atualizar informações do usuário e papel do usuário em uma empresa.
+\subsubsubsection{Atualização de Papel de Usuário}
+\begin{itemize}
+  \item \textbf{Rota:} \texttt{PATCH /tenant/:tenantId/users/:id/role}
+  \item \textbf{Descrição:} Atualiza o papel do usuário dentro de uma empresa.
+  \item \textbf{Fluxo:}
+  \begin{enumerate}
+    \item O controlador recebe o \texttt{id} do usuário, o \texttt{tenantId} e o novo papel.
+    \item O serviço verifica se o papel existe.
+    \item O serviço verifica se o usuário solicitante tem permissão para a alteração.
+    \item Caso não tenha permissão, retorna erro.
+    \item Atualiza o papel e salva no banco.
+    \item Retorna os novos dados do usuário.
+  \end{enumerate}
+\end{itemize}
 
+\subsubsubsection{Exclusão de Usuário}
+\begin{itemize}
+  \item \textbf{Rota:} \texttt{DELETE /tenant/:tenantId/users/:id}
+  \item \textbf{Descrição:} Remove um usuário do sistema (exclusão lógica).
+  \item \textbf{Fluxo:}
+  \begin{enumerate}
+    \item O controlador recebe o \texttt{id} do usuário.
+    \item O serviço verifica se o usuário existe.
+    \item Caso não exista, retorna erro.
+    \item Apaga logicamente o registro do banco.
+    \item Retorna sucesso.
+  \end{enumerate}
+\end{itemize}
+
+\textbf{Conclusão} \\
 Esse módulo é essencial para a gestão dos usuários do sistema, garantindo que cada um tenha acesso adequado aos recursos da empresa em que está vinculado. As regras de permissão asseguram que apenas usuários autorizados possam modificar informações sensíveis, proporcionando segurança e integridade aos dados.
 
 \subsubsection{Módulos de Quadras e Disponibilidade de Quadras}\label{subsubsec:modulos_quadras_disponibilidade_quadras}
@@ -610,8 +661,7 @@ Além das rotas descritas acima, os módulos também disponibilizam endpoints pa
 
 \subsubsection{Integração com eWeLink}\label{subsubsec:integacao_ewelink}
 
-\textbf{Visão Geral}\\
-
+\textbf{Visão Geral} \\
 O módulo de integração com a API eWeLink é responsável por permitir a conexão entre o sistema e dispositivos IoT suportados pela plataforma eWeLink. Ele possibilita que os administradores das empresas associem sua conta à plataforma, consultem os seus dispositivos e interajam de forma automatizada com os equipamentos cadastrados.
 
 As principais funcionalidades deste módulo incluem:
@@ -623,9 +673,8 @@ As principais funcionalidades deste módulo incluem:
     \item Controle seguro de permissões, garantindo que apenas administradores possam gerenciar dispositivos.
 \end{itemize}
 
-\textbf{Fluxo das Rotas}\\
-
-As rotas deste módulo são definidas no \texttt{EwelinkController} e interagem com o serviço de autenticação e gerenciamento de dispositivos eWeLink, fornecido pelo \texttt{EwelinkService}. A seguir, apresenta-se o fluxo das operações de autenticação e listagem de dispositivos.
+\textbf{Fluxo das Rotas} \\
+As rotas deste módulo são definidas no \texttt{EwelinkController} e interagem com o serviço de autenticação e gerenciamento de dispositivos eWeLink, fornecido pelo \texttt{EwelinkService}. A seguir, apresenta-se o fluxo das operações deste módulo.
 
 \subsubsubsection{Autenticação na API eWeLink}
 \begin{itemize}
@@ -634,10 +683,42 @@ As rotas deste módulo são definidas no \texttt{EwelinkController} e interagem 
     \item \textbf{Fluxo:}
     \begin{enumerate}
         \item O usuário autenticado faz uma requisição para iniciar a autenticação com a API eWeLink.
-        \item O serviço gera uma URL de autenticação e redireciona o usuário para a página de login da eWeLink.
-        \item Após a autenticação bem-sucedida, a eWeLink redireciona o usuário de volta ao sistema com um código de autorização.
+        \item O serviço gera uma URL de autenticação com a informação do \texttt{tenantId} e redireciona o usuário para a página de login da eWeLink.
+        \item Após a autenticação bem-sucedida, a eWeLink redireciona o usuário de volta ao sistema com um código de autorização através do \texttt{tenantId}.
     \end{enumerate}
 \end{itemize}
+
+Esse fluxo de autenticação segue o formato OAuth2.0. OAuth (Open Authorization) 2.0 é um protocolo padrão para autorização de acesso a recursos online. Ele permite que um cliente solicite permissão específica do usuário para o acesso a dados ou serviços, sem compartilhar informações sensitivas diretamente com o provedor de recursos. OAuth2.0 define quatro protocolos:
+
+\begin{enumerate}
+  \item Autorização de Cliente (Client Authorization): o cliente solicita permissão ao usuário para autorizar o acesso à aplicação web ou dispositivo móvel que deseja usar os recursos do provedor de recursos.
+  \item Tokens de Acesso (Access Tokens): o provedor de recursos concede um token de acesso ao cliente, que é utilizado para autenticar futuras solicitações e obter acesso aos recursos protegidos.
+  \item Refresh Tokens: quando o token de acesso expira ou está prestes a fazer isso, o cliente pode usar o refresh token para obter um novo token sem reautenticar o usuário.
+  \item Gerenciamento de Autorização (Authorization Management): o provedor de recursos permite que os administradores revoguem ou gerenciem as permissões concedidas a um cliente.
+\end{enumerate}
+
+O fluxo geral do protocolo OAuth2.0 é o seguinte:
+
+\begin{enumerate}
+  \item Autenticação do Usuário: o usuário realiza autenticação no provedor de recursos.
+  \item Solicitando Autorização: a aplicação web ou dispositivo móvel solicita permissão ao usuário para acessar um recurso protegido em nome do usuário.
+  \item Autorização de Cliente: o provedor de recursos exibe uma janela à qual o cliente pode dar autorização à aplicação web ou dispositivo móvel.
+  \item Gerando Tokens de Acesso e Refresh Tokens: se o usuário concede a autorização, o provedor de recursos gera um token de acesso e um refresh token (se for o caso).
+  \item Recebendo e Utilizando Tokens de Acesso: a aplicação web ou dispositivo móvel envia o token de acesso para solicitar os recursos protegidos.
+  \item Verificando e Renovando Tokens de Acesso: quando o token de acesso expira, a aplicação web ou dispositivo móvel usa o refresh token para obter um novo token sem reautenticar o usuário.
+\end{enumerate}
+
+OAuth2.0 é amplamente utilizado em plataformas online, como Google Drive, Facebook e Twitter, que promove a autorização segura de recursos entre diferentes aplicações.
+
+\begin{figure}[htp]
+	\caption{\label{fig:oauth1}OAuth2.0 EWeLink. Obter oauth \textit{token}}
+	\begin{center}
+	  \includegraphics[scale=0.45]{images/cap5/oauth_1.png}
+	\end{center}
+	\fonte{\cite{COOLKITOAUTH}}
+\end{figure}
+
+No contexto da aplicação desenvolvida neste PFC, o usuário é redirecionado para a página de autenticação da eWeLink, onde ele pode inserir suas credenciais. Após o login bem-sucedido, a eWeLink redireciona o usuário de volta ao sistema com um código de autorização (\textit{access token}) conforme demonstrado na \autoref{fig:oauth1}, que é armazenado no banco de dados para permitir interações futuras com a API.
 
 \subsubsubsection{Obtenção do Token de Acesso eWeLink}
 \begin{itemize}
@@ -663,13 +744,477 @@ As rotas deste módulo são definidas no \texttt{EwelinkController} e interagem 
     \end{enumerate}
 \end{itemize}
 
+\begin{figure}[htp]
+	\caption{\label{fig:oauth2}OAuth2.0 EWeLink. Usando um \textit{access token}}
+	\begin{center}
+	  \includegraphics[scale=0.45]{images/cap5/oauth_2.png}
+	\end{center}
+	\fonte{\cite{COOLKITOAUTH}}
+\end{figure}
+
+A \autoref{fig:oauth2} mostra o processo de uso do \textit{access token} na interação com a plataforma \textit{Coolkit Open Platform 4.3 EWeLink}. Neste exemplo, o usuário autenticado com permissão realiza uma requisição para listar os dispositivos, que são consultados na API eWeLink e retornados ao usuário.
+
+\begin{figure}[htp]
+	\caption{\label{fig:oauth3}OAuth2.0 EWeLink. Atualizando um \textit{access token}}
+	\begin{center}
+	  \includegraphics[scale=0.45]{images/cap5/oauth_3.png}
+	\end{center}
+	\fonte{\cite{COOLKITOAUTH}}
+\end{figure}
+
+Caso o \textit{access token} esteja expirado ou inválido, a aplicação solicita um novo token utilizando o \textit{refresh token}. O servidor de autorização gera um novo \textit{access token} e um novo \textit{refresh token}, que podem ser usados para futuras requisições. Caso o \textit{refresh token} esteja expirado ou inválido, a plataforma acusará erro e indicará ao usuário para efetuar login novamente para obter um novo \textit{access token} e \textit{refresh token}.
+ 
 \textbf{Outras Operações}\\
 Além das rotas descritas acima, o módulo também inclui funcionalidades para atualização de tokens de acesso, controle de status dos dispositivos e integração com eventos IoT.
 
 \subsubsection{Módulo de Quadras-Dispositivos}\label{subsubsec:modulo_quadras_dispositivos}
 
+\textbf{Visão Geral}\\
+O módulo de \textit{field-devices} é responsável pela integração entre as quadras esportivas e os dispositivos IoT, permitindo o gerenciamento dos equipamentos eletrônicos associados a cada quadra. Essa funcionalidade possibilita o controle automatizado de iluminação, climatização e outros dispositivos conectados, otimizando a experiência do usuário e a gestão operacional do sistema.
+
+As principais funcionalidades deste módulo incluem:
+
+\begin{itemize}
+\item Associação de comandos de dispositivos a quadras esportivas específicas.
+\item Consulta e listagem dos comandos de dispositivos cadastrados para uma quadra.
+\item Atualização e remoção de dispositivos vinculados às quadras.
+\item Controle seguro de permissões, garantindo que apenas administradores e gerentes possam gerenciar os dispositivos.
+\end{itemize}
+
+\textbf{Fluxo das Rotas}\\
+As rotas deste módulo são definidas no \texttt{FieldDevicesController} e interagem com o serviço de gerenciamento de dispositivos \texttt{FieldDevicesService}. A seguir, são apresentados os fluxos de todas as operações disponíveis.
+
+\subsubsubsection{Criação de um Dispositivo de Quadra}
+\begin{itemize}
+\item \textbf{Rota:} \texttt{POST /tenants/:tenantId/fields/:fieldId/field-devices}
+\item \textbf{Descrição:} Criar um novo comando de dispositivo vinculado a uma quadra esportiva.
+\item \textbf{Fluxo:}
+\begin{enumerate}
+\item O usuário autenticado com permissão faz uma requisição contendo os dados do dispositivo obtidos através da API eWeLink juntamente com o comando desejado.
+\item O serviço verifica se a quadra informada existe.
+\item Se validado, os dados do dispositivo e o comando desejado são armazenados no banco de dados e associados à quadra.
+\item A resposta retorna uma mensagem de sucesso e os detalhes do dispositivo cadastrado.
+\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Consulta de Todos os Dispositivos de uma Quadra}
+\begin{itemize}
+\item \textbf{Rota:} \texttt{GET /tenants/:tenantId/fields/:fieldId/field-devices}
+\item \textbf{Descrição:} Retorna uma lista com todos os dispositivos vinculados a uma quadra específica.
+\item \textbf{Fluxo:}
+\begin{enumerate}
+\item O usuário faz uma requisição para listar os dispositivos de uma quadra específica.
+\item O serviço busca todos os dispositivos associados à quadra no banco de dados.
+\item A lista dos dispositivos cadastrados é retornada na resposta.
+\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Consulta de um Dispositivo de Quadra Específico}
+\begin{itemize}
+\item \textbf{Rota:} \texttt{GET /tenants/:tenantId/fields/:fieldId/field-devices/:id}
+\item \textbf{Descrição:} Buscar um dispositivo específico vinculado a uma quadra esportiva.
+\item \textbf{Fluxo:}
+\begin{enumerate}
+\item O usuário faz uma requisição com o identificador do dispositivo e da quadra correspondente.
+\item O serviço consulta o banco de dados para localizar o dispositivo correspondente.
+\item Se encontrado, os detalhes do dispositivo são retornados na resposta.
+\item Se o dispositivo não for encontrado, uma exceção é lançada informando o erro.
+\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Atualização de um Dispositivo de Quadra}
+\begin{itemize}
+\item \textbf{Rota:} \texttt{PATCH /tenants/:tenantId/fields/:fieldId/field-devices/:id}
+\item \textbf{Descrição:} Atualiza as informações de um comando de dispositivo vinculado a uma quadra esportiva.
+\item \textbf{Fluxo:}
+\begin{enumerate}
+\item O usuário autenticado com permissão faz uma requisição contendo os dados atualizados do dispositivo.
+\item O serviço verifica se o dispositivo informado existe.
+\item Se validado, os dados do dispositivo são atualizados no banco de dados.
+\item A resposta retorna uma mensagem de sucesso e os detalhes do dispositivo atualizado.
+\end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Remoção de um Dispositivo de Quadra}
+\begin{itemize}
+\item \textbf{Rota:} \texttt{DELETE /tenants/:tenantId/fields/:fieldId/field-devices/:id}
+\item \textbf{Descrição:} Remove um comando de dispositivo vinculado a uma quadra esportiva.
+\item \textbf{Fluxo:}
+\begin{enumerate}
+\item O usuário autenticado com permissão faz uma requisição para remover o dispositivo.
+\item O serviço verifica se o dispositivo informado existe.
+\item Se encontrado, o dispositivo é removido logicamente do banco de dados.
+\item A resposta confirma a remoção do dispositivo.
+\end{enumerate}
+\end{itemize}
+
 \subsubsection{Módulo de Reservas e Comandos IoT}\label{subsubsec:modulo_reservas}
+
+\textbf{Visão Geral}\\
+O módulo de \textit{reservas e comandos IoT} é responsável pelo gerenciamento das reservas de quadras esportivas e pela automação dos dispositivos IoT associados. Ele garante que os usuários possam realizar reservas de maneira eficiente, ao mesmo tempo que controla dispositivos como iluminação e climatização, otimizando os recursos disponíveis.
+
+As principais funcionalidades deste módulo incluem:
+
+\begin{itemize}
+    \item Criação e gerenciamento de reservas de quadras esportivas.
+    \item Listagem de reservas existentes, incluindo filtros por período e usuário.
+    \item Controle automatizado de dispositivos IoT com base nos horários das reservas.
+    \item Prevenção de conflitos de horários e gerenciamento de comandos consecutivos para dispositivos.
+\end{itemize}
+
+\textbf{Fluxo das Rotas}\\
+As rotas deste módulo são definidas no \texttt{BookingsController} e interagem com o serviço de gerenciamento de reservas e automação de dispositivos IoT, fornecido pelo \texttt{BookingsService}. A seguir, são apresentados os fluxos das principais operações disponíveis.
+
+\subsubsubsection{Criação de uma Reserva}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{POST /tenants/:tenantId/fields/:fieldId/bookings}
+    \item \textbf{Descrição:} Criar uma nova reserva para uma quadra esportiva.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário autenticado com permissão faz uma requisição contendo os detalhes da reserva.
+        \item O serviço verifica se a quadra informada existe e se a disponibilidade está correta.
+        \item Caso não haja conflitos de horário, a reserva é criada e armazenada no banco de dados.
+        \item Se houver dispositivos IoT associados à quadra, são criados comandos automáticos para acioná-los no início e no final da reserva.
+        \item A resposta retorna uma mensagem de sucesso com os detalhes da reserva e dos comandos IoT gerados.
+    \end{enumerate}
+\end{itemize}
+
+O código construído para o o \textit{service} está disponíveis no \autoref{cod:create-booking-service}.
+
+\begin{lstlisting}[caption={Exemplo de \textit{controller} para \textit{login}.},label={cod:create-booking-service}]
+	async create(
+    createBookingDto: CreateBookingDto,
+    fieldId: string,
+    userId: string
+  ) {
+    const fieldAvailability = await this.fieldAvailabilitiesService.findOne(
+      fieldId,
+      createBookingDto.fieldAvailabilityId
+    )
+
+    const user = await this.usersService.findById(userId)
+
+    const startDateTime = moment(createBookingDto.startTime)
+    const endDateTime = moment(createBookingDto.endTime)
+    console.log('startDateTime moment', startDateTime)
+    console.log('endDateTime moment', endDateTime)
+
+    const hasConflict = await this.hasBookingConflict(
+      fieldId,
+      createBookingDto.startTime,
+      createBookingDto.endTime
+    )
+
+    if (hasConflict)
+      throw new ConflictException('Ja existe uma reserva neste periodo')
+
+    // check if the week days are the same
+    if (
+      startDateTime.utc().day() !==
+      moment().day(fieldAvailability.dayOfWeek).day()
+    )
+      throw new BadRequestException(
+        'Dia da semana solicitado nao confere com o dia disponivel'
+      )
+
+    // check if the start and end times match the availability range
+    if (
+      startDateTime.utc().format('HH:mm:ss') !== fieldAvailability.startTime ||
+      endDateTime.utc().format('HH:mm:ss') !== fieldAvailability.endTime
+    ) {
+      console.log('hora disponivel inicio:', fieldAvailability.startTime)
+      console.log(
+        'hora solicitada inicio:',
+        startDateTime.utc().format('HH:mm:ss')
+      )
+      console.log('hora disponivel final:', fieldAvailability.endTime)
+      console.log(
+        'hora solicitada final:',
+        endDateTime.utc().format('HH:mm:ss')
+      )
+
+      throw new BadRequestException(
+        'Horarios solicitados nao conferem com os horarios disponiveis'
+      )
+    }
+
+    const booking = new Booking()
+
+    Object.assign(booking, {
+      ...createBookingDto,
+      field: fieldAvailability.field,
+      user
+    } as unknown as Booking)
+    // Filter data to return without user for the booking
+    const createdBooking = await this.bookingsRepository.save(booking)
+
+    const fieldDevicesByField = await this.fieldDevicesService.findAll(fieldId)
+
+    // if there are field devices, create device commands
+    const returnObject = { booking: createdBooking }
+    if (fieldDevicesByField.length > 0) {
+      const bookingDeviceCommands = fieldDevicesByField.map((device) => {
+        const deviceCommand = new DeviceCommand()
+        Object.assign(deviceCommand, {
+          booking: createdBooking,
+          fieldDevice: device,
+          executionTime:
+            device.eventType === EventTypeEnum.START
+              ? booking.startTime
+              : booking.endTime
+        })
+        return deviceCommand
+      })
+
+      const consecutiveCommands = await Promise.all(
+        bookingDeviceCommands.map((command) => {
+          // Step 1: Check if there are any consecutive commands for the same device and ignore them
+          const query = {
+            where: {
+              status: CommandStatusEnum.PENDING,
+              fieldDevice: {
+                deviceId: command.fieldDevice.deviceId,
+                skipIfConsecutive: true,
+                field: { id: fieldId }
+              },
+              executionTime: Between(
+                moment(command.executionTime).subtract(5, 'minutes').toDate(),
+                moment(command.executionTime).add(5, 'minutes').toDate()
+              )
+            },
+            relations: { fieldDevice: { field: true } }
+          }
+          return this.deviceCommandsRepository.findOne(query)
+        })
+      )
+
+      // search if the command has any consecutive command so it needs to be ignored
+      const deviceCommandsWithoutConsecutiveCommands =
+        bookingDeviceCommands.filter(
+          (_command, index) => !consecutiveCommands[index]
+        )
+
+      // delete the pending commands that are already in the device_command table
+      const commandsToDeleteFromDeviceCommandTable = consecutiveCommands.filter(
+        (command) => !!command
+      )
+
+      // delete the commands from the device_command table
+      if (commandsToDeleteFromDeviceCommandTable.length > 0) {
+        await this.deviceCommandsRepository.delete(
+          commandsToDeleteFromDeviceCommandTable.map((command) => command.id)
+        )
+
+        returnObject['deviceCommandsDeleted'] =
+          commandsToDeleteFromDeviceCommandTable
+      }
+      returnObject['deviceCommandsCreated'] =
+        await this.deviceCommandsRepository.save(
+          deviceCommandsWithoutConsecutiveCommands
+        )
+    }
+
+    return returnObject
+  }
+
+  async hasBookingConflict(
+    fieldId: string,
+    startTime: string,
+    endTime: string
+  ): Promise<boolean> {
+    const conflict = await this.bookingsRepository.query(
+      `SELECT COUNT(*) > 0 AS has_overlap
+      FROM booking
+      WHERE "fieldId" = $1
+        AND "startTime" < $3
+        AND "endTime" > $2`,
+      [fieldId, startTime, endTime]
+    )
+    return conflict[0]?.has_overlap
+  }
+\end{lstlisting}
+
+\subsubsubsection{Listagem de Reservas de uma Quadra}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{GET /tenants/:tenantId/fields/:fieldId/bookings}
+    \item \textbf{Descrição:} Retorna todas as reservas vinculadas a uma quadra específica.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário faz uma requisição para listar as reservas de uma quadra específica.
+        \item O serviço busca todas as reservas associadas à quadra no banco de dados.
+        \item A lista das reservas cadastradas é retornada na resposta.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Listagem de Reservas Futuras por Período}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{POST /tenants/:tenantId/fields/:fieldId/bookings/future}
+    \item \textbf{Descrição:} Retorna todas as reservas futuras dentro de um determinado período.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário faz uma requisição informando um intervalo de tempo desejado.
+        \item O serviço busca todas as reservas futuras que se enquadram no período informado.
+        \item A resposta retorna uma lista de reservas futuras.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Consulta de uma Reserva Específica}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{GET /tenants/:tenantId/fields/:fieldId/bookings/:id}
+    \item \textbf{Descrição:} Buscar uma reserva específica dentro de uma quadra esportiva.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário faz uma requisição com o identificador da reserva e da quadra correspondente.
+        \item O serviço consulta o banco de dados para localizar a reserva correspondente.
+        \item Se encontrada, os detalhes da reserva são retornados na resposta.
+        \item Se a reserva não for encontrada, uma exceção é lançada informando o erro.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsubsection{Cancelamento de uma Reserva}
+\begin{itemize}
+    \item \textbf{Rota:} \texttt{DELETE /tenants/:tenantId/fields/:fieldId/bookings/:id}
+    \item \textbf{Descrição:} Cancela uma reserva existente e remove os comandos IoT associados.
+    \item \textbf{Fluxo:}
+    \begin{enumerate}
+        \item O usuário autenticado faz uma requisição para cancelar uma reserva existente.
+        \item O serviço verifica se a reserva existe.
+        \item Caso existam comandos IoT pendentes para a reserva, estes são removidos do banco de dados.
+        \item A reserva é marcada como cancelada e excluída do banco de dados.
+        \item A resposta confirma o cancelamento da reserva e a remoção dos comandos IoT.
+    \end{enumerate}
+\end{itemize}
 
 \subsubsection{Envio de Comandos IoT}\label{subsubsec:envio_comandos_iot}
 
+\textbf{Visão Geral}\\
+O módulo \textit{schedule} é responsável por garantir o envio dos comandos IoT para a API eWeLink no momento adequado. Para isso, ele utiliza a biblioteca \texttt{@nestjs/schedule}, que permite a execução de tarefas periódicas dentro do sistema. O agendamento periódico verifica comandos pendentes e os envia à API eWeLink, garantindo que os dispositivos IoT sejam acionados conforme as reservas criadas no sistema.
+
+O processo de agendamento é realizado com a anotação \texttt{@Cron('* * * * *')}, que configura a execução da tarefa a cada minuto. Durante essa execução, o sistema:
+
+\begin{itemize}
+    \item Consulta os comandos pendentes no banco de dados.
+    \item Agrupa os comandos por \textit{tenant}.
+    \item Filtra e prioriza os comandos mais recentes para cada dispositivo.
+    \item Envia os comandos selecionados à API eWeLink.
+    \item Atualiza o status dos comandos no banco de dados.
+\end{itemize}
+
+\textbf{Fluxo de Execução}\\
+O módulo segue um fluxo detalhado para processar os comandos de dispositivos IoT de maneira eficiente e segura:
+
+\begin{enumerate}
+  \item Consulta de Comandos Pendentes
+  \begin{itemize}
+      \item O sistema busca no banco de dados os comandos cujo horário de execução já tenha sido alcançado e que ainda estejam no estado \texttt{PENDING}.
+      \item Os comandos são agrupados por \textit{tenant} para garantir que cada empresa tenha seus dispositivos controlados separadamente e com uma única chamada à API EWeLink.
+  \end{itemize}
+  
+  \item Filtragem de Comandos Duplicados
+  \begin{itemize}
+      \item Para cada dispositivo IoT, apenas o comando mais recente é mantido para execução, evitando envio de comandos desnecessários.
+      \item Comandos mais antigos para o mesmo dispositivo são marcados como \texttt{SKIPPED} para evitar acionamentos desnecessários.
+  \end{itemize}
+  
+  \item Envio dos Comandos à API eWeLink
+  \begin{itemize}
+      \item Os comandos selecionados são formatados no padrão aceito pela API eWeLink.
+      \item O sistema busca e verifica se os \textit{access tokens} de cada empresa estão válidos, caso contrário utiliza os \textit{refresh tokens} para obter um novo \textit{access token} ou emite um erro caso o \textit{refresh token} esteja expirado e continua para os próximos \textit{tenants}.
+      \item O sistema envia os comandos em lote para otimizar a comunicação.
+      \item A resposta da API é analisada para verificar quais comandos foram executados com sucesso e quais falharam.
+  \end{itemize}
+  
+  \item Atualização do Status dos Comandos
+  \begin{itemize}
+      \item Os comandos que foram executados com sucesso são marcados como \texttt{EXECUTED}.
+      \item Os comandos que falharam na execução são marcados como \texttt{FAILED}.
+      \item Em caso de erro geral na execução, todos os comandos do \textit{tenant} são atualizados para \texttt{FAILED}.
+  \end{itemize}
+\end{enumerate}
+
+\textbf{Conclusão}\\
+O módulo \textit{schedule} desempenha um papel fundamental na automação dos dispositivos IoT integrados ao sistema. Ao utilizar a biblioteca \texttt{@nestjs/schedule}, garante-se que os comandos sejam processados no momento correto, evitando acionamentos incorretos e otimizando a interação com a API eWeLink. Essa abordagem melhora a eficiência operacional do sistema e proporciona uma experiência mais confiável para o envio de comandos ao dispositivos IoT.
+
 \section{Análise de Resultados}\label{sec:analise_resultados}
+
+Este capítulo apresenta uma análise detalhada dos resultados obtidos com a implementação do sistema de gerenciamento de reservas de quadras esportivas e automação de dispositivos IoT. A avaliação se baseia em indicadores de desempenho, gráficos e estatísticas para determinar a eficácia da solução desenvolvida em comparação com métodos anteriores.
+
+\subsection{Avaliação dos Resultados}
+
+A implementação realizada solucionou o problema tratado ao fornecer uma aplicação de servidor eficiente para o agendamento de quadras esportivas e o controle automatizado de dispositivos IoT com fácil configuração através da integração com a plataforma EWeLink. Os resultados obtidos foram analisados a partir dos seguintes aspectos:
+
+\subsubsection{Eficiência e Desempenho}
+
+O novo sistema demonstrou desempenho significativo no processo de reservas e na automação de dispositivos. Através de uma bateria de testes realizados através de um script atumoatizado para envio de diversas requisições, foi observado que o sistema foi capaz de manter velocidade média de resposta das requisições inferior à 2 segundos para as principais funcionalidades analisadas em um ambiente de testes local com hardware de nível intermediário presente na \autoref{tab:hardware_teste_local}.
+
+\begin{table}[htb]
+	\centering
+	\caption{\label{tab:hardware_teste_local}Hardware de testes utilizado na análise de desempenho do sitema.}	
+	\begin{tabular}{|l|c|p{6cm}|}
+		\hline
+		\textbf{Dispositivo} & \textbf{marca} & \textbf{modelo} \\ \hline
+    Processador & AMD & Ryzen 5 3600 \\ \hline
+    Placa-mãe & Gigabyte & B450M DS3H V2 \\ \hline
+    Placa de vídeo & Gigabyte & RTX3070 Aorus Master \\ \hline
+    Memória RAM & XPG & 4x8GB DDR4 3000MHz \\ \hline
+    SSD & KingDian & 512GB NVME read/write speed 2500MB/s | 1500MB/s\\ \hline
+	\end{tabular}
+	\fonte{Autor.}
+\end{table}
+
+//INSERIR GRÁFICO  COM OS TEMPOS MÉDIOS DE RESPOSTA DE CADA ROTA TESTADA
+
+Esses resultados comprovam a eficiência e desempenho do novo sistema em gerenciar reservas de quadras e controlar dispositivos IoT, demonstrando sua capacidade de atender às necessidades dos usuários e melhorar a experiência de locação, além de atender os requisitos técnicos desejados e definidos no início do projeto.
+
+\subsection{Vantagens e Desvantagens da Solução Desenvolvida}
+
+\textbf{Vantagens}\\
+\begin{itemize}
+    \item Integração direta com a API eWeLink para controle de dispositivos IoT.
+    \item Simplicidade na aquisição, instalação, configuração e controle dos dispositivos IoT. 
+    \item Gestão eficiente de múltiplos \textit{tenants} em um ambiente unificado.
+    \item Redução do consumo de energia elétrica com acionamento automatizado dos dispositivos apenas nos horários de uso.
+    \item Segurança aprimorada por meio de autenticação baseada em tokens e controle de permissões de acesso baseado em papéis.
+\end{itemize}
+
+\textbf{Desvantagens}\\
+\begin{itemize}
+    \item Dependência da conectividade com a API eWeLink para a operação dos dispositivos IoT.
+    \item Possível curva de aprendizado para novos usuários e administradores do sistema.
+    \item Necessidade de manutenção e melhorias contínuas para atualização necessidades das empresas.
+\end{itemize}
+
+\subsection{Problemas Encontrados}
+
+Durante a implementação, alguns desafios técnicos foram identificados, como a necessidade de lidar com comandos IoT duplicados ou atrasados e a otimização do processamento de comandos para evitar sobrecarga no sistema. Além disso, questões relacionadas à conectividade da API eWeLink impactaram levemente na confiabilidade da automação dos dispositivos pois, em alguns momentos, a API pode ficar indisponível ou apresentar lentidão no envio dos comandos aos dispositivos.
+
+\subsection{Impacto dos Resultados Obtidos}
+
+Através de testes simulados, notou-se que a futura implementação do sistema completo trará impactos significativos nos processos e serviços das empresas clientes, com destaque para os seguintes aspectos:
+
+\textbf{Impactos Organizacionais}\\
+\begin{itemize}
+    \item Maior controle sobre a gestão de reservas e utilização dos espaços esportivos.
+    \item Melhoria na comunicação com clientes devido à transparência na disponibilidade de horários.
+\end{itemize}
+
+\textbf{Impactos Tecnológicos}\\
+\begin{itemize}
+    \item Utilização de tecnologias modernas como \textit{NestJS}, \textit{PostgreSQL} e \textit{TypeORM}.
+    \item Integração bem-sucedida com dispositivos IoT para automação.
+\end{itemize}
+
+\textbf{Impactos Financeiros}\\
+\begin{itemize}
+    \item Redução de custos operacionais com a automação do acionamento de dispositivos elétricos.
+    \item Potencial aumento da receita devido à otimização do uso das quadras.
+\end{itemize}
+
+\textbf{Impactos Ecológicos}\\
+\begin{itemize}
+    \item Redução do consumo de energia elétrica por meio da automação dos dispositivos IoT.
+    \item Contribuição para práticas mais sustentáveis no gerenciamento dos espaços esportivos.
+\end{itemize}
+
+\textbf{Conclusão}\\
+A análise dos resultados demonstra que o sistema backend desenvolvido atendeu aos objetivos propostos e trouxe melhorias significativas para a gestão de reservas e automação de dispositivos IoT em ambiente simulado. Apesar dos desafios encontrados, a implementação se mostrou eficaz e com grande potencial de expansão e aprimoramento futuro.
