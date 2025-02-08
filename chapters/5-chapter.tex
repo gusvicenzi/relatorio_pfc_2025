@@ -181,7 +181,7 @@ A arquitetura do projeto foi dividida em pastas para organizar o código fonte e
 
 \subsection{Implementação das Funcionalidades}\label{subsec:implementacao_funcionalidades}
 
-Nessa seção serão detalhadas as implementações das funcionalidades do sistema. Serão abordados os modelos de dados \ref{subsubsec:modelagem_banco_dados}, autenticação e autorização \ref{subsubsec:autenticacao_autorizacao}, módulos de usuários \ref{subsubsec:modulo_usuarios}, tenants \ref{subsubsec:modulo_tenants}, quadras \ref{subsubsec:modulo_quadras}, disponibilidade de quadras \ref{subsubsec:modulo_disponibilidade_quadras}, integração com a API eWeLink \ref{subsubsec:integacao_ewelink}, quadras-dispositivos \ref{subsubsec:modulo_quadras_dispositivos}, reservas e comandos IoT \ref{subsubsec:modulo_reservas} e envio de comandos aos dispositivos IoT \ref{subsubsec:envio_comandos_iot}. Algumas rotas e implementações serão mostradas e detalhadas como exemplo e outras ocultadas a fim de reduzir a extensão do texto.
+Nessa seção serão detalhadas as implementações das funcionalidades do sistema. Serão abordados o modelo de dados em \ref{subsubsec:modelagem_banco_dados}, autenticação e autorização em \ref{subsubsec:autenticacao_autorizacao}, \textit{tenants} em \ref{subsubsec:modulo_tenants}, módulos de usuários em \ref{subsubsec:modulo_usuarios}, quadras e disponibilidade de quadras em \ref{subsubsec:modulos_quadras_disponibilidade_quadras}, integração com a API eWeLink em \ref{subsubsec:integacao_ewelink}, quadras-dispositivos em \ref{subsubsec:modulo_quadras_dispositivos}, reservas e comandos IoT em \ref{subsubsec:modulo_reservas} e o envio de comandos aos dispositivos IoT em \ref{subsubsec:envio_comandos_iot}. Algumas rotas e implementações serão mostradas e detalhadas como exemplo e outras ocultadas a fim de reduzir a extensão do texto.
 
 \subsubsection{Modelagem do Banco de Dados}\label{subsubsec:modelagem_banco_dados}
 A primeira etapa do desenvolvimento do sistema é a modelagem do banco de dados. Nesta etapa, são criados os diagramas entidade-relacionamento (ER) que representam as entidades e seus relacionamentos. O diagrama ER é uma representação visual das tabelas do banco de dados e dos relacionamentos entre elas e está apresentado na \autoref{fig:modelagem_banco_dados}.
@@ -688,7 +688,7 @@ As rotas deste módulo são definidas no \texttt{EwelinkController} e interagem 
     \end{enumerate}
 \end{itemize}
 
-Esse fluxo de autenticação segue o formato OAuth2.0. OAuth (Open Authorization) 2.0 é um protocolo padrão para autorização de acesso a recursos online. Ele permite que um cliente solicite permissão específica do usuário para o acesso a dados ou serviços, sem compartilhar informações sensitivas diretamente com o provedor de recursos. OAuth2.0 define quatro protocolos:
+Esse fluxo de autenticação segue o formato OAuth2.0. \acrfull{OAuth} 2.0 é um protocolo padrão para autorização de acesso a recursos online. Ele permite que um cliente solicite permissão específica do usuário para o acesso a dados ou serviços, sem compartilhar informações sensitivas diretamente com o provedor de recursos. OAuth2.0 define quatro protocolos:
 
 \begin{enumerate}
   \item Autorização de Cliente (Client Authorization): o cliente solicita permissão ao usuário para autorizar o acesso à aplicação web ou dispositivo móvel que deseja usar os recursos do provedor de recursos.
@@ -726,9 +726,9 @@ No contexto da aplicação desenvolvida neste PFC, o usuário é redirecionado p
     \item \textbf{Descrição:} Recebe o código de autorização da eWeLink e gera um token de acesso.
     \item \textbf{Fluxo:}
     \begin{enumerate}
-        \item O usuário é redirecionado da eWeLink para o sistema com um código de autorização.
+        \item O usuário é redirecionado da eWeLink para o sistema com um código de autorização e o id do \textit{tenant}.
         \item O sistema utiliza esse código para obter um token de acesso e um token de atualização.
-        \item As credenciais são armazenadas no banco de dados para permitir interações futuras com a API.
+        \item As credenciais são armazenadas no banco de dados usando o id do \textit{tenant} para permitir interações futuras com a API.
     \end{enumerate}
 \end{itemize}
 
@@ -765,7 +765,7 @@ A \autoref{fig:oauth2} mostra o processo de uso do \textit{access token} na inte
 Caso o \textit{access token} esteja expirado ou inválido, a aplicação solicita um novo token utilizando o \textit{refresh token}. O servidor de autorização gera um novo \textit{access token} e um novo \textit{refresh token}, que podem ser usados para futuras requisições. Caso o \textit{refresh token} esteja expirado ou inválido, a plataforma acusará erro e indicará ao usuário para efetuar login novamente para obter um novo \textit{access token} e \textit{refresh token}.
  
 \textbf{Outras Operações}\\
-Além das rotas descritas acima, o módulo também inclui funcionalidades para atualização de tokens de acesso, controle de status dos dispositivos e integração com eventos IoT.
+Além das rotas descritas acima, o módulo também inclui funcionalidades para atualização de tokens de acesso, e controle dos dispositivos IoT para fins de testes (os controles da plataforma serão enviados pelo módulo \textit{schedule} demonstrado na \autoref{subsubsec:envio_comandos_iot}).
 
 \subsubsection{Módulo de Quadras-Dispositivos}\label{subsubsec:modulo_quadras_dispositivos}
 
@@ -1118,11 +1118,40 @@ O módulo segue um fluxo detalhado para processar os comandos de dispositivos Io
   
   \item Envio dos Comandos à API eWeLink
   \begin{itemize}
-      \item Os comandos selecionados são formatados no padrão aceito pela API eWeLink.
+      \item Os comandos selecionados são formatados no padrão aceito pela API eWeLink demonstrado no \autoref{cod:formato_controle_iot}.
       \item O sistema busca e verifica se os \textit{access tokens} de cada empresa estão válidos, caso contrário utiliza os \textit{refresh tokens} para obter um novo \textit{access token} ou emite um erro caso o \textit{refresh token} esteja expirado e continua para os próximos \textit{tenants}.
       \item O sistema envia os comandos em lote para otimizar a comunicação.
       \item A resposta da API é analisada para verificar quais comandos foram executados com sucesso e quais falharam.
   \end{itemize}
+
+  \begin{lstlisting}[caption={Formato de envio de comando para \acrshort{API}.},label={cod:formato_controle_iot}]
+    [
+      {
+        type: 0 | 1,
+        id: "<id do dispositivo na plataforma ewelink>",
+        params: {
+          switch: "on" | "off"
+        }
+      }
+    ]
+  \end{lstlisting}
+
+  O serviço desenvolvido para envio dos comandos à \acrshort{API} eWeLink com auxílio da biblioteca \textit{ewelink-api-next} desenvolvida pela \textit{Coolkit} na linguagem javascript está disponível no \autoref{cod:envio_comandos_iot}.
+
+  \begin{lstlisting}[caption={Serviço para envio de comandos IoT à \acrshort{API} eWeLink.},label={cod:envio_comandos_iot}]
+    async controlBatchThing(tenantId: string, thingList: SetThingDto[]) {
+    const { accessToken, region } =
+      await this.checkAccessAndRefreshToken(tenantId)
+
+    this.client.at = accessToken
+    this.client.region = region
+    this.client.setUrl(region)
+
+    const response = await this.client.device.setAllThingStatus({ thingList })
+
+    return response
+  }
+  \end{lstlisting}
   
   \item Atualização do Status dos Comandos
   \begin{itemize}
@@ -1145,7 +1174,7 @@ A implementação realizada solucionou o problema tratado ao fornecer uma aplica
 
 \subsubsection{Eficiência e Desempenho}
 
-O novo sistema demonstrou desempenho significativo no processo de reservas e na automação de dispositivos. Através de uma bateria de testes realizados através de um script atumoatizado para envio de diversas requisições, foi observado que o sistema foi capaz de manter velocidade média de resposta das requisições inferior à 2 segundos para as principais funcionalidades analisadas em um ambiente de testes local com hardware de nível intermediário presente na \autoref{tab:hardware_teste_local}.
+O novo sistema demonstrou desempenho significativo no processo de reservas e na automação de dispositivos. Através de uma bateria de testes realizados através de um script automatizado para envio de diversas requisições, foi observado que o sistema foi capaz de manter velocidade média de resposta das requisições inferior à 2 segundos para as principais funcionalidades analisadas em um ambiente de testes local com hardware de nível intermediário presente na \autoref{tab:hardware_teste_local}. As chamadas foram realizadas de um outro computador através da rede local, a fim de simular um ambiente real.
 
 \begin{table}[htb]
 	\centering
@@ -1162,9 +1191,83 @@ O novo sistema demonstrou desempenho significativo no processo de reservas e na 
 	\fonte{Autor.}
 \end{table}
 
-//INSERIR GRÁFICO  COM OS TEMPOS MÉDIOS DE RESPOSTA DE CADA ROTA TESTADA
+O código base desenvolvido para realiza n chamadas ao endpoit e calcular o tempo médio de resposta está apresentado no \autoref{cod:script_tempo_medio_resposta}.
 
-Esses resultados comprovam a eficiência e desempenho do novo sistema em gerenciar reservas de quadras e controlar dispositivos IoT, demonstrando sua capacidade de atender às necessidades dos usuários e melhorar a experiência de locação, além de atender os requisitos técnicos desejados e definidos no início do projeto.
+\begin{lstlisting}[caption={\textit{script} para cálculo do tempo médio de resposta.},label={cod:script_tempo_medio_resposta}]
+  const axios = require('axios');
+
+  const sendRequest = (startTime, i) => {
+    const timePromise = new Promise(resolve => {
+        axios.get(url, {headers: headerWithAccessToken});
+        const responseTime = Date.now() - startTime;
+        console.log(`Request ${i + 1} took ${responseTime} ms`)
+        resolve(responseTime)
+    })
+    return timePromise
+  }
+
+  const headerWithAccessToken = {
+    headers: {
+      'Authorization': `Bearer ACCESS_TOKEN`
+    }
+  }
+  
+  async function measureAverageResponseTime(url, n) {
+    let promises = []
+  
+    for (let i = 0; i < n; i++) {
+      const start = Date.now();
+      try {
+        const timePromise = sendRequest(start, i)
+        promises.push(timePromise)
+      } catch (error) {
+        console.error(`Request ${i + 1} failed:`, error.message);
+      }
+    }
+    const resolvedTimes = await Promise.all(promises)
+    const totalTime = resolvedTimes.reduce((acc, curr) => acc + curr, 0)
+
+    const averageResponseTime = totalTime / n;
+    console.log(`Average response time over ${n} requests: ${averageResponseTime.toFixed(0)} ms`);
+  }
+  
+  // Example usage:
+  const apiUrl = 'http://localhost:3000/tenants/451e6db3-1a94-4918-9ec1-b8aa793f0269/fields/5b7a652f-0ddb-4a52-b552-4f92a02026d2/bookings'; // To get all bookings from a field
+  const numberOfCalls = 1000;
+  
+  measureAverageResponseTime(apiUrl, numberOfCalls);
+\end{lstlisting}
+
+Para alguns \textit{endpoints} foi necessário realizas algumas modificações no código para garantir que ele funcionasse corretamente. Por exemplo, alguns endpoints exigiam autenticação e outros não. Além disso, alguns endpoints exigiam parâmetros específicos na requisição, como e-mails, senhas e outros dados, sendo necessário criar listas com parâmetros \textit{mockados}. Com os \textit{scripts} de teste prontos, foi possível realizar a análise dos principais endpoints do sistema realizando 1000 chamadas para cada e calcular o tempo médio de resposta.
+
+\begin{table}[htb]
+  \centering
+  \caption{\label{tab:tempo_medio_resposta}Tempo médio de resposta para os principais \textit{endpoints} analisados.}
+  \begin{tabular}{|m{6cm}|c|p{4cm}|c|}
+  \hline
+  \textbf{Enpoint} & \textbf{método} & \textbf{descrição} & \textbf{tempo (ms)} \\ \hline
+  /auth/login & POST & login de usuário & 12 \\ \hline
+  /auth/register & POST & Registra um novo usuario & 174 \\ \hline
+  /auth/refresh & GET & Renova o token de acesso & 52 \\ \hline
+  /users & GET & Lista todos os usuarios & 204 \\ \hline
+  /tenants & GET & Lista todos os tenants & 124 \\ \hline
+  % \multicolumn{4}{|c|}{\textbf{/tenants/:tenantId/fields}} \\ \hline
+  \textbf{/tenants/:tenantId/fields} & & & \\ \hline
+  / & GET & Lista todas as quadras de um tenant & 155 \\ \hline
+  /:id & GET & Retorna os detalhes de uma quadra especifica & 73 \\ \hline
+  /:fieldId/field-availabilities & GET & Lista as disponibilidades de uma quadra & 212 \\ \hline
+  /:fieldId/bookings & POST & Cria uma nova reserva & 230 \\ \hline
+  /:fieldId/bookings & GET & Lista todas as reservas de uma quadra & 344 \\ \hline
+  /:fieldId/bookings/future & POST & Lista reservas futuras & 281 \\ \hline
+  /:fieldId/bookings/future-by-user & POST & Lista reservas futuras por usuario & 292 \\ \hline
+  /:fieldId/bookings/:id & GET & Retorna os detalhes de uma reserva especifica & 125 \\ \hline
+  /:fieldId/field-devices & GET & Lista todos os dispositivos de uma quadra & 123 \\ \hline
+  /:fieldId/field-devices/:id & GET & Retorna os detalhes de um dispositivo & 89 \\ \hline
+  \end{tabular}
+  \fonte{Autor.}
+\end{table}
+
+A \autoref{tab:tempo_medio_resposta} apresenta o tempo médio de resposta para cada um dos principais e mais críticos endpoints da \acrshort{API}. Esses resultados comprovam a eficiência e desempenho do novo sistema em gerenciar reservas de quadras e controlar dispositivos IoT, demonstrando sua capacidade de atender às necessidades dos usuários e melhorar a experiência de locação, além de atender os requisitos técnicos desejados e definidos no início do projeto. Apesar do ambiente testado ter sido local, acredita-se que o sistema será capaz de seguir os requisitos mesmo quando estiver executando em um servidor remoto, pois houve uma boa margem de segurança do resquisito técnico desejado em relação ao tempo médio das chamadas obtido.
 
 \subsection{Vantagens e Desvantagens da Solução Desenvolvida}
 
@@ -1186,7 +1289,7 @@ Esses resultados comprovam a eficiência e desempenho do novo sistema em gerenci
 
 \subsection{Problemas Encontrados}
 
-Durante a implementação, alguns desafios técnicos foram identificados, como a necessidade de lidar com comandos IoT duplicados ou atrasados e a otimização do processamento de comandos para evitar sobrecarga no sistema. Além disso, questões relacionadas à conectividade da API eWeLink impactaram levemente na confiabilidade da automação dos dispositivos pois, em alguns momentos, a API pode ficar indisponível ou apresentar lentidão no envio dos comandos aos dispositivos.
+Durante a implementação, alguns desafios técnicos foram identificados, como a necessidade de lidar com comandos IoT duplicados ou atrasados e a otimização do processamento de comandos para evitar sobrecarga no sistema. Além disso, questões relacionadas à conectividade da API eWeLink impactaram levemente na confiabilidade da automação dos dispositivos pois, em alguns momentos, a API pode ficar indisponível ou apresentar lentidão no envio dos comandos aos dispositivos. Embora essa lentidão ocorra, o impacto não deve ser significativo, pois em nenhum caso o envio de comandos demorou mais de 20 segundos para ser efetivado.
 
 \subsection{Impacto dos Resultados Obtidos}
 

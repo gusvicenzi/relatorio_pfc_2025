@@ -582,16 +582,6 @@ OUTPUT chapters\6-chapter.aux
 INPUT .\chapters\6-chapter.tex
 INPUT .\chapters\6-chapter.tex
 INPUT chapters\6-chapter.tex
-INPUT .\aftertext\apendice_a.tex
-INPUT .\aftertext\apendice_a.tex
-INPUT .\aftertext\apendice_a.tex
-INPUT .\aftertext\apendice_a.tex
-INPUT aftertext\apendice_a.tex
-INPUT .\aftertext\anexo_a.tex
-INPUT .\aftertext\anexo_a.tex
-INPUT .\aftertext\anexo_a.tex
-INPUT .\aftertext\anexo_a.tex
-INPUT aftertext\anexo_a.tex
 OUTPUT main.lof
 OUTPUT main.lot
 OUTPUT main.toc
