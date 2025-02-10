@@ -100,8 +100,12 @@
 \contentsline {subsection}{\numberline {5.3.4}Impacto dos Resultados Obtidos}{76}{subsection.5.3.4}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Conclusão}}{78}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Síntese do Problema e Solução Proposta}{78}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Avaliação dos Objetivos e Limitações Encontradas}{78}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Possíveis Aprimoramentos}{78}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Sugestão de Trabalhos Futuros}{79}{section.6.4}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{REFERÊNCIAS}{79}{section*.28}%
+\contentsline {chapter}{REFERÊNCIAS}{80}{section*.28}%
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 

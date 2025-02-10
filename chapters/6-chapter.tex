@@ -2,14 +2,53 @@
 \chapter{Conclusão}\label{cap:conclusao}
 % ----------------------------------------------------------
 
-\textbf{Instruções da Coordenação do PFC:}
+% \textbf{Instruções da Coordenação do PFC:}
 
-A Conclusão deve apresentar:
+% A Conclusão deve apresentar:
+% \begin{itemize}
+% 	\item Uma \textbf{síntese} do problema tratado, da solução proposta e dos principais resultados obtidos;
+% 	\item Uma discussão sobre o que foi atingido no PFC em relação aos objetivos inicialmente traçados e sobre as limitações encontradas;
+% 	\item Uma discussão sobre possíveis aprimoramentos;
+% 	\item Destacar os impactos do PFC para a empresa/clientes da empresa/instituto de pesquisa, além de possíveis impactos organizacionais, tecnológicos, financeiros, éticos, ecológicos, etc. 
+% 	\item Sugestão de trabalhos futuros (como se poderia dar continuidade ao PFC; aplicar o desenvolvimento realizado no PFC a outros problemas/processos; etc)
+% \end{itemize}
+
+\section{Síntese do Problema e Solução Proposta}
+
+
+Com a crescente demanda por alugueis de quadras esportivas e a difusão do uso de dispositivos \acrshort{IoT} para controle de equipamentos elétricos e eletrônicos, surge a necessidade de uma solução robusta que permitisse a simplificação do processo de reserva de quadras e o controle dos equipamentos associados de maneira automatizada.
+A Fischertec Tecnologia, buscando reduzir sua dependência de projetos de terceiros e analisando os desafios enfrentados pelas empresas na gestão de reservas de quadras esportivas e no controle automatizado de dispositivos \acrshort{IoT}, decidiu investir em uma solução própria para atender a essas necessidades do setor esportivo.
+
+Este \acrshort{PFC} teve como objetivo solucionar os desafios enfrentados na gestão de reservas de quadras esportivas e no controle automatizado de dispositivos \acrshort{IoT}. Para isso, foi proposto o desenvolvimento de um sistema web multi-tenant que permitisse o gerenciamento eficiente de reservas e a automação de dispositivos inteligêntes conectados via API eWeLink. A solução proposta incluiu um backend robusto desenvolvido com tecnologias modernas como Nest.js, um frontend intuitivo (que será desenvolvido em um futuro próximo) e uma integração eficiente e de fácil configuração com dispositivos \acrshort{IoT}, garantindo maior controle e otimização dos recursos.
+
+\section{Avaliação dos Objetivos e Limitações Encontradas}
+
+Os objetivos inicialmente traçados foram amplamente alcançados, com a criação de um sistema backend funcional e eficiente para gestão de quadras e automação \acrshort{IoT}. A aplicação atendeu a todos os requisitos funcionais e não funcionais definidos nas Seções \ref{subsec:requisitos_funcionais} e \ref{subsec:requisitos_nao_funcionais}, respectivamente, proporcionando um ambiente seguro, escalável e acessível para os usuários.
+
+Entretanto, algumas limitações foram identificadas ao longo do desenvolvimento. A dependência da API eWeLink para o controle dos dispositivos \acrshort{IoT} trouxe preocupações quanto à estabilidade da comunicação, custos de use e manutenção e o tempo de resposta das operações.
+
+\section{Possíveis Aprimoramentos}
+
+Para tornar a solução ainda mais eficiente, algumas melhorias podem ser exploradas no futuro:
+
 \begin{itemize}
-	\item Uma \textbf{síntese} do problema tratado, da solução proposta e dos principais resultados obtidos;
-	\item Uma discussão sobre o que foi atingido no PFC em relação aos objetivos inicialmente traçados e sobre as limitações encontradas;
-	\item Uma discussão sobre possíveis aprimoramentos;
-	\item Destacar os impactos do PFC para a empresa/clientes da empresa/instituto de pesquisa, além de possíveis impactos organizacionais, tecnológicos, financeiros, éticos, ecológicos, etc. 
-	\item Sugestão de trabalhos futuros (como se poderia dar continuidade ao PFC; aplicar o desenvolvimento realizado no PFC a outros problemas/processos; etc)
+  \item Implementação de suporte a múltiplas APIs de dispositivos \acrshort{IoT}, reduzindo a dependência da eWeLink. Uma opção seria a integração com outras plataformas como Tuya, SmartLife, SmartThings e HomeAssistant.
+  \item Otimização das consultas ao banco de dados para melhorar o desempenho do sistema, utilizando paginação para rotas com muitos registros.
+  \item Uso de \acrfull{LLMs} para criação de relatórios detalhados sobre o uso das quadras e o consumo de energia.
+  \item Desenvolvimento de um painel administrativo para monitoramento e controle em tempo real dos dispositivos.
 \end{itemize}
 
+\section{Sugestão de Trabalhos Futuros}
+
+Para dar continuidade ao trabalho desenvolvido nesta \acrshort{PFC}, algumas direções podem ser exploradas:
+
+\begin{itemize}
+  \item Desenvolvimento da aplicação web frontend para interação com o sistema já desenvolvido. Essa etapa acontecerá em uma etapa subsequente da \acrshort{PFC}.
+  \item Desenvolvimento de um aplicativo móvel para facilitar o acesso ao sistema pelos clientes e administradores.
+  \item Implementação de um módulo de notificações push para alertar os usuários sobre eventos importantes, como agendamentos próximos ou alterações no status dos dispositivos.
+  \item Customização do sistema para atender aulas em grupo, com quantidade de vagas e associação de vários usuários ao agendamento.
+  \item Desenvolvimento de um módulo de análise de dados para fornecer relatórios detalhados sobre a utilização das quadras.
+  \item Integração com sistemas de pagamento online para facilitar a gestão financeira das reservas.
+\end{itemize}
+
+O desenvolvimento deste PFC demonstrou a viabilidade e os benefícios de uma solução integrada para a gestão de reservas de quadras esportivas e automação \acrshort{IoT}. Apesar dos desafios encontrados, os resultados obtidos comprovam a eficiência da abordagem adotada e abrem espaço para futuras melhorias e expansões. A criação de um sistema próprio representa um avanço para a Fischertec, permitindo maior autonomia através de faturamento recorrente além de levar ao mercado uma solução robusta que atenda às necessidades das empresas do setor esportivo.
