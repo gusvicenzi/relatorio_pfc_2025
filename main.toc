@@ -61,8 +61,8 @@
 \contentsline {paragraph}{\numberline {5.2.3.2.3}Renovação de Token}{50}{paragraph.5.2.3.2.3}%
 \contentsline {paragraph}{\numberline {5.2.3.2.4}Logout}{50}{paragraph.5.2.3.2.4}%
 \contentsline {subsubsection}{\numberline {5.2.3.3}Módulo de Tenants}{51}{subsubsection.5.2.3.3}%
-\contentsline {paragraph}{\numberline {5.2.3.3.1}Criação de um Tenant}{51}{paragraph.5.2.3.3.1}%
-\contentsline {paragraph}{\numberline {5.2.3.3.2}Consulta de um Tenant}{52}{paragraph.5.2.3.3.2}%
+\contentsline {paragraph}{\numberline {5.2.3.3.1}Criação de um\textit {Tenant}}{51}{paragraph.5.2.3.3.1}%
+\contentsline {paragraph}{\numberline {5.2.3.3.2}Consulta de um\textit {Tenant}}{52}{paragraph.5.2.3.3.2}%
 \contentsline {subsubsection}{\numberline {5.2.3.4}Módulo de Usuarios}{52}{subsubsection.5.2.3.4}%
 \contentsline {paragraph}{\numberline {5.2.3.4.1}Criação de Usuário}{52}{paragraph.5.2.3.4.1}%
 \contentsline {paragraph}{\numberline {5.2.3.4.2}Consulta de Usuário por ID}{53}{paragraph.5.2.3.4.2}%
@@ -87,25 +87,94 @@
 \contentsline {paragraph}{\numberline {5.2.3.7.5}Remoção de um Dispositivo de Quadra}{64}{paragraph.5.2.3.7.5}%
 \contentsline {subsubsection}{\numberline {5.2.3.8}Módulo de Reservas e Comandos IoT}{64}{subsubsection.5.2.3.8}%
 \contentsline {paragraph}{\numberline {5.2.3.8.1}Criação de uma Reserva}{65}{paragraph.5.2.3.8.1}%
-\contentsline {paragraph}{\numberline {5.2.3.8.2}Listagem de Reservas de uma Quadra}{69}{paragraph.5.2.3.8.2}%
-\contentsline {paragraph}{\numberline {5.2.3.8.3}Listagem de Reservas Futuras por Período}{69}{paragraph.5.2.3.8.3}%
-\contentsline {paragraph}{\numberline {5.2.3.8.4}Consulta de uma Reserva Específica}{69}{paragraph.5.2.3.8.4}%
-\contentsline {paragraph}{\numberline {5.2.3.8.5}Cancelamento de uma Reserva}{70}{paragraph.5.2.3.8.5}%
-\contentsline {subsubsection}{\numberline {5.2.3.9}Envio de Comandos IoT}{70}{subsubsection.5.2.3.9}%
-\contentsline {section}{\numberline {5.3}Análise de Resultados}{72}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Avaliação dos Resultados}{72}{subsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.1.1}Eficiência e Desempenho}{73}{subsubsection.5.3.1.1}%
-\contentsline {subsection}{\numberline {5.3.2}Vantagens e Desvantagens da Solução Desenvolvida}{75}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Problemas Encontrados}{76}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Impacto dos Resultados Obtidos}{76}{subsection.5.3.4}%
+\contentsline {paragraph}{\numberline {5.2.3.8.2}Listagem de Reservas de uma Quadra}{65}{paragraph.5.2.3.8.2}%
+\contentsline {paragraph}{\numberline {5.2.3.8.3}Listagem de Reservas Futuras por Período}{65}{paragraph.5.2.3.8.3}%
+\contentsline {paragraph}{\numberline {5.2.3.8.4}Consulta de uma Reserva Específica}{66}{paragraph.5.2.3.8.4}%
+\contentsline {paragraph}{\numberline {5.2.3.8.5}Cancelamento de uma Reserva}{66}{paragraph.5.2.3.8.5}%
+\contentsline {subsubsection}{\numberline {5.2.3.9}Envio de Comandos IoT}{67}{subsubsection.5.2.3.9}%
+\contentsline {section}{\numberline {5.3}Análise de Resultados}{69}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Avaliação dos Resultados}{69}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}Eficiência e Desempenho}{69}{subsubsection.5.3.1.1}%
+\contentsline {subsection}{\numberline {5.3.2}Vantagens e Desvantagens da Solução Desenvolvida}{71}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Problemas Encontrados}{73}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Impacto dos Resultados Obtidos}{73}{subsection.5.3.4}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Conclusão}}{78}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Síntese do Problema e Solução Proposta}{78}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Avaliação dos Objetivos e Limitações Encontradas}{78}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Possíveis Aprimoramentos}{78}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Sugestão de Trabalhos Futuros}{79}{section.6.4}%
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Conclusão}}{75}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Síntese do Problema e Solução Proposta}{75}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Avaliação dos Objetivos e Limitações Encontradas}{75}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Possíveis Aprimoramentos}{75}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Sugestão de Trabalhos Futuros}{76}{section.6.4}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{REFERÊNCIAS}{80}{section*.28}%
+\contentsline {chapter}{REFERÊNCIAS}{77}{section*.28}%
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\renewcommand *{\cftappendixname }{AP\^ENDICE \space }
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{APÊNDICE A - Código do Controlador}}{80}{appendix.A}%

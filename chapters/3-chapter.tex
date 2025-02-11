@@ -44,7 +44,7 @@ O desenvolvimento de uma solução para esses problemas exige a definição clar
 \subsection{Requisitos Funcionais}\label{subsec:requisitos_funcionais}
 
 \begin{enumerate}
-     \item O sistema deve permitir o cadastro de empresas no formato multi-tenant, onde cada empresa terá um ambiente isolado para suas configurações e dados.
+     \item O sistema deve permitir o cadastro de empresas no formato \textit{multi-tenant}, onde cada empresa terá um ambiente isolado para suas configurações e dados.
      \item Deve ser possível configurar os horários de funcionamento das quadras de forma personalizada para cada dia da semana.
      \item O sistema deve oferecer uma interface para visualizar os horários configurados de uma quadra para todos os dias da semana.
      \item Deve ser possível realizar reservas de quadras, com confirmação imediata e registro dos dados no sistema.
@@ -66,7 +66,7 @@ O desenvolvimento de uma solução para esses problemas exige a definição clar
      \item Deve ser garantida a segurança dos dados por meio de autenticação e autorização robustas.
      \item O administrador da empresa deve ter a possibilidade de vincular sua conta eWelink de forma prática.
      \item O administrador da empresa deve ser capaz de adicionar novos dispositivos IoT mesmo sem ter conhecimento técnico avançado.
-     \item O sistema deve manter logs de eventos críticos, como reservas realizadas e comandos enviados a dispositivos IoT.
+     \item O sistema deve manter \textit{logs} de eventos críticos, como reservas realizadas e comandos enviados a dispositivos IoT.
      \item O tempo de resposta das principais operações deve ser inferior a 2 segundos.
      \item A aplicação deve ser documentada para facilitar a manutenção e futuras expansões.
 \end{itemize}
@@ -74,25 +74,25 @@ O desenvolvimento de uma solução para esses problemas exige a definição clar
 
 \subsection{Casos de Uso}\label{subsec:casos_de_uso}
 
-\subsubsection*{Caso de Uso 1: Reserva de Quadra}
+\subsubsection*{\underline{Caso de Uso 1}: Reserva de Quadra}
 \begin{itemize}
      \item Ator: Cliente
      \item Descrição: O cliente acessa o sistema através de um navegador, visualiza as quadras disponíveis para uma data e horário específicos, seleciona a quadra desejada e realiza a reserva. O sistema confirma a reserva e cria os comandos para ligar e desligar as luzes da quadra no início e fim da reserva.
 \end{itemize}
 
-\subsubsection*{Caso de Uso 2: Configuração de Quadras e Dispositivos IoT}
+\subsubsection*{\underline{Caso de Uso 2}: Configuração de Quadras e Dispositivos IoT}
 \begin{itemize}
      \item Ator: Administrador
      \item Descrição: O usuário faz login na plataforma e cria uma nova empresa. Esse usuário se torna administrador automaticamente para essa empresa. Ele acessa o painel de administração da empresa, adiciona uma nova quadra e associa um dispositivo IoT e um comando de \"ligar\" ao início dos agendamentos dessa quadra.
 \end{itemize}
 
-\subsubsection*{Caso de Uso 3: Consulta de Disponibilidade de Quadras}
+\subsubsection*{\underline{Caso de Uso 3}: Consulta de Disponibilidade de Quadras}
 \begin{itemize}
      \item Ator: Cliente
      \item Descrição: O cliente acessa a aplicação, seleciona uma empresa e uma consulta a disponibilidade de uma quadra para um dia específico. As informações da disponibilidade do dia da semana para a quadra selecionada são exibidas. Os horários indisponíveis devem ser apresentados a partir dos agendametos confirmados nessa quadra.
 \end{itemize}
 
-\subsubsection*{Caso de Uso 4: Cancelamento de Reserva de Quadra}
+\subsubsection*{\underline{Caso de Uso 4}: Cancelamento de Reserva de Quadra}
 \begin{itemize}
      \item Ator: Cliente
      \item Descrição: O cliente acessa a aplicação e escolhe ver as reservas que tem para uma determinada empresa. O sistema busca todas as quadras desse empresa e busca as reservas do cliente para cada quadra. O cliente seleciona a reserva que deseja cancelar e o sistema confirma o cancelamento, liberando a quadra para novas reservas.

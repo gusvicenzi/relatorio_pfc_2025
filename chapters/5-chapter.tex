@@ -1,7 +1,7 @@
 % ----------------------------------------------------------
 \chapter{Desenvolvimento e Análise dos Resultados Obtidos}\label{cap:desenvolvimento_e_analise_resultados}
 % ----------------------------------------------------------
-Este capítulo apresenta o processo de desenvolvimento do \acrlong{PFC} relativo ao desenvolvimento de um sistema de gerenciamento de reservas e controle automatizado de dispositivos IoT para quadras esportivas. Na \autoref{sec:ferramentas_tecnologias} são apresentadas as ferramentas e tecnologias utilizadas no desenvolvimento do sistema. A \autoref{sec:desenvolvimento} apresenta o processo de desenvolvimento do PFC e a \autoref{sec:analise_resultados} dispõe dos resultados alcançados ao fim do processo.
+Este capítulo apresenta o processo de desenvolvimento do sistema de gerenciamento de reservas e controle automatizado de dispositivos IoT para quadras esportivas. Na \autoref{sec:ferramentas_tecnologias} são apresentadas as ferramentas e tecnologias utilizadas no desenvolvimento do sistema. A \autoref{sec:desenvolvimento} apresenta o processo de desenvolvimento do PFC e a \autoref{sec:analise_resultados} dispõe dos resultados alcançados ao fim do processo.
 
 % \textbf{Instruções da Coordenação do PFC:}
 
@@ -31,19 +31,19 @@ Alguns pontos que serão explicados nesse capítulo:
 	\item \textbf{Ferramentas}: As tecnologias utilizadas na implementação da solução proposta, como linguagens de programação, frameworks, bibliotecas, etc.
 	\item \textbf{Arquitetura da solução}: A arquitetura utilizada na implementação da solução proposta, como monolítica, microsserviços, cliente-servidor, etc.
 	\item \textbf{Modelagem do banco de dados}: O modelo utilizado para representar os dados da aplicação, incluindo as entidades, relacionamentos, atributos, etc.
-	\item \textbf{Backend}: A parte da solução que lida com a manipulação dos dados e a regra de negócio da aplicação.
+	\item \textbf{\textit{backend}}: A parte da solução que lida com a manipulação dos dados e a regra de negócio da aplicação.
 	\subitem{\textbf{Registro e autenticação de usuários}: Como o backend implementa a funcionalidade de registro e autenticação de usuários, incluindo validações, segurança, etc.}
-	\subitem{\textbf{Autorização de usuários}: Como o backend implementa a funcionalidade de autorização de usuários, incluindo permissões, roles, etc.}
-	\subitem{\textbf{Rotas da aplicação}: Como o backend implementa as rotas da aplicação, incluindo endpoints de CRUD para tenanants, quadras, agendamentos de horários e credenciais de acesso a API relacionada à internet das coisas (IoT).}
-	\subitem{\textbf{Detalhamento do agendamentos de horários}: Como o backend implementa a funcionalidade de agendamentos de horários de quadras, incluindo informações sobre os locais, os tipos de atividades, as datas e as horas.}
-	\subitem{\textbf{Detalhamento da integração com IoT}: Como o backend implementa a integração com dispositivos IoT e comanda o acionamento e desligamento de acordo com os agendamentos feitos pelosus usuários.}
+	\subitem{\textbf{Autorização de usuários}: Como o \textit{backend} implementa a funcionalidade de autorização de usuários, incluindo permissões, roles, etc.}
+	\subitem{\textbf{Rotas da aplicação}: Como o \textit{backend} implementa as rotas da aplicação, incluindo endpoints de CRUD para tenanants, quadras, agendamentos de horários e credenciais de acesso a API relacionada à internet das coisas (IoT).}
+	\subitem{\textbf{Detalhamento do agendamentos de horários}: Como o \textit{backend} implementa a funcionalidade de agendamentos de horários de quadras, incluindo informações sobre os locais, os tipos de atividades, as datas e as horas.}
+	\subitem{\textbf{Detalhamento da integração com IoT}: Como o \textit{backend} implementa a integração com dispositivos IoT e comanda o acionamento e desligamento de acordo com os agendamentos feitos pelosus usuários.}
 	\item \textbf{Análise de resultados}: Análise dos resultados obtidos com o desenvolvimento da aplicação. Detalhando os principais aspesctos relevantes, como a eficiência do agendamento de horários, a segurança das informações e a integração com IoT.
 \end{itemize}
 
 \section{Ferramentas e Tecnologias Utilizadas}\label{sec:ferramentas_tecnologias}
 
 A seção de ferramentas e tecnologias utilizadas no desenvolvimento deste projeto apresenta um panorama detalhado dos recursos técnicos empregados para a construção da aplicação de servidor do sistema de gerenciamento de reservas e controle automatizado de dispositivos IoT para quadras esportivas. 
-% O projeto foi desenvolvido utilizando uma stack moderna e robusta, com o backend implementado em Nest.js, um framework eficiente e escalável para Node.js, e o frontend será desenvolvido em React, a fim de proporcionar uma experiência de usuário dinâmica e responsiva. Além disso, o banco de dados relacional PostgreSQL foi utilizado para garantir a integridade e a consistência dos dados, enquanto a integração com a plataforma eWeLink permitiu o controle automatizado de dispositivos IoT, agregando um nível adicional de automação e inovação ao sistema. Este conjunto de ferramentas foi escolhido com o objetivo de garantir um desenvolvimento ágil, eficiente e que atendesse às necessidades específicas do projeto.
+% O projeto foi desenvolvido utilizando uma stack moderna e robusta, com o \textit{backend} implementado em Nest.js, um framework eficiente e escalável para Node.js, e o \textit{frontend} será desenvolvido em React, a fim de proporcionar uma experiência de usuário dinâmica e responsiva. Além disso, o banco de dados relacional PostgreSQL foi utilizado para garantir a integridade e a consistência dos dados, enquanto a integração com a plataforma eWeLink permitiu o controle automatizado de dispositivos IoT, agregando um nível adicional de automação e inovação ao sistema. Este conjunto de ferramentas foi escolhido com o objetivo de garantir um desenvolvimento ágil, eficiente e que atendesse às necessidades específicas do projeto.
 
 \subsection{Git}
 
@@ -65,7 +65,7 @@ O Github é uma ferramenta usada por padrão na Fischertec. Embora outras plataf
 
 \subsection{PostgreSQL}
 
-O SQL (Structured Query Language) foi desenvolvido nos anos 1970 pela IBM como uma linguagem padrão para gerenciar e manipular bancos de dados relacionais. PostgreSQL, um sistema de gerenciamento de banco de dados relacional, surgiu na Universidade da Califórnia em Berkeley, no final dos anos 1980, como parte do projeto POSTGRES (Post Ingres). Em 1996, o sistema foi renomeado para PostgreSQL, refletindo sua compatibilidade com SQL. Desde então, PostgreSQL evoluiu significativamente, tornando-se uma das bases de dados relacionais mais robustas e avançadas disponíveis.
+O \acrlong{SQL} foi desenvolvido nos anos 1970 pela IBM como uma linguagem padrão para gerenciar e manipular bancos de dados relacionais. PostgreSQL, um sistema de gerenciamento de banco de dados relacional, surgiu na Universidade da Califórnia em Berkeley, no final dos anos 1980, como parte do projeto POSTGRES (Post Ingres). Em 1996, o sistema foi renomeado para PostgreSQL, refletindo sua compatibilidade com SQL. Desde então, PostgreSQL evoluiu significativamente, tornando-se uma das bases de dados relacionais mais robustas e avançadas disponíveis.
 
 PostgreSQL oferece uma ampla gama de funções, incluindo suporte a transações ACID (Atomicidade, Consistência, Isolamento, Durabilidade), integridade referencial, e extensões para manipulação de dados complexos como JSON e XML. Além disso, suporta procedimentos armazenados, gatilhos e uma variedade de tipos de índices para otimizar consultas. Atualmente, PostgreSQL é amplamente utilizado por grandes empresas, startups e projetos de código aberto devido à sua confiabilidade, flexibilidade e conformidade com os padrões SQL.
 
@@ -79,9 +79,9 @@ O JavaScript, criado em 1995 por Brendan Eich da Netscape, rapidamente se tornou
 
 As principais funções do TypeScript incluem a adição de tipos estáticos, interfaces, classes e módulos, que não existem nativamente no JavaScript. Essas funcionalidades permitem a detecção de erros durante o desenvolvimento, antes do tempo de execução, melhorando a qualidade do código. Além disso, TypeScript se transpila (é convertido) para JavaScript, garantindo compatibilidade total com os navegadores e plataformas que suportam JavaScript. Atualmente, TypeScript é amplamente adotado em projetos de grande escala devido à sua capacidade de melhorar a produtividade e a manutenção do código. Empresas como Google, Microsoft e Airbnb utilizam TypeScript em seus projetos.
 
-No desenvolvimento do projeto backend, optou-se por TypeScript em vez de JavaScript por várias razões. TypeScript proporciona uma melhor experiência de desenvolvimento, oferecendo autocompletar, navegação de código e verificação de tipos em tempo de compilação, o que ajuda a evitar muitos erros comuns em JavaScript. Isso é especialmente importante em projetos backend, onde a robustez e a previsibilidade do código são cruciais. Além disso, TypeScript facilita a colaboração entre desenvolvedores, permitindo que eles entendam e mantenham o código com mais facilidade.
+No desenvolvimento do projeto \textit{backend}, optou-se por TypeScript em vez de JavaScript por várias razões. TypeScript proporciona uma melhor experiência de desenvolvimento, oferecendo autocompletar, navegação de código e verificação de tipos em tempo de compilação, o que ajuda a evitar muitos erros comuns em JavaScript. Isso é especialmente importante em projetos \textit{backend}, onde a robustez e a previsibilidade do código são cruciais. Além disso, TypeScript facilita a colaboração entre desenvolvedores, permitindo que eles entendam e mantenham o código com mais facilidade.
 
-O TypeScript se destaca como uma ferramenta poderosa que complementa e aprimora JavaScript, tornando o desenvolvimento de software mais eficiente e menos propenso a erros. Sua adoção no desenvolvimento da aplicação backend de gerenciamento de reservas e controle automatizado de dispositivos IoT permitiu criar um código mais robusto e sustentável.
+O TypeScript se destaca como uma ferramenta poderosa que complementa e aprimora JavaScript, tornando o desenvolvimento de software mais eficiente e menos propenso a erros. Sua adoção no desenvolvimento da aplicação \textit{backend} de gerenciamento de reservas e controle automatizado de dispositivos IoT permitiu criar um código mais robusto e sustentável.
 
 \subsection{Node.js}
 
@@ -89,19 +89,19 @@ O Node.js é uma plataforma de desenvolvimento open-source baseada no motor Java
 
 Atualmente, o Node.js é amplamente utilizado para construir desde APIs e microservices até aplicações completas de grande escala. Sua capacidade de executar JavaScript tanto no cliente quanto no servidor facilita o desenvolvimento fullstack, enquanto a vasta biblioteca de pacotes disponíveis através do npm (Node Package Manager) oferece soluções para praticamente qualquer necessidade de desenvolvimento. O Node.js tem sido uma escolha popular em diversas indústrias devido à sua performance, escalabilidade e ao suporte contínuo de uma grande comunidade de desenvolvedores.
 
-Uma das principais vantagens do Node.js em comparação com outras soluções é sua natureza assíncrona e orientada a eventos, que permite o gerenciamento eficiente de múltiplas conexões simultâneas sem sobrecarregar os recursos do servidor. Além disso, a utilização de JavaScript, uma linguagem amplamente conhecida e utilizada, reduz a curva de aprendizado para novos desenvolvedores e facilita a integração entre equipes de frontend e backend. A modularidade do Node.js e sua grande comunidade de apoio também contribuem para o desenvolvimento mais rápido e eficiente de aplicações.
+Uma das principais vantagens do Node.js em comparação com outras soluções é sua natureza assíncrona e orientada a eventos, que permite o gerenciamento eficiente de múltiplas conexões simultâneas sem sobrecarregar os recursos do servidor. Além disso, a utilização de JavaScript, uma linguagem amplamente conhecida e utilizada, reduz a curva de aprendizado para novos desenvolvedores e facilita a integração entre equipes de \textit{frontend} e \textit{backend}. A modularidade do Node.js e sua grande comunidade de apoio também contribuem para o desenvolvimento mais rápido e eficiente de aplicações.
 
 Portanto o Node.js se destaca como uma solução versátil e eficiente para o desenvolvimento de aplicações modernas. Sua combinação de performance, escalabilidade e uma vasta gama de ferramentas e bibliotecas tornam-no uma escolha robusta para desenvolvedores que buscam criar aplicações rápidas e escaláveis, atendendo às demandas de um mercado cada vez mais dinâmico e competitivo.
 
 \subsection{Nest.js}
 
-O Nest.js é um framework de desenvolvimento backend criado em 2017 por Kamil Myśliwiec. Inspirado nos princípios de programação modular e fortemente influenciado pelo Angular, o Nest.js foi projetado para oferecer uma estrutura robusta e escalável para a construção de aplicações do lado do servidor. Desde o seu lançamento, o framework tem crescido em popularidade, especialmente entre desenvolvedores que buscam uma abordagem moderna para o desenvolvimento de aplicações backend em Node.js.
+O Nest.js é um framework de desenvolvimento \textit{backend} criado em 2017 por Kamil Myśliwiec. Inspirado nos princípios de programação modular e fortemente influenciado pelo Angular, o Nest.js foi projetado para oferecer uma estrutura robusta e escalável para a construção de aplicações do lado do servidor. Desde o seu lançamento, o framework tem crescido em popularidade, especialmente entre desenvolvedores que buscam uma abordagem moderna para o desenvolvimento de aplicações \textit{backend} em Node.js.
 
 O Nest.js fornece uma arquitetura modular que facilita a criação e a manutenção de aplicações escaláveis e bem estruturadas. Ele suporta diversos paradigmas de programação, incluindo orientação a objetos, programação funcional e reativa. Com suporte nativo para TypeScript, o Nest.js oferece tipagem estática, o que melhora a confiabilidade e a legibilidade do código. Atualmente, é amplamente utilizado para construir APIs RESTful, microservices e aplicativos monolíticos, sendo uma escolha frequente em projetos que exigem alta escalabilidade e flexibilidade.
 
-Entre as principais vantagens do Nest.js estão sua modularidade, que permite a criação de aplicações altamente organizadas e de fácil manutenção, e seu suporte integral a TypeScript, que traz maior segurança e produtividade no desenvolvimento. Em comparação com outros frameworks, como Express.js, o Nest.js oferece uma estrutura mais robusta e orientada a boas práticas, facilitando o desenvolvimento de aplicações complexas. No contexto do \acrlong{PFC}, o Nest.js foi escolhido por sua capacidade de suportar a criação de uma aplicação multi-tenant complexa, com necessidades específicas de escalabilidade, organização e integração com outras tecnologias.
+Entre as principais vantagens do Nest.js estão sua modularidade, que permite a criação de aplicações altamente organizadas e de fácil manutenção, e seu suporte integral a TypeScript, que traz maior segurança e produtividade no desenvolvimento. Em comparação com outros frameworks, como Express.js, o Nest.js oferece uma estrutura mais robusta e orientada a boas práticas, facilitando o desenvolvimento de aplicações complexas. No contexto do \acrlong{PFC}, o Nest.js foi escolhido por sua capacidade de suportar a criação de uma aplicação \textit{multi-tenant} complexa, com necessidades específicas de escalabilidade, organização e integração com outras tecnologias.
 
-O Nest.js se destaca como uma ferramenta poderosa para o desenvolvimento de aplicações backend modernas, combinando a performance do Node.js com uma arquitetura flexível e escalável. Sua adoção neste \acrlong{PFC} reflete a busca por soluções eficientes e de alta qualidade, alinhadas com as demandas atuais do mercado de tecnologia.
+O Nest.js se destaca como uma ferramenta poderosa para o desenvolvimento de aplicações \textit{backend} modernas, combinando a performance do Node.js com uma arquitetura flexível e escalável. Sua adoção neste \acrlong{PFC} reflete a busca por soluções eficientes e de alta qualidade, alinhadas com as demandas atuais do mercado de tecnologia.
 
 \subsection{Docker}
 
@@ -126,7 +126,7 @@ Portanto o Postman se consolida como uma ferramenta essencial para o desenvolvim
 
 \section{Desenvolvimento}\label{sec:desenvolvimento}
 
-Após apresentadas as ferramentas e tecnologias selecionadas na \autoref{sec:ferramentas_tecnologias}, esta seção tratará do desenvolvimento do projeto backend da aplicação.
+Após apresentadas as ferramentas e tecnologias selecionadas na \autoref{sec:ferramentas_tecnologias}, esta seção tratará do desenvolvimento do projeto \textit{backend} da aplicação.
 
 \subsection{Configuração Inicial do Projeto}\label{subsec:configuracao_inicial}
 
@@ -172,7 +172,7 @@ Em seguida os cointêneres Docker foram configurados para executar o banco de da
 A arquitetura do projeto foi dividida em pastas para organizar o código fonte e facilitar a manutenção, seguindo a metodologia de arquitetura modular e de camadas. A pasta "src" contém todos os arquivos do projeto, divididos em pastas para cada funcionalidade ou recurso do sistema. As principais pastas são "config" (configuração do TypeORM com PostgreSQL) , "db" (configuração da conexão do banco PostgreSQL), "modules" (módulos dos recursos da aplicação, como \textit{tenants}, \textit{users} e etc.) e "resources" (como funções de manipulação de dados, \textit{pipes} para criptografia de senhas, \textit{interceptors} para logs de informações e \textit{filters} para tratamento de erros).
 
 \begin{figure}[htp]
-	\caption{\label{fig:arquitetura_pastas}Arquitetura de pastas da aplicação backend.}
+	\caption{\label{fig:arquitetura_pastas}Arquitetura de pastas da aplicação \textit{backend}.}
 	\begin{center}
 	  \includegraphics[scale=0.5]{images/cap5/arq_pastas.png}
 	\end{center}
@@ -194,7 +194,7 @@ A primeira etapa do desenvolvimento do sistema é a modelagem do banco de dados.
 	\fonte{Autor.}
 \end{figure}
 
-\textbf{tenant (Locatário/Empresa)}\\
+\noindent\textbf{\textit{tenant} (Locatário/Empresa)}\\
 Armazena informações das empresas que utilizam o sistema. Cada empresa tem um ambiente isolado para suas configurações e dados.\\
 Relacionamentos:
 \begin{itemize}
@@ -204,7 +204,7 @@ Relacionamentos:
 	\item Relaciona-se com \texttt{company\_operating\_hours} (definição do horário de funcionamento da empresa).
 \end{itemize}
 
-\textbf{user (Usuário do Sistema)}\\
+\noindent\textbf{\textit{user} (Usuário do Sistema)}\\
 Cadastra usuários na plataforma, permitindo o acesso e gestão de informações dos usuários em diferentes locatários. \\
 Relacionamentos: 
 \begin{itemize} 
@@ -212,7 +212,7 @@ Relacionamentos:
 	\item Relaciona-se com \texttt{booking} (usuários realizam reservas de quadras). 
 \end{itemize}
 
-\textbf{user\textunderscore tenant\textunderscore roles (Papéis de Usuário na Empresa)}\\
+\noindent\textbf{\textit{user\textunderscore tenant\textunderscore roles} (Papéis de Usuário na Empresa)}\\
 Define os papéis dos usuários em diferentes locatários, garantindo acesso e permissões personalizadas para cada perfil. \\
 Relacionamentos: 
 
@@ -222,7 +222,7 @@ Relacionamentos:
 \end{itemize}
 
 
-\textbf{company\textunderscore operating\textunderscore hours (Horários de Funcionamento da Empresa)}\\
+\noindent\textbf{\textit{company\textunderscore operating\textunderscore hours} (Horários de Funcionamento da Empresa)}\\
 Define os horários de funcionamento das empresas, permitindo customização e gestão do tempo disponível para operações em cada locatário. \\
 Relacionamentos: 
 
@@ -231,7 +231,7 @@ Relacionamentos:
 \end{itemize}
 
 
-\textbf{field (Quadras Esportivas)}\\
+\noindent\textbf{\textit{field} (Quadras Esportivas)}\\
 Armazena as quadras disponíveis para reservas, relacionadas ao locatário que as possui e contendo informações específicas sobre cada quadra. \\
 Relacionamentos: 
 
@@ -243,7 +243,7 @@ Relacionamentos:
 \end{itemize}
 
 
-\textbf{field\textunderscore availability (Disponibilidade da Quadra)}\\
+\noindent\textbf{\textit{field\textunderscore availability} (Disponibilidade da Quadra)}\\
 Determina os horários disponíveis para cada quadra, indicando o período de tempo em que a mesma fica aberta e quanto custa o uso dela. \\
 Relacionamentos: 
 
@@ -252,7 +252,7 @@ Relacionamentos:
 \end{itemize}
 
 
-\textbf{booking (Reservas de Quadras)}\\
+\noindent\textbf{\textit{booking} (Reservas de Quadras)}\\
 Registra as reservas feitas pelos usuários, associando-as ao locatário que possui a quadra reservada e outros detalhes sobre o horário, usuário e status da reserva. \\
 Relacionamentos: 
 
@@ -262,7 +262,7 @@ Relacionamentos:
 \end{itemize}
 
 
-\textbf{ewelink\textunderscore credential (Credenciais para Controle IoT via eWeLink)}\\
+\noindent\textbf{\textit{ewelink\textunderscore credentia}l (Credenciais para Controle IoT via eWeLink)}\\
 Armazena informações de autenticação da integração entre o sistema e dispositivos IoT, como tokens de acesso e gerenciamento de recursos. \\
 Relacionamentos: 
 
@@ -271,7 +271,7 @@ Relacionamentos:
 \end{itemize}
 
 
-\textbf{field\textunderscore device (Dispositivos IoT Associados às Quadras)}\\
+\noindent\textbf{\textit{field\textunderscore device} (Dispositivos IoT Associados às Quadras)}\\
 Registra os dispositivos IoT instalados em cada quadra, indicando seu tipo de funcionalidade, comando a ser executado e outros detalhes relevantes para o gerenciamento. \\
 Relacionamentos: 
 
@@ -280,7 +280,7 @@ Relacionamentos:
 \end{itemize}
 
 
-\textbf{device\textunderscore command (Comandos Enviados a Dispositivos IoT)}\\
+\noindent\textbf{\textit{device\textunderscore command} (Comandos Enviados a Dispositivos IoT)}\\
 Armazena os comandos programados ou executados para dispositivos IoT, associados às reservas e que devem ser executados conforme a agenda de reservas. \\
 Relacionamentos: 
 
@@ -291,12 +291,12 @@ Relacionamentos:
 
 \subsubsection{Autenticação e Autorização}\label{subsubsec:autenticacao_autorizacao}
 
-\textbf{Visão Geral}\\
+\noindent\textbf{Visão Geral}\\
 O módulo de autenticação é responsável por garantir a segurança e o controle de acesso ao sistema multi-tenant. Ele permite que os usuários se autentiquem utilizando credenciais seguras e fornece mecanismos para gerenciamento de tokens de acesso e renovação de sessão. O sistema utiliza autenticação baseada em tokens JWT (\textit{JSON Web Token}) e cookies para armazenar \textit{refresh tokens} com segurança.
 
 A autenticação dos usuários é fundamental para garantir que apenas indivíduos autorizados tenham acesso aos recursos do sistema. Além disso, o módulo gerencia o login, o registro de novos usuários (inicialmente sem vínculo com nenhum \textit{tenant}), a renovação de tokens e o logout seguro, invalidando tokens de sessão comprometidos.
 
-\textbf{Fluxo das Rotas}\\
+\noindent\textbf{Fluxo das Rotas}\\
 O controlador de autenticação (\texttt{auth.controller.ts}) define os endpoints responsáveis pelo login, registro de novos usuários, renovação de tokens e logout. Ele interage com o serviço de autenticação (\texttt{auth.service.ts}), que contém a lógica de geração e validação de tokens, verificação de credenciais e manipulação segura de sessões.
 
 \subsubsubsection{Autenticação de Usuário}
@@ -415,7 +415,7 @@ O código construído para o \textit{controller} e  o \textit{service} estão di
 
 \subsubsection{Módulo de Tenants}\label{subsubsec:modulo_tenants}
 
-\textbf{Visão Geral} \\
+\noindent\textbf{Visão Geral} \\
 O módulo de \textit{tenants} é responsável por gerenciar múltiplos locatários dentro do sistema, permitindo a criação, consulta, atualização e remoção de \textit{tenants}. Esse módulo é essencial para suportar um ambiente multi-tenant, onde cada empresa ou cliente pode operar de forma isolada dentro da mesma aplicação.
 
 As principais funcionalidades deste módulo incluem:
@@ -430,10 +430,10 @@ As principais funcionalidades deste módulo incluem:
 
 O acesso às rotas do módulo é protegido por um sistema de autenticação e autorização baseado em \textit{roles}, garantindo que apenas usuários autorizados possam executar determinadas ações.
 
-\textbf{Fluxo das Rotas} \\
+\noindent\textbf{Fluxo das Rotas} \\
 As rotas do módulo de \textit{tenants} são definidas no \texttt{TenantsController}, garantindo a estruturação adequada dos endpoints da API. A seguir, estão dispostos os fluxos de duas das principais operações: criação e busca de \textit{tenants}.
 
-\subsubsubsection{Criação de um Tenant}
+\subsubsubsection{Criação de um\textit{Tenant}}
 \begin{itemize}
 	\item \textbf{Rota:} \texttt{POST /tenants}
 	\item \textbf{Descrição:} Criação de um novo \textit{tenant}.
@@ -447,7 +447,7 @@ As rotas do módulo de \textit{tenants} são definidas no \texttt{TenantsControl
 	\end{enumerate}
 \end{itemize}
 
-\subsubsubsection{Consulta de um Tenant}
+\subsubsubsection{Consulta de um\textit{Tenant}}
 \begin{itemize}
 	\item \textbf{Rota:} \texttt{GET /tenants/:id}
 	\item \textbf{Descrição:} Buscar um \textit{tenant} específico.
@@ -460,17 +460,17 @@ As rotas do módulo de \textit{tenants} são definidas no \texttt{TenantsControl
 	\end{enumerate}
 \end{itemize}
 
-\textbf{Outras Operações} \\
+\noindent\textbf{Outras Operações} \\
 Além das rotas descritas acima, o módulo também disponibiliza endpoints para listar todos os \textit{tenants}, atualizar informações e remover um \textit{tenant}. Estas operações são protegidas por um sistema de autenticação e autorização baseado em \textit{roles}, garantindo que apenas usuários com as permissões adequadas possam realizá-las.
 
 \subsubsection{Módulo de Usuarios}\label{subsubsec:modulo_usuarios}
 
-\textbf{Visão Geral}\\
+\noindent\textbf{Visão Geral}\\
 O módulo de usuários é responsável por gerenciar os perfis de usuários dentro do sistema multi-tenant. Ele permite o cadastro, consulta, edição e remoção de usuários (vinculados a uma empresa específica), além de possibilitar a gestão de papéis dentro de diferentes empresas. O sistema suporta diferentes níveis de acesso e autenticação baseada em tokens.
 
 Os usuários podem pertencer a múltiplas empresas e ter diferentes papéis em cada uma delas. Isso permite um controle granular das permissões e acesso às funcionalidades do sistema.
 
-\textbf{Fluxo das Rotas}\\
+\noindent\textbf{Fluxo das Rotas}\\
 O controlador de usuários (\texttt{users.controller.ts}) define os endpoints para interação com o serviço de usuários (\texttt{users.service.ts}), que contém a lógica de negócio. O código construído para o \textit{controller} e  o \textit{service} estão disponíveis no \autoref{cod:create-user-controller} e  no \autoref{cod:create-user-service}, respectivamente, e servirão de exemplo para os demais \textit{controllers} e \textit{services}.
 
 \subsubsubsection{Criação de Usuário}
@@ -584,12 +584,12 @@ O controlador de usuários (\texttt{users.controller.ts}) define os endpoints pa
   \end{enumerate}
 \end{itemize}
 
-\textbf{Conclusão} \\
+\noindent\textbf{Conclusão} \\
 Esse módulo é essencial para a gestão dos usuários do sistema, garantindo que cada um tenha acesso adequado aos recursos da empresa em que está vinculado. As regras de permissão asseguram que apenas usuários autorizados possam modificar informações sensíveis, proporcionando segurança e integridade aos dados.
 
 \subsubsection{Módulos de Quadras e Disponibilidade de Quadras}\label{subsubsec:modulos_quadras_disponibilidade_quadras}
 
-\textbf{Visão Geral}\\
+\noindent\textbf{Visão Geral}\\
 Os módulos de \textit{quadras} e \textit{disponibilidade de quadras} são responsáveis pelo gerenciamento dos espaços esportivos disponíveis para reserva dentro do sistema. O módulo de quadras gerencia a criação, consulta, atualização e remoção das quadras cadastradas, enquanto o módulo de disponibilidade de quadras permite definir os horários disponíveis para cada quadra em dias específicos da semana.
 
 As principais funcionalidades destes módulos incluem:
@@ -601,8 +601,9 @@ As principais funcionalidades destes módulos incluem:
     \item Atualização e remoção de quadras e horários disponíveis.
 \end{itemize}
 
-\textbf{Fluxo das Rotas}\\
-As rotas desses módulos são definidas nos controladores \texttt{FieldsController} e \texttt{FieldAvailabilitiesController}. A seguir, estão dispostos os fluxos das operações de criação e consulta de quadras e disponibilidade.
+\noindent\textbf{Fluxo das Rotas}\\
+As rotas desses módulos são definidas no controlador \texttt{FieldsController} e no controlador \texttt{FieldAvailabilitiesController}.
+A seguir, estão dispostos os fluxos das operações de criação e consulta de quadras e disponibilidade.
 
 \subsubsubsection{Criação de uma Quadra}
 \begin{itemize}
@@ -656,12 +657,12 @@ As rotas desses módulos são definidas nos controladores \texttt{FieldsControll
     \end{enumerate}
 \end{itemize}
 
-\textbf{Outras Operações}\\
+\noindent\textbf{Outras Operações}\\
 Além das rotas descritas acima, os módulos também disponibilizam endpoints para listar todas as quadras, atualizar informações e remover quadras e horários disponíveis.
 
 \subsubsection{Integração com eWeLink}\label{subsubsec:integacao_ewelink}
 
-\textbf{Visão Geral} \\
+\noindent\textbf{Visão Geral} \\
 O módulo de integração com a API eWeLink é responsável por permitir a conexão entre o sistema e dispositivos IoT suportados pela plataforma eWeLink. Ele possibilita que os administradores das empresas associem sua conta à plataforma, consultem os seus dispositivos e interajam de forma automatizada com os equipamentos cadastrados.
 
 As principais funcionalidades deste módulo incluem:
@@ -673,7 +674,7 @@ As principais funcionalidades deste módulo incluem:
     \item Controle seguro de permissões, garantindo que apenas administradores possam gerenciar dispositivos.
 \end{itemize}
 
-\textbf{Fluxo das Rotas} \\
+\noindent\textbf{Fluxo das Rotas} \\
 As rotas deste módulo são definidas no \texttt{EwelinkController} e interagem com o serviço de autenticação e gerenciamento de dispositivos eWeLink, fornecido pelo \texttt{EwelinkService}. A seguir, apresenta-se o fluxo das operações deste módulo.
 
 \subsubsubsection{Autenticação na API eWeLink}
@@ -711,7 +712,7 @@ O fluxo geral do protocolo OAuth2.0 é o seguinte:
 OAuth2.0 é amplamente utilizado em plataformas online, como Google Drive, Facebook e Twitter, que promove a autorização segura de recursos entre diferentes aplicações.
 
 \begin{figure}[htp]
-	\caption{\label{fig:oauth1}OAuth2.0 EWeLink. Obter oauth \textit{token}}
+	\caption{\label{fig:oauth1}OAuth2.0 EWeLink: Obtendo oauth \textit{token}}
 	\begin{center}
 	  \includegraphics[scale=0.45]{images/cap5/oauth_1.png}
 	\end{center}
@@ -745,7 +746,7 @@ No contexto da aplicação desenvolvida neste PFC, o usuário é redirecionado p
 \end{itemize}
 
 \begin{figure}[htp]
-	\caption{\label{fig:oauth2}OAuth2.0 EWeLink. Usando um \textit{access token}}
+	\caption{\label{fig:oauth2}OAuth2.0 EWeLink: Usando um \textit{access token}}
 	\begin{center}
 	  \includegraphics[scale=0.45]{images/cap5/oauth_2.png}
 	\end{center}
@@ -755,7 +756,7 @@ No contexto da aplicação desenvolvida neste PFC, o usuário é redirecionado p
 A \autoref{fig:oauth2} mostra o processo de uso do \textit{access token} na interação com a plataforma \textit{Coolkit Open Platform 4.3 EWeLink}. Neste exemplo, o usuário autenticado com permissão realiza uma requisição para listar os dispositivos, que são consultados na API eWeLink e retornados ao usuário.
 
 \begin{figure}[htp]
-	\caption{\label{fig:oauth3}OAuth2.0 EWeLink. Atualizando um \textit{access token}}
+	\caption{\label{fig:oauth3}OAuth2.0 EWeLink: Atualizando um \textit{access token}}
 	\begin{center}
 	  \includegraphics[scale=0.45]{images/cap5/oauth_3.png}
 	\end{center}
@@ -764,12 +765,12 @@ A \autoref{fig:oauth2} mostra o processo de uso do \textit{access token} na inte
 
 Caso o \textit{access token} esteja expirado ou inválido, a aplicação solicita um novo token utilizando o \textit{refresh token}. O servidor de autorização gera um novo \textit{access token} e um novo \textit{refresh token}, que podem ser usados para futuras requisições. Caso o \textit{refresh token} esteja expirado ou inválido, a plataforma acusará erro e indicará ao usuário para efetuar login novamente para obter um novo \textit{access token} e \textit{refresh token}.
  
-\textbf{Outras Operações}\\
+\noindent\textbf{Outras Operações}\\
 Além das rotas descritas acima, o módulo também inclui funcionalidades para atualização de tokens de acesso, e controle dos dispositivos IoT para fins de testes (os controles da plataforma serão enviados pelo módulo \textit{schedule} demonstrado na \autoref{subsubsec:envio_comandos_iot}).
 
 \subsubsection{Módulo de Quadras-Dispositivos}\label{subsubsec:modulo_quadras_dispositivos}
 
-\textbf{Visão Geral}\\
+\noindent\textbf{Visão Geral}\\
 O módulo de \textit{field-devices} é responsável pela integração entre as quadras esportivas e os dispositivos IoT, permitindo o gerenciamento dos equipamentos eletrônicos associados a cada quadra. Essa funcionalidade possibilita o controle automatizado de iluminação, climatização e outros dispositivos conectados, otimizando a experiência do usuário e a gestão operacional do sistema.
 
 As principais funcionalidades deste módulo incluem:
@@ -781,7 +782,7 @@ As principais funcionalidades deste módulo incluem:
 \item Controle seguro de permissões, garantindo que apenas administradores e gerentes possam gerenciar os dispositivos.
 \end{itemize}
 
-\textbf{Fluxo das Rotas}\\
+\noindent\textbf{Fluxo das Rotas}\\
 As rotas deste módulo são definidas no \texttt{FieldDevicesController} e interagem com o serviço de gerenciamento de dispositivos \texttt{FieldDevicesService}. A seguir, são apresentados os fluxos de todas as operações disponíveis.
 
 \subsubsubsection{Criação de um Dispositivo de Quadra}
@@ -850,7 +851,7 @@ As rotas deste módulo são definidas no \texttt{FieldDevicesController} e inter
 
 \subsubsection{Módulo de Reservas e Comandos IoT}\label{subsubsec:modulo_reservas}
 
-\textbf{Visão Geral}\\
+\noindent\textbf{Visão Geral}\\
 O módulo de \textit{reservas e comandos IoT} é responsável pelo gerenciamento das reservas de quadras esportivas e pela automação dos dispositivos IoT associados. Ele garante que os usuários possam realizar reservas de maneira eficiente, ao mesmo tempo que controla dispositivos como iluminação e climatização, otimizando os recursos disponíveis.
 
 As principais funcionalidades deste módulo incluem:
@@ -862,7 +863,7 @@ As principais funcionalidades deste módulo incluem:
     \item Prevenção de conflitos de horários e gerenciamento de comandos consecutivos para dispositivos.
 \end{itemize}
 
-\textbf{Fluxo das Rotas}\\
+\noindent\textbf{Fluxo das Rotas}\\
 As rotas deste módulo são definidas no \texttt{BookingsController} e interagem com o serviço de gerenciamento de reservas e automação de dispositivos IoT, fornecido pelo \texttt{BookingsService}. A seguir, são apresentados os fluxos das principais operações disponíveis.
 
 \subsubsubsection{Criação de uma Reserva}
@@ -879,160 +880,7 @@ As rotas deste módulo são definidas no \texttt{BookingsController} e interagem
     \end{enumerate}
 \end{itemize}
 
-O código construído para o o \textit{service} está disponíveis no \autoref{cod:create-booking-service}.
-
-\begin{lstlisting}[caption={Exemplo de \textit{controller} para \textit{login}.},label={cod:create-booking-service}]
-	async create(
-    createBookingDto: CreateBookingDto,
-    fieldId: string,
-    userId: string
-  ) {
-    const fieldAvailability = await this.fieldAvailabilitiesService.findOne(
-      fieldId,
-      createBookingDto.fieldAvailabilityId
-    )
-
-    const user = await this.usersService.findById(userId)
-
-    const startDateTime = moment(createBookingDto.startTime)
-    const endDateTime = moment(createBookingDto.endTime)
-    console.log('startDateTime moment', startDateTime)
-    console.log('endDateTime moment', endDateTime)
-
-    const hasConflict = await this.hasBookingConflict(
-      fieldId,
-      createBookingDto.startTime,
-      createBookingDto.endTime
-    )
-
-    if (hasConflict)
-      throw new ConflictException('Ja existe uma reserva neste periodo')
-
-    // check if the week days are the same
-    if (
-      startDateTime.utc().day() !==
-      moment().day(fieldAvailability.dayOfWeek).day()
-    )
-      throw new BadRequestException(
-        'Dia da semana solicitado nao confere com o dia disponivel'
-      )
-
-    // check if the start and end times match the availability range
-    if (
-      startDateTime.utc().format('HH:mm:ss') !== fieldAvailability.startTime ||
-      endDateTime.utc().format('HH:mm:ss') !== fieldAvailability.endTime
-    ) {
-      console.log('hora disponivel inicio:', fieldAvailability.startTime)
-      console.log(
-        'hora solicitada inicio:',
-        startDateTime.utc().format('HH:mm:ss')
-      )
-      console.log('hora disponivel final:', fieldAvailability.endTime)
-      console.log(
-        'hora solicitada final:',
-        endDateTime.utc().format('HH:mm:ss')
-      )
-
-      throw new BadRequestException(
-        'Horarios solicitados nao conferem com os horarios disponiveis'
-      )
-    }
-
-    const booking = new Booking()
-
-    Object.assign(booking, {
-      ...createBookingDto,
-      field: fieldAvailability.field,
-      user
-    } as unknown as Booking)
-    // Filter data to return without user for the booking
-    const createdBooking = await this.bookingsRepository.save(booking)
-
-    const fieldDevicesByField = await this.fieldDevicesService.findAll(fieldId)
-
-    // if there are field devices, create device commands
-    const returnObject = { booking: createdBooking }
-    if (fieldDevicesByField.length > 0) {
-      const bookingDeviceCommands = fieldDevicesByField.map((device) => {
-        const deviceCommand = new DeviceCommand()
-        Object.assign(deviceCommand, {
-          booking: createdBooking,
-          fieldDevice: device,
-          executionTime:
-            device.eventType === EventTypeEnum.START
-              ? booking.startTime
-              : booking.endTime
-        })
-        return deviceCommand
-      })
-
-      const consecutiveCommands = await Promise.all(
-        bookingDeviceCommands.map((command) => {
-          // Step 1: Check if there are any consecutive commands for the same device and ignore them
-          const query = {
-            where: {
-              status: CommandStatusEnum.PENDING,
-              fieldDevice: {
-                deviceId: command.fieldDevice.deviceId,
-                skipIfConsecutive: true,
-                field: { id: fieldId }
-              },
-              executionTime: Between(
-                moment(command.executionTime).subtract(5, 'minutes').toDate(),
-                moment(command.executionTime).add(5, 'minutes').toDate()
-              )
-            },
-            relations: { fieldDevice: { field: true } }
-          }
-          return this.deviceCommandsRepository.findOne(query)
-        })
-      )
-
-      // search if the command has any consecutive command so it needs to be ignored
-      const deviceCommandsWithoutConsecutiveCommands =
-        bookingDeviceCommands.filter(
-          (_command, index) => !consecutiveCommands[index]
-        )
-
-      // delete the pending commands that are already in the device_command table
-      const commandsToDeleteFromDeviceCommandTable = consecutiveCommands.filter(
-        (command) => !!command
-      )
-
-      // delete the commands from the device_command table
-      if (commandsToDeleteFromDeviceCommandTable.length > 0) {
-        await this.deviceCommandsRepository.delete(
-          commandsToDeleteFromDeviceCommandTable.map((command) => command.id)
-        )
-
-        returnObject['deviceCommandsDeleted'] =
-          commandsToDeleteFromDeviceCommandTable
-      }
-      returnObject['deviceCommandsCreated'] =
-        await this.deviceCommandsRepository.save(
-          deviceCommandsWithoutConsecutiveCommands
-        )
-    }
-
-    return returnObject
-  }
-
-  async hasBookingConflict(
-    fieldId: string,
-    startTime: string,
-    endTime: string
-  ): Promise<boolean> {
-    const conflict = await this.bookingsRepository.query(
-      `SELECT COUNT(*) > 0 AS has_overlap
-      FROM booking
-      WHERE "fieldId" = $1
-        AND "startTime" < $3
-        AND "endTime" > $2`,
-      [fieldId, startTime, endTime]
-    )
-    return conflict[0]?.has_overlap
-  }
-\end{lstlisting}
+O código construído para o o \textit{service} está disponível no \autoref{cod:create-booking-service}.
 
 \subsubsubsection{Listagem de Reservas de uma Quadra}
 \begin{itemize}
@@ -1087,7 +935,7 @@ O código construído para o o \textit{service} está disponíveis no \autoref{c
 
 \subsubsection{Envio de Comandos IoT}\label{subsubsec:envio_comandos_iot}
 
-\textbf{Visão Geral}\\
+\noindent\textbf{Visão Geral}\\
 O módulo \textit{schedule} é responsável por garantir o envio dos comandos IoT para a API eWeLink no momento adequado. Para isso, ele utiliza a biblioteca \texttt{@nestjs/schedule}, que permite a execução de tarefas periódicas dentro do sistema. O agendamento periódico verifica comandos pendentes e os envia à API eWeLink, garantindo que os dispositivos IoT sejam acionados conforme as reservas criadas no sistema.
 
 O processo de agendamento é realizado com a anotação \texttt{@Cron('* * * * *')}, que configura a execução da tarefa a cada minuto. Durante essa execução, o sistema:
@@ -1100,7 +948,7 @@ O processo de agendamento é realizado com a anotação \texttt{@Cron('* * * * *
     \item Atualiza o status dos comandos no banco de dados.
 \end{itemize}
 
-\textbf{Fluxo de Execução}\\
+\noindent\textbf{Fluxo de Execução}\\
 O módulo segue um fluxo detalhado para processar os comandos de dispositivos IoT de maneira eficiente e segura:
 
 \begin{enumerate}
@@ -1161,12 +1009,12 @@ O módulo segue um fluxo detalhado para processar os comandos de dispositivos Io
   \end{itemize}
 \end{enumerate}
 
-\textbf{Conclusão}\\
+\noindent\textbf{Conclusão}\\
 O módulo \textit{schedule} desempenha um papel fundamental na automação dos dispositivos IoT integrados ao sistema. Ao utilizar a biblioteca \texttt{@nestjs/schedule}, garante-se que os comandos sejam processados no momento correto, evitando acionamentos incorretos e otimizando a interação com a API eWeLink. Essa abordagem melhora a eficiência operacional do sistema e proporciona uma experiência mais confiável para o envio de comandos ao dispositivos IoT.
 
 \section{Análise de Resultados}\label{sec:analise_resultados}
 
-Este capítulo apresenta uma análise detalhada dos resultados obtidos com a implementação do sistema de gerenciamento de reservas de quadras esportivas e automação de dispositivos IoT. A avaliação se baseia em indicadores de desempenho, gráficos e estatísticas para determinar a eficácia da solução desenvolvida em comparação com métodos anteriores.
+Esta seção apresenta uma análise detalhada dos resultados obtidos com a implementação do sistema de gerenciamento de reservas de quadras esportivas e automação de dispositivos IoT. A avaliação se baseia em indicadores de desempenho, gráficos e estatísticas para determinar a eficácia da solução desenvolvida em comparação com métodos anteriores.
 
 \subsection{Avaliação dos Resultados}
 
@@ -1191,7 +1039,7 @@ O novo sistema demonstrou desempenho significativo no processo de reservas e na 
 	\fonte{Autor.}
 \end{table}
 
-O código base desenvolvido para realiza n chamadas ao endpoit e calcular o tempo médio de resposta está apresentado no \autoref{cod:script_tempo_medio_resposta}.
+O código base desenvolvido para realiza n chamadas ao \textit{endpoit} e calcular o tempo médio de resposta está apresentado no \autoref{cod:script_tempo_medio_resposta}.
 
 \begin{lstlisting}[caption={\textit{script} para cálculo do tempo médio de resposta.},label={cod:script_tempo_medio_resposta}]
   const axios = require('axios');
@@ -1253,7 +1101,7 @@ Para alguns \textit{endpoints} foi necessário realizas algumas modificações n
   /tenants & GET & Lista todos os tenants & 124 \\ \hline
   % \multicolumn{4}{|c|}{\textbf{/tenants/:tenantId/fields}} \\ \hline
   \textbf{/tenants/:tenantId/fields} & & & \\ \hline
-  / & GET & Lista todas as quadras de um tenant & 155 \\ \hline
+  / & GET & Lista todas as quadras de um\textit{tenant}& 155 \\ \hline
   /:id & GET & Retorna os detalhes de uma quadra especifica & 73 \\ \hline
   /:fieldId/field-availabilities & GET & Lista as disponibilidades de uma quadra & 212 \\ \hline
   /:fieldId/bookings & POST & Cria uma nova reserva & 230 \\ \hline
@@ -1271,7 +1119,7 @@ A \autoref{tab:tempo_medio_resposta} apresenta o tempo médio de resposta para c
 
 \subsection{Vantagens e Desvantagens da Solução Desenvolvida}
 
-\textbf{Vantagens}\\
+\noindent\textbf{Vantagens}\\
 \begin{itemize}
     \item Integração direta com a API eWeLink para controle de dispositivos IoT.
     \item Simplicidade na aquisição, instalação, configuração e controle dos dispositivos IoT. 
@@ -1280,7 +1128,7 @@ A \autoref{tab:tempo_medio_resposta} apresenta o tempo médio de resposta para c
     \item Segurança aprimorada por meio de autenticação baseada em tokens e controle de permissões de acesso baseado em papéis.
 \end{itemize}
 
-\textbf{Desvantagens}\\
+\noindent\textbf{Desvantagens}\\
 \begin{itemize}
     \item Dependência da conectividade com a API eWeLink para a operação dos dispositivos IoT.
     \item Possível curva de aprendizado para novos usuários e administradores do sistema.
@@ -1319,5 +1167,5 @@ Através de testes simulados, notou-se que a futura implementação do sistema c
     \item Contribuição para práticas mais sustentáveis no gerenciamento dos espaços esportivos.
 \end{itemize}
 
-\textbf{Conclusão}\\
-A análise dos resultados demonstra que o sistema backend desenvolvido atendeu aos objetivos propostos e trouxe melhorias significativas para a gestão de reservas e automação de dispositivos IoT em ambiente simulado. Apesar dos desafios encontrados, a implementação se mostrou eficaz e com grande potencial de expansão e aprimoramento futuro.
+\noindent\textbf{Conclusão}\\
+A análise dos resultados demonstra que o sistema \textit{backend} desenvolvido atendeu aos objetivos propostos e trouxe melhorias significativas para a gestão de reservas e automação de dispositivos IoT em ambiente simulado. Apesar dos desafios encontrados, a implementação se mostrou eficaz e com grande potencial de expansão e aprimoramento futuro.

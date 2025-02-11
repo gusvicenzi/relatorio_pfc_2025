@@ -1,5 +1,160 @@
 % ----------------------------------------------------------
-\chapter{Descrição 1}
-% ----------------------------------------------------------
+% \chapter{Descrição 1}
+% % ----------------------------------------------------------
 
-Textos elaborados pelo autor, a fim de completar a sua argumentação. Deve ser precedido da palavra APÊNDICE, identificada por letras maiúsculas consecutivas, travessão e pelo respectivo título. Utilizam-se letras maiúsculas dobradas quando esgotadas as letras do alfabeto. 
+% Textos elaborados pelo autor, a fim de completar a sua argumentação. Deve ser precedido da palavra APÊNDICE, identificada por letras maiúsculas consecutivas, travessão e pelo respectivo título. Utilizam-se letras maiúsculas dobradas quando esgotadas as letras do alfabeto. 
+
+\chapter{APÊNDICE A - Código do Controlador}
+
+\begin{lstlisting}[caption={\textit{Service} para a rota de criação de \textit{booking} (agendamento).},label={cod:create-booking-service}]
+	async create(
+    createBookingDto: CreateBookingDto,
+    fieldId: string,
+    userId: string
+  ) {
+    const fieldAvailability = await this.fieldAvailabilitiesService.findOne(
+      fieldId,
+      createBookingDto.fieldAvailabilityId
+    )
+
+    const user = await this.usersService.findById(userId)
+
+    const startDateTime = moment(createBookingDto.startTime)
+    const endDateTime = moment(createBookingDto.endTime)
+    console.log('startDateTime moment', startDateTime)
+    console.log('endDateTime moment', endDateTime)
+
+    const hasConflict = await this.hasBookingConflict(
+      fieldId,
+      createBookingDto.startTime,
+      createBookingDto.endTime
+    )
+
+    if (hasConflict)
+      throw new ConflictException('Ja existe uma reserva neste periodo')
+
+    // check if the week days are the same
+    if (
+      startDateTime.utc().day() !==
+      moment().day(fieldAvailability.dayOfWeek).day()
+    )
+      throw new BadRequestException(
+        'Dia da semana solicitado nao confere com o dia disponivel'
+      )
+
+    // check if the start and end times match the availability range
+    if (
+      startDateTime.utc().format('HH:mm:ss') !== fieldAvailability.startTime ||
+      endDateTime.utc().format('HH:mm:ss') !== fieldAvailability.endTime
+    ) {
+      console.log('hora disponivel inicio:', fieldAvailability.startTime)
+      console.log(
+        'hora solicitada inicio:',
+        startDateTime.utc().format('HH:mm:ss')
+      )
+      console.log('hora disponivel final:', fieldAvailability.endTime)
+      console.log(
+        'hora solicitada final:',
+        endDateTime.utc().format('HH:mm:ss')
+      )
+
+      throw new BadRequestException(
+        'Horarios solicitados nao conferem com os horarios disponiveis'
+      )
+    }
+
+    const booking = new Booking()
+
+    Object.assign(booking, {
+      ...createBookingDto,
+      field: fieldAvailability.field,
+      user
+    } as unknown as Booking)
+    // Filter data to return without user for the booking
+    const createdBooking = await this.bookingsRepository.save(booking)
+
+    const fieldDevicesByField = await this.fieldDevicesService.findAll(fieldId)
+
+    // if there are field devices, create device commands
+    const returnObject = { booking: createdBooking }
+    if (fieldDevicesByField.length > 0) {
+      const bookingDeviceCommands = fieldDevicesByField.map((device) => {
+        const deviceCommand = new DeviceCommand()
+        Object.assign(deviceCommand, {
+          booking: createdBooking,
+          fieldDevice: device,
+          executionTime:
+            device.eventType === EventTypeEnum.START
+              ? booking.startTime
+              : booking.endTime
+        })
+        return deviceCommand
+      })
+
+      const consecutiveCommands = await Promise.all(
+        bookingDeviceCommands.map((command) => {
+          // Step 1: Check if there are any consecutive commands for the same device and ignore them
+          const query = {
+            where: {
+              status: CommandStatusEnum.PENDING,
+              fieldDevice: {
+                deviceId: command.fieldDevice.deviceId,
+                skipIfConsecutive: true,
+                field: { id: fieldId }
+              },
+              executionTime: Between(
+                moment(command.executionTime).subtract(5, 'minutes').toDate(),
+                moment(command.executionTime).add(5, 'minutes').toDate()
+              )
+            },
+            relations: { fieldDevice: { field: true } }
+          }
+          return this.deviceCommandsRepository.findOne(query)
+        })
+      )
+
+      // search if the command has any consecutive command so it needs to be ignored
+      const deviceCommandsWithoutConsecutiveCommands =
+        bookingDeviceCommands.filter(
+          (_command, index) => !consecutiveCommands[index]
+        )
+
+      // delete the pending commands that are already in the device_command table
+      const commandsToDeleteFromDeviceCommandTable = consecutiveCommands.filter(
+        (command) => !!command
+      )
+
+      // delete the commands from the device_command table
+      if (commandsToDeleteFromDeviceCommandTable.length > 0) {
+        await this.deviceCommandsRepository.delete(
+          commandsToDeleteFromDeviceCommandTable.map((command) => command.id)
+        )
+
+        returnObject['deviceCommandsDeleted'] =
+          commandsToDeleteFromDeviceCommandTable
+      }
+      returnObject['deviceCommandsCreated'] =
+        await this.deviceCommandsRepository.save(
+          deviceCommandsWithoutConsecutiveCommands
+        )
+    }
+
+    return returnObject
+  }
+
+  async hasBookingConflict(
+    fieldId: string,
+    startTime: string,
+    endTime: string
+  ): Promise<boolean> {
+    const conflict = await this.bookingsRepository.query(
+      `SELECT COUNT(*) > 0 AS has_overlap
+      FROM booking
+      WHERE "fieldId" = $1
+        AND "startTime" < $3
+        AND "endTime" > $2`,
+      [fieldId, startTime, endTime]
+    )
+    return conflict[0]?.has_overlap
+  }
+\end{lstlisting}

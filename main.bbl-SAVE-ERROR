@@ -19,6 +19,242 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{KHANACADEMY}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=60b71e8d3f6c088495d6e63a3d4ef713}{%
+           family={Academy},
+           familyi={A\bibinitperiod},
+           given={Khan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{60b71e8d3f6c088495d6e63a3d4ef713}
+      \strng{fullhash}{60b71e8d3f6c088495d6e63a3d4ef713}
+      \strng{fullhashraw}{60b71e8d3f6c088495d6e63a3d4ef713}
+      \strng{bibnamehash}{60b71e8d3f6c088495d6e63a3d4ef713}
+      \strng{authorbibnamehash}{60b71e8d3f6c088495d6e63a3d4ef713}
+      \strng{authornamehash}{60b71e8d3f6c088495d6e63a3d4ef713}
+      \strng{authorfullhash}{60b71e8d3f6c088495d6e63a3d4ef713}
+      \strng{authorfullhashraw}{60b71e8d3f6c088495d6e63a3d4ef713}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Khan Academy}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pt.khanacademy.org/
+      \endverb
+      \verb{url}
+      \verb https://pt.khanacademy.org/
+      \endverb
+    \endentry
+    \entry{AWS}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4847e034bb0a55fcbc8a3380d6a3ab80}{%
+           family={AWS},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{fullhash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{fullhashraw}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{bibnamehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authorbibnamehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authornamehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authorfullhash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authorfullhashraw}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AWS}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/pt/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/pt/
+      \endverb
+    \endentry
+    \entry{AWS_BEANS}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4847e034bb0a55fcbc8a3380d6a3ab80}{%
+           family={AWS},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{fullhash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{fullhashraw}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{bibnamehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authorbibnamehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authornamehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authorfullhash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authorfullhashraw}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AWS Elastic Beanstalk}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/pt/elasticbeanstalk/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/pt/elasticbeanstalk/
+      \endverb
+    \endentry
+    \entry{AWS_IoT}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4847e034bb0a55fcbc8a3380d6a3ab80}{%
+           family={AWS},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{fullhash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{fullhashraw}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{bibnamehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authorbibnamehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authornamehash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authorfullhash}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \strng{authorfullhashraw}{4847e034bb0a55fcbc8a3380d6a3ab80}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AWS IoT Core}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/pt/iot-core/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/pt/iot-core/
+      \endverb
+    \endentry
+    \entry{Cassandra}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9a62a012d95c35060b57a902c411d73d}{%
+           family={Cassandra},
+           familyi={C\bibinitperiod},
+           given={Apache},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9a62a012d95c35060b57a902c411d73d}
+      \strng{fullhash}{9a62a012d95c35060b57a902c411d73d}
+      \strng{fullhashraw}{9a62a012d95c35060b57a902c411d73d}
+      \strng{bibnamehash}{9a62a012d95c35060b57a902c411d73d}
+      \strng{authorbibnamehash}{9a62a012d95c35060b57a902c411d73d}
+      \strng{authornamehash}{9a62a012d95c35060b57a902c411d73d}
+      \strng{authorfullhash}{9a62a012d95c35060b57a902c411d73d}
+      \strng{authorfullhashraw}{9a62a012d95c35060b57a902c411d73d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cassandra}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cassandra.apache.org/_/index.html
+      \endverb
+      \verb{url}
+      \verb https://cassandra.apache.org/_/index.html
+      \endverb
+    \endentry
+    \entry{COURSERA}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=31a74a3d90482bebd296c057539e548c}{%
+           family={Coursera},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{31a74a3d90482bebd296c057539e548c}
+      \strng{fullhash}{31a74a3d90482bebd296c057539e548c}
+      \strng{fullhashraw}{31a74a3d90482bebd296c057539e548c}
+      \strng{bibnamehash}{31a74a3d90482bebd296c057539e548c}
+      \strng{authorbibnamehash}{31a74a3d90482bebd296c057539e548c}
+      \strng{authornamehash}{31a74a3d90482bebd296c057539e548c}
+      \strng{authorfullhash}{31a74a3d90482bebd296c057539e548c}
+      \strng{authorfullhashraw}{31a74a3d90482bebd296c057539e548c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Coursera}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.coursera.org/
+      \endverb
+      \verb{url}
+      \verb https://www.coursera.org/
+      \endverb
+    \endentry
+    \entry{DOCKER}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c5fd214cdd0d2b3b4272e73b022ba5c2}{%
+           family={Docker},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{fullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{fullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{bibnamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{authorbibnamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{authornamehash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{authorfullhash}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \strng{authorfullhashraw}{c5fd214cdd0d2b3b4272e73b022ba5c2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Docker}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.docker.com/
+      \endverb
+      \verb{url}
+      \verb https://www.docker.com/
+      \endverb
+    \endentry
     \entry{Erl2013}{book}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=5606702d875163ff65690170e545c0b8}{%
@@ -121,6 +357,38 @@
       \field{title}{Patterns of Enterprise Application Architecture}
       \field{year}{2002}
     \endentry
+    \entry{GITHUB_ACTIONS}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e1adbcbb92c622d0b3e619f9d0730abf}{%
+           family={Github},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{fullhash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{fullhashraw}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{bibnamehash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{authorbibnamehash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{authornamehash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{authorfullhash}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \strng{authorfullhashraw}{e1adbcbb92c622d0b3e619f9d0730abf}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Github Actions}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/features/actions
+      \endverb
+      \verb{url}
+      \verb https://github.com/features/actions
+      \endverb
+    \endentry
     \entry{gokhale2018introduction}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=64a5fa16b3524f6c179c35c0e37e3a18}{%
@@ -163,6 +431,340 @@
       \field{year}{2018}
       \field{pages}{41\bibrangedash 44}
       \range{pages}{4}
+    \endentry
+    \entry{GOOGLE_APP_ENGINE}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google App Engine}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/appengine
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/appengine
+      \endverb
+    \endentry
+    \entry{GOOGLE_IoT}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Cloud IoT}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.google.com/iot
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/iot
+      \endverb
+    \endentry
+    \entry{GCP}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Cloud Platform}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/
+      \endverb
+    \endentry
+    \entry{GOOGLE_DOCS}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{4}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Docs}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.google.com/
+      \endverb
+      \verb{url}
+      \verb https://docs.google.com/
+      \endverb
+    \endentry
+    \entry{GOOGLE_DRIVE}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{5}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Drive}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://drive.google.com/
+      \endverb
+      \verb{url}
+      \verb https://drive.google.com/
+      \endverb
+    \endentry
+    \entry{GOOGLE_SHEETS}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{6}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Sheets}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sheets.google.com/
+      \endverb
+      \verb{url}
+      \verb https://sheets.google.com/
+      \endverb
+    \endentry
+    \entry{GOOGLE_WORKSPACE}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{7}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Workspace}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://workspace.google.com/
+      \endverb
+      \verb{url}
+      \verb https://workspace.google.com/
+      \endverb
+    \endentry
+    \entry{InfluxDB}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=aeaf5074e9f38f1268187fc89e1e8d54}{%
+           family={InfluxData},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{aeaf5074e9f38f1268187fc89e1e8d54}
+      \strng{fullhash}{aeaf5074e9f38f1268187fc89e1e8d54}
+      \strng{fullhashraw}{aeaf5074e9f38f1268187fc89e1e8d54}
+      \strng{bibnamehash}{aeaf5074e9f38f1268187fc89e1e8d54}
+      \strng{authorbibnamehash}{aeaf5074e9f38f1268187fc89e1e8d54}
+      \strng{authornamehash}{aeaf5074e9f38f1268187fc89e1e8d54}
+      \strng{authorfullhash}{aeaf5074e9f38f1268187fc89e1e8d54}
+      \strng{authorfullhashraw}{aeaf5074e9f38f1268187fc89e1e8d54}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{InfluxDB}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.influxdata.com/
+      \endverb
+      \verb{url}
+      \verb https://www.influxdata.com/
+      \endverb
+    \endentry
+    \entry{JENKINS}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2e54334c0a5ce2e3e5a5845df3ab3ada}{%
+           family={Jenkins},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e54334c0a5ce2e3e5a5845df3ab3ada}
+      \strng{fullhash}{2e54334c0a5ce2e3e5a5845df3ab3ada}
+      \strng{fullhashraw}{2e54334c0a5ce2e3e5a5845df3ab3ada}
+      \strng{bibnamehash}{2e54334c0a5ce2e3e5a5845df3ab3ada}
+      \strng{authorbibnamehash}{2e54334c0a5ce2e3e5a5845df3ab3ada}
+      \strng{authornamehash}{2e54334c0a5ce2e3e5a5845df3ab3ada}
+      \strng{authorfullhash}{2e54334c0a5ce2e3e5a5845df3ab3ada}
+      \strng{authorfullhashraw}{2e54334c0a5ce2e3e5a5845df3ab3ada}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Jenkins}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.jenkins.io/
+      \endverb
+      \verb{url}
+      \verb https://www.jenkins.io/
+      \endverb
+    \endentry
+    \entry{KUBERNETES}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=30136395f01879792198317c11831ea4}{%
+           family={Kubernetes},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{30136395f01879792198317c11831ea4}
+      \strng{fullhash}{30136395f01879792198317c11831ea4}
+      \strng{fullhashraw}{30136395f01879792198317c11831ea4}
+      \strng{bibnamehash}{30136395f01879792198317c11831ea4}
+      \strng{authorbibnamehash}{30136395f01879792198317c11831ea4}
+      \strng{authornamehash}{30136395f01879792198317c11831ea4}
+      \strng{authorfullhash}{30136395f01879792198317c11831ea4}
+      \strng{authorfullhashraw}{30136395f01879792198317c11831ea4}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kubernetes}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://kubernetes.io/
+      \endverb
+      \verb{url}
+      \verb https://kubernetes.io/
+      \endverb
     \endentry
     \entry{martin2000design}{article}{}{}
       \name{author}{1}{}{%
@@ -256,6 +858,362 @@
       \field{title}{REST API design rulebook}
       \field{year}{2011}
     \endentry
+    \entry{AZURE_IoT}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=23092042d64b67eae81636ed3219b1ac}{%
+           family={Microsfot},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{fullhash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{fullhashraw}{23092042d64b67eae81636ed3219b1ac}
+      \strng{bibnamehash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{authorbibnamehash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{authornamehash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{authorfullhash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{authorfullhashraw}{23092042d64b67eae81636ed3219b1ac}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Azure IoT Hub}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://azure.microsoft.com/pt-br/products/iot-hub
+      \endverb
+      \verb{url}
+      \verb https://azure.microsoft.com/pt-br/products/iot-hub
+      \endverb
+    \endentry
+    \entry{TEAMS}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=23092042d64b67eae81636ed3219b1ac}{%
+           family={Microsfot},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{fullhash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{fullhashraw}{23092042d64b67eae81636ed3219b1ac}
+      \strng{bibnamehash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{authorbibnamehash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{authornamehash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{authorfullhash}{23092042d64b67eae81636ed3219b1ac}
+      \strng{authorfullhashraw}{23092042d64b67eae81636ed3219b1ac}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microsfot Teams}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.microsoft.com/pt-br/microsoft-teams/log-in
+      \endverb
+      \verb{url}
+      \verb https://www.microsoft.com/pt-br/microsoft-teams/log-in
+      \endverb
+    \endentry
+    \entry{AZURE}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Azure}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://azure.microsoft.com/pt-br/
+      \endverb
+      \verb{url}
+      \verb https://azure.microsoft.com/pt-br/
+      \endverb
+    \endentry
+    \entry{MongoDB}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=206e3718af092fd1d12f80cae771ccac}{%
+           family={MongoDB},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{206e3718af092fd1d12f80cae771ccac}
+      \strng{fullhash}{206e3718af092fd1d12f80cae771ccac}
+      \strng{fullhashraw}{206e3718af092fd1d12f80cae771ccac}
+      \strng{bibnamehash}{206e3718af092fd1d12f80cae771ccac}
+      \strng{authorbibnamehash}{206e3718af092fd1d12f80cae771ccac}
+      \strng{authornamehash}{206e3718af092fd1d12f80cae771ccac}
+      \strng{authorfullhash}{206e3718af092fd1d12f80cae771ccac}
+      \strng{authorfullhashraw}{206e3718af092fd1d12f80cae771ccac}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MongoDB}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mongodb.com/
+      \endverb
+      \verb{url}
+      \verb https://www.mongodb.com/
+      \endverb
+    \endentry
+    \entry{MySQL}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=62a004b95946bb97541afa471dcca73a}{%
+           family={MySQL},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{62a004b95946bb97541afa471dcca73a}
+      \strng{fullhash}{62a004b95946bb97541afa471dcca73a}
+      \strng{fullhashraw}{62a004b95946bb97541afa471dcca73a}
+      \strng{bibnamehash}{62a004b95946bb97541afa471dcca73a}
+      \strng{authorbibnamehash}{62a004b95946bb97541afa471dcca73a}
+      \strng{authornamehash}{62a004b95946bb97541afa471dcca73a}
+      \strng{authorfullhash}{62a004b95946bb97541afa471dcca73a}
+      \strng{authorfullhashraw}{62a004b95946bb97541afa471dcca73a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MySQL}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mysql.com/
+      \endverb
+      \verb{url}
+      \verb https://www.mysql.com/
+      \endverb
+    \endentry
+    \entry{NETFLIX}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=170b1d363bd8516fbf3a3eb05d4faff6}{%
+           family={Netflix},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{170b1d363bd8516fbf3a3eb05d4faff6}
+      \strng{fullhash}{170b1d363bd8516fbf3a3eb05d4faff6}
+      \strng{fullhashraw}{170b1d363bd8516fbf3a3eb05d4faff6}
+      \strng{bibnamehash}{170b1d363bd8516fbf3a3eb05d4faff6}
+      \strng{authorbibnamehash}{170b1d363bd8516fbf3a3eb05d4faff6}
+      \strng{authornamehash}{170b1d363bd8516fbf3a3eb05d4faff6}
+      \strng{authorfullhash}{170b1d363bd8516fbf3a3eb05d4faff6}
+      \strng{authorfullhashraw}{170b1d363bd8516fbf3a3eb05d4faff6}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Netflix}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.netflix.com/
+      \endverb
+      \verb{url}
+      \verb https://www.netflix.com/
+      \endverb
+    \endentry
+    \entry{NETSUITE}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f6641d8266d544a2282ef1570f01423e}{%
+           family={NetSuite},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6641d8266d544a2282ef1570f01423e}
+      \strng{fullhash}{f6641d8266d544a2282ef1570f01423e}
+      \strng{fullhashraw}{f6641d8266d544a2282ef1570f01423e}
+      \strng{bibnamehash}{f6641d8266d544a2282ef1570f01423e}
+      \strng{authorbibnamehash}{f6641d8266d544a2282ef1570f01423e}
+      \strng{authornamehash}{f6641d8266d544a2282ef1570f01423e}
+      \strng{authorfullhash}{f6641d8266d544a2282ef1570f01423e}
+      \strng{authorfullhashraw}{f6641d8266d544a2282ef1570f01423e}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NetSuite}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.netsuite.com/portal/br/home.shtml
+      \endverb
+      \verb{url}
+      \verb https://www.netsuite.com/portal/br/home.shtml
+      \endverb
+    \endentry
+    \entry{Oracle}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=30162ed78b6c10f731411f2fc440c24f}{%
+           family={Oracle},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhashraw}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{bibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorbibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authornamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhashraw}{30162ed78b6c10f731411f2fc440c24f}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Oracle Database}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.oracle.com/database/
+      \endverb
+      \verb{url}
+      \verb https://www.oracle.com/database/
+      \endverb
+    \endentry
+    \entry{PostgreSQL}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=399bd1ee587245ecac6f39beaa99886f}{%
+           family={PostgreSQL},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{fullhash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{fullhashraw}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{bibnamehash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{authorbibnamehash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{authornamehash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{authorfullhash}{399bd1ee587245ecac6f39beaa99886f}
+      \strng{authorfullhashraw}{399bd1ee587245ecac6f39beaa99886f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PostgreSQL}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.postgresql.org/
+      \endverb
+      \verb{url}
+      \verb https://www.postgresql.org/
+      \endverb
+    \endentry
+    \entry{PRISMA}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee10f79aa18f7cf1c69142450a809181}{%
+           family={Prisma},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee10f79aa18f7cf1c69142450a809181}
+      \strng{fullhash}{ee10f79aa18f7cf1c69142450a809181}
+      \strng{fullhashraw}{ee10f79aa18f7cf1c69142450a809181}
+      \strng{bibnamehash}{ee10f79aa18f7cf1c69142450a809181}
+      \strng{authorbibnamehash}{ee10f79aa18f7cf1c69142450a809181}
+      \strng{authornamehash}{ee10f79aa18f7cf1c69142450a809181}
+      \strng{authorfullhash}{ee10f79aa18f7cf1c69142450a809181}
+      \strng{authorfullhashraw}{ee10f79aa18f7cf1c69142450a809181}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Prisma}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.prisma.io/
+      \endverb
+      \verb{url}
+      \verb https://www.prisma.io/
+      \endverb
+    \endentry
+    \entry{SAP}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=999bc6b18351bbe817d26f559ba408ae}{%
+           family={SAP},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{fullhash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{fullhashraw}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{bibnamehash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{authorbibnamehash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{authornamehash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{authorfullhash}{999bc6b18351bbe817d26f559ba408ae}
+      \strng{authorfullhashraw}{999bc6b18351bbe817d26f559ba408ae}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SAP}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sap.com/brazil/index.html
+      \endverb
+      \verb{url}
+      \verb https://www.sap.com/brazil/index.html
+      \endverb
+    \endentry
     \entry{COOLKITOAUTH}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e8e9ff0e577a9089669977f477abb5b8}{%
@@ -289,6 +1247,70 @@
       \endverb
       \verb{url}
       \verb https://coolkit-technologies.github.io/eWeLink-API/#/en/OAuth2.0
+      \endverb
+    \endentry
+    \entry{SLACK}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3561f3a3c5576e2ce0dc0d1e268bb9b2}{%
+           family={Slack},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3561f3a3c5576e2ce0dc0d1e268bb9b2}
+      \strng{fullhash}{3561f3a3c5576e2ce0dc0d1e268bb9b2}
+      \strng{fullhashraw}{3561f3a3c5576e2ce0dc0d1e268bb9b2}
+      \strng{bibnamehash}{3561f3a3c5576e2ce0dc0d1e268bb9b2}
+      \strng{authorbibnamehash}{3561f3a3c5576e2ce0dc0d1e268bb9b2}
+      \strng{authornamehash}{3561f3a3c5576e2ce0dc0d1e268bb9b2}
+      \strng{authorfullhash}{3561f3a3c5576e2ce0dc0d1e268bb9b2}
+      \strng{authorfullhashraw}{3561f3a3c5576e2ce0dc0d1e268bb9b2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Slack}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://slack.com/
+      \endverb
+      \verb{url}
+      \verb https://slack.com/
+      \endverb
+    \endentry
+    \entry{SPOTIFY}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd539ca17a17132049c4fef4619df638}{%
+           family={Spotify},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd539ca17a17132049c4fef4619df638}
+      \strng{fullhash}{fd539ca17a17132049c4fef4619df638}
+      \strng{fullhashraw}{fd539ca17a17132049c4fef4619df638}
+      \strng{bibnamehash}{fd539ca17a17132049c4fef4619df638}
+      \strng{authorbibnamehash}{fd539ca17a17132049c4fef4619df638}
+      \strng{authornamehash}{fd539ca17a17132049c4fef4619df638}
+      \strng{authorfullhash}{fd539ca17a17132049c4fef4619df638}
+      \strng{authorfullhashraw}{fd539ca17a17132049c4fef4619df638}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spotify}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.spotify.com/
+      \endverb
+      \verb{url}
+      \verb https://www.spotify.com/
       \endverb
     \endentry
     \entry{1236470}{article}{}{}
@@ -335,6 +1357,38 @@
       \range{pages}{7}
       \verb{doi}
       \verb 10.1109/MC.2003.1236470
+      \endverb
+    \endentry
+    \entry{TYPEORM}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7b9728b975ec0895c7fdf9058be017d8}{%
+           family={Typeorm},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b9728b975ec0895c7fdf9058be017d8}
+      \strng{fullhash}{7b9728b975ec0895c7fdf9058be017d8}
+      \strng{fullhashraw}{7b9728b975ec0895c7fdf9058be017d8}
+      \strng{bibnamehash}{7b9728b975ec0895c7fdf9058be017d8}
+      \strng{authorbibnamehash}{7b9728b975ec0895c7fdf9058be017d8}
+      \strng{authornamehash}{7b9728b975ec0895c7fdf9058be017d8}
+      \strng{authorfullhash}{7b9728b975ec0895c7fdf9058be017d8}
+      \strng{authorfullhashraw}{7b9728b975ec0895c7fdf9058be017d8}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Typeorm}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://typeorm.io/
+      \endverb
+      \verb{url}
+      \verb https://typeorm.io/
       \endverb
     \endentry
   \enddatalist

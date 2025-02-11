@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.27)  10 FEB 2025 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.27)  11 FEB 2025 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1238,31 +1238,31 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'brazil'.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 190.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 191.
 (C:\Users\gusta\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (main.aux (chapters/1-chapter.aux) (chapters/2-chapter.aux) (chapters/3-chapter.aux) (chapters/4-chapter.aux) (chapters/5-chapter.aux) (chapters/6-chapter.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 190.
-LaTeX Font Info:    ... okay on input line 190.
-Package hyperref Info: Link coloring ON on input line 190.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+Package hyperref Info: Link coloring ON on input line 191.
 \myptabbox=\box72
 \myptabboxwidth=\skip299
 \c@lstlisting=\count539
@@ -1285,13 +1285,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\gusta\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 190.
-Package microtype Info: Applying patch `item' on input line 190.
-Package microtype Info: Applying patch `toc' on input line 190.
-Package microtype Info: Applying patch `eqnum' on input line 190.
-Package microtype Info: Applying patch `footnote' on input line 190.
-Package microtype Info: Applying patch `verbatim' on input line 190.
-LaTeX Info: Redefining \microtypesetup on input line 190.
+LaTeX Info: Redefining \microtypecontext on input line 191.
+Package microtype Info: Applying patch `item' on input line 191.
+Package microtype Info: Applying patch `toc' on input line 191.
+Package microtype Info: Applying patch `eqnum' on input line 191.
+Package microtype Info: Applying patch `footnote' on input line 191.
+Package microtype Info: Applying patch `verbatim' on input line 191.
+LaTeX Info: Redefining \microtypesetup on input line 191.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2),
 (microtype)             factor: 1100.
@@ -1299,7 +1299,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 10, shrink: 10, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 190.
+LaTeX Info: Redefining \showhyphens on input line 191.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1411,8 +1411,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 190.
-Package biblatex Info: Reference segment=0 on input line 190.
+Package biblatex Info: Reference section=0 on input line 191.
+Package biblatex Info: Reference segment=0 on input line 191.
  (beforetext/beforetext.tex
 
 pdfTeX warning: pdflatex (file ./setup/vertical_sigla_fundo_claro.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
@@ -1496,16 +1496,42 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 
 
 ]
-<beforetext/publicidade.png, id=57, 726.46407pt x 512.66531pt>
-File: beforetext/publicidade.png Graphic file (type png)
-<use beforetext/publicidade.png>
-Package pdftex.def Info: beforetext/publicidade.png  used on input line 136.
-(pdftex.def)             Requested size: 450.40306pt x 317.8492pt.
+<beforetext/Declaracao_publicidade_Fischertec_assinada.pdf, id=57, 597.50786pt x 845.04686pt>
+File: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf Graphic file (type pdf)
+<use beforetext/Declaracao_publicidade_Fischertec_assinada.pdf>
+Package pdftex.def Info: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf  used on input line 135.
+(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
+File: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf Graphic file (type pdf)
+<use beforetext/Declaracao_publicidade_Fischertec_assinada.pdf>
+Package pdftex.def Info: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf  used on input line 135.
+(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
+<beforetext/Declaracao_publicidade_Fischertec_assinada.pdf, id=60, page=1, 597.50786pt x 845.04686pt>
+File: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf Graphic file (type pdf)
+<use beforetext/Declaracao_publicidade_Fischertec_assinada.pdf, page 1>
+Package pdftex.def Info: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf , page1 used on input line 135.
+(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
+File: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf Graphic file (type pdf)
+<use beforetext/Declaracao_publicidade_Fischertec_assinada.pdf, page 1>
+Package pdftex.def Info: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf , page1 used on input line 135.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
+File: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf Graphic file (type pdf)
+<use beforetext/Declaracao_publicidade_Fischertec_assinada.pdf, page 1>
+Package pdftex.def Info: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf , page1 used on input line 135.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
+File: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf Graphic file (type pdf)
+<use beforetext/Declaracao_publicidade_Fischertec_assinada.pdf, page 1>
+Package pdftex.def Info: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf , page1 used on input line 135.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 
 
+File: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf Graphic file (type pdf)
+<use beforetext/Declaracao_publicidade_Fischertec_assinada.pdf, page 1>
+Package pdftex.def Info: beforetext/Declaracao_publicidade_Fischertec_assinada.pdf , page1 used on input line 135.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
 [6
 
- <./beforetext/publicidade.png>]
+
+ <./beforetext/Declaracao_publicidade_Fischertec_assinada.pdf>]
 
 [7
 
@@ -1631,7 +1657,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 \openout2 = `chapters/4-chapter.aux'.
 
  (chapters/4-chapter.tex
-<images/cap4/arquitetura_geral.png, id=490, 697.10437pt x 686.565pt>
+<images/cap4/arquitetura_geral.png, id=613, 697.10437pt x 686.565pt>
 File: images/cap4/arquitetura_geral.png Graphic file (type png)
 <use images/cap4/arquitetura_geral.png>
 Package pdftex.def Info: images/cap4/arquitetura_geral.png  used on input line 29.
@@ -1677,7 +1703,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 [43]
-<images/cap5/arq_pastas.png, id=549, 222.07968pt x 646.66594pt>
+<images/cap5/arq_pastas.png, id=672, 222.07968pt x 646.66594pt>
 File: images/cap5/arq_pastas.png Graphic file (type png)
 <use images/cap5/arq_pastas.png>
 Package pdftex.def Info: images/cap5/arq_pastas.png  used on input line 177.
@@ -1685,7 +1711,7 @@ Package pdftex.def Info: images/cap5/arq_pastas.png  used on input line 177.
 
 
 [44 <./images/cap5/arq_pastas.png>]
-<images/cap5/modelage_banco_dados.png, id=565, 1153.30875pt x 603.75563pt>
+<images/cap5/modelage_banco_dados.png, id=688, 1153.30875pt x 603.75563pt>
 File: images/cap5/modelage_banco_dados.png Graphic file (type png)
 <use images/cap5/modelage_banco_dados.png>
 Package pdftex.def Info: images/cap5/modelage_banco_dados.png  used on input line 192.
@@ -1717,39 +1743,34 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 [54]
 
 [55]
-Overfull \hbox (135.75749pt too wide) in paragraph at lines 604--606
-\T1/phv/m/n/12 (-10) As ro-tas des-ses mó-du-los são de-fi-ni-das nos con-tro-la-do-res \T1/cmtt/m/n/12 FieldsController \T1/phv/m/n/12 (-10) e \T1/cmtt/m/n/12 FieldAvailabilitiesController\T1/phv/m/n/12 (-10) .
- []
-
-
 
 [56]
 
 [57]
-Overfull \hbox (15.51154pt too wide) in paragraph at lines 676--678
+Overfull \hbox (15.51154pt too wide) in paragraph at lines 677--679
 \T1/phv/m/n/12 (-10) de au-ten-ti-ca-ção e ge-ren-ci-a-mento de dis-po-si-ti-vos eWe-Link, for-ne-cido pelo \T1/cmtt/m/n/12 EwelinkService\T1/phv/m/n/12 (-10) .
  []
 
 
 
 [58]
-<images/cap5/oauth_1.png, id=788, 921.4425pt x 411.03563pt>
+<images/cap5/oauth_1.png, id=911, 921.4425pt x 411.03563pt>
 File: images/cap5/oauth_1.png Graphic file (type png)
 <use images/cap5/oauth_1.png>
-Package pdftex.def Info: images/cap5/oauth_1.png  used on input line 716.
+Package pdftex.def Info: images/cap5/oauth_1.png  used on input line 717.
 (pdftex.def)             Requested size: 414.6453pt x 184.96432pt.
 
 
 [59]
-<images/cap5/oauth_2.png, id=806, 921.4425pt x 310.15875pt>
+<images/cap5/oauth_2.png, id=929, 921.4425pt x 310.15875pt>
 File: images/cap5/oauth_2.png Graphic file (type png)
 <use images/cap5/oauth_2.png>
-Package pdftex.def Info: images/cap5/oauth_2.png  used on input line 750.
+Package pdftex.def Info: images/cap5/oauth_2.png  used on input line 751.
 (pdftex.def)             Requested size: 414.6453pt x 139.57014pt.
-<images/cap5/oauth_3.png, id=812, 919.93687pt x 210.7875pt>
+<images/cap5/oauth_3.png, id=935, 919.93687pt x 210.7875pt>
 File: images/cap5/oauth_3.png Graphic file (type png)
 <use images/cap5/oauth_3.png>
-Package pdftex.def Info: images/cap5/oauth_3.png  used on input line 760.
+Package pdftex.def Info: images/cap5/oauth_3.png  used on input line 761.
 (pdftex.def)             Requested size: 413.96777pt x 94.8535pt.
 
 
@@ -1774,83 +1795,91 @@ Package pdftex.def Info: images/cap5/oauth_3.png  used on input line 760.
 [69]
 
 [70]
-
-[71]
-
-[72]
-
-[73]
-Underfull \hbox (badness 10000) in paragraph at lines 1250--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1098--1098
 []|\T1/phv/m/n/12 (+10) Registra um novo
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 1256--1256
+Underfull \hbox (badness 1205) in paragraph at lines 1104--1104
 []|\T1/phv/m/n/12 (+10) Lista to-das as qua-
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 1259--1259
+Underfull \hbox (badness 3428) in paragraph at lines 1107--1107
 []|\T1/phv/m/n/12 (+10) Cria uma nova re-
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1124
 
-[74]
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1276
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1133
 
  []
 
 
 
-[75]
-Underfull \hbox (badness 10000) in paragraph at lines 1283--1285
+[71]
+
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1298--1300
+Underfull \hbox (badness 10000) in paragraph at lines 1152--1154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1306
+Underfull \hbox (badness 10000) in paragraph at lines 1158--1160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1310--1312
-
- []
-
-
-
-[76]
-Underfull \hbox (badness 10000) in paragraph at lines 1316--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1164--1166
 
  []
 
 )
 
-[77]
+[73]
+
+[74]
 \openout2 = `chapters/6-chapter.aux'.
 
  (chapters/6-chapter.tex
 
-[78
+[75
 
 
 
 
 ])
 
-[79]
+[76]
 
-[80
+[77
 
 
 
 ]
+
+[78] (aftertext/apendice_a.tex
+
+[79]
+
+[80
+
+]
+
+[81]
+
+[82])
+
+[83]
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1874,17 +1903,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38942 strings out of 473535
- 687699 string characters out of 5714935
- 1869879 words of memory out of 5000000
- 60757 multiletter control sequences out of 15000+600000
- 600824 words of font info for 190 fonts, out of 8000000 for 9000
+ 39200 strings out of 473535
+ 694693 string characters out of 5714935
+ 1861202 words of memory out of 5000000
+ 60967 multiletter control sequences out of 15000+600000
+ 601018 words of font info for 194 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,17n,117p,2446b,4447s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\gusta\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\gusta\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/gusta/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (81 pages, 989756 bytes).
+Output written on main.pdf (84 pages, 976609 bytes).
 PDF statistics:
- 1828 PDF objects out of 2073 (max. 8388607)
- 674 named destinations out of 1000 (max. 500000)
- 41845 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 2008 PDF objects out of 2073 (max. 8388607)
+ 711 named destinations out of 1000 (max. 500000)
+ 41868 words of extra memory for PDF output out of 42996 (max. 10000000)
 
