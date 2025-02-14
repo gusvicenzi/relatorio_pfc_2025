@@ -1,18 +1,18 @@
 # Fdb version 4
-["biber main"] 1739307543.31017 "main.bcf" "main.bbl" "main" 1739451642.7595 0
+["biber main"] 1739307543.31017 "main.bcf" "main.bbl" "main" 1739556294.55373 0
   "aftertext/references.bib" 1739303463 10232 3500e617155d6d2258de2a65abeb1dce ""
-  "main.bcf" 1739451642 117828 bc606ae96e2b9e563cfdd66e0b27c649 "pdflatex"
+  "main.bcf" 1739556294 117828 bc606ae96e2b9e563cfdd66e0b27c649 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1739307543.03624 "main.idx" "main.ind" "main" 1739451642.75896 0
-  "main.idx" 1739451636 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1739307543.03624 "main.idx" "main.ind" "main" 1739556294.5533 0
+  "main.idx" 1739556287 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1739451634.8592 "c:/Users/gusta/Documents/UFSC/24.2/PFC - Gustavo Vicenzi/Latex/main.tex" "main.pdf" "main" 1739451642.76026 0
+["pdflatex"] 1739556284.0308 "c:/Users/gusta/Documents/UFSC/24.2/PFC - Gustavo Vicenzi/Latex/main.tex" "main.pdf" "main" 1739556294.55441 0
   "C:/Users/gusta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1738356159 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/gusta/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk" 1738438548 20028 45878df122c836cd94327be81d0d2246 ""
   "C:/Users/gusta/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1200.pk" 1729520773 24152 9413947807dc423bc9b0c2c60b309e4f ""
@@ -213,17 +213,17 @@
   "beforetext/Ficha_Catalografica.pdf" 1729531502 7340 4060e335d28108b9c4a9687d208220af ""
   "beforetext/beforetext.tex" 1739451634 14309 b170ddb4243c02e13f86743f0aad9253 ""
   "c:/Users/gusta/Documents/UFSC/24.2/PFC - Gustavo Vicenzi/Latex/main.tex" 1739307784 10063 2cb2f02450befb5bf534203deca9b31e ""
-  "chapters/1-chapter.aux" 1739451639 6060 5652e5c7b1767b9d1e2d9b55083587ee "pdflatex"
+  "chapters/1-chapter.aux" 1739556290 6060 5652e5c7b1767b9d1e2d9b55083587ee "pdflatex"
   "chapters/1-chapter.tex" 1739304084 13669 8aa185028fc69009c018637f2ce10160 ""
-  "chapters/2-chapter.aux" 1739451639 8623 65b4b13a0a09f785e92d00ff8d7b41e1 "pdflatex"
+  "chapters/2-chapter.aux" 1739556291 8623 65b4b13a0a09f785e92d00ff8d7b41e1 "pdflatex"
   "chapters/2-chapter.tex" 1739303467 39134 21c502625634b44d4fff7bb701950a3d ""
-  "chapters/3-chapter.aux" 1739451639 6839 c98d21801aa5f746b5704f41eccff9c0 "pdflatex"
+  "chapters/3-chapter.aux" 1739556291 6839 c98d21801aa5f746b5704f41eccff9c0 "pdflatex"
   "chapters/3-chapter.tex" 1739306171 11241 77ebcfb5801be7f239dca219e77e9bc0 ""
-  "chapters/4-chapter.aux" 1739451639 6400 910aad99ef4192c50980e538750dfdde "pdflatex"
+  "chapters/4-chapter.aux" 1739556291 6400 910aad99ef4192c50980e538750dfdde "pdflatex"
   "chapters/4-chapter.tex" 1739304153 6782 9396ff7700be8e8aa04c99aaaeb1b40d ""
-  "chapters/5-chapter.aux" 1739451641 20522 06335b62421a78824f2d1a7c4fb19d62 "pdflatex"
-  "chapters/5-chapter.tex" 1739307875 82175 052bd437cd0e502167e53a3ec37517fe ""
-  "chapters/6-chapter.aux" 1739451641 7240 612f840b0528b640ab698ca5566f3710 "pdflatex"
+  "chapters/5-chapter.aux" 1739556292 20522 06335b62421a78824f2d1a7c4fb19d62 "pdflatex"
+  "chapters/5-chapter.tex" 1739556281 82255 58053bb615fc55d41894fd177ed2e27a ""
+  "chapters/6-chapter.aux" 1739556292 7240 612f840b0528b640ab698ca5566f3710 "pdflatex"
   "chapters/6-chapter.tex" 1739306504 5607 e2ec65828d95789c7b27d6ab0f5ccfe2 ""
   "images/cap4/arquitetura_geral.png" 1738355819 76739 79ac5dbd874e558d484ca74f142fb034 ""
   "images/cap5/arq_pastas.png" 1738504137 29677 6bae5870ef754a77807f654b7a81df9e ""
@@ -231,14 +231,14 @@
   "images/cap5/oauth_1.png" 1738538332 98916 269fb6696a83ba52652d50df66ec490d ""
   "images/cap5/oauth_2.png" 1738538355 72355 064a5658b39b8c85c7be453f87d01edf ""
   "images/cap5/oauth_3.png" 1738538370 36992 f3e50440834fe7e4deb0a38e4ae143ba ""
-  "main.aux" 1739451642 48711 615d73c11d624188ed65387c9d44579c "pdflatex"
+  "main.aux" 1739556293 48711 615d73c11d624188ed65387c9d44579c "pdflatex"
   "main.bbl" 1739307545 55782 517194623d698b32183b377828102648 "biber main"
   "main.ind" 1739307543 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1739451642 2720 915278d35f012b83a2a5e14600ec5dbb "pdflatex"
-  "main.lot" 1739451642 2369 33ba6fabc10b7b46841cca8760d11d05 "pdflatex"
-  "main.run.xml" 1739451642 2520 678fcd486eb36ae963e16136b3fbd359 "pdflatex"
+  "main.lof" 1739556294 2720 915278d35f012b83a2a5e14600ec5dbb "pdflatex"
+  "main.lot" 1739556294 2369 33ba6fabc10b7b46841cca8760d11d05 "pdflatex"
+  "main.run.xml" 1739556294 2520 678fcd486eb36ae963e16136b3fbd359 "pdflatex"
   "main.tex" 1739307784 10063 2cb2f02450befb5bf534203deca9b31e ""
-  "main.toc" 1739451642 12600 feab3cac388450168438bfb5f4079c10 "pdflatex"
+  "main.toc" 1739556294 12600 feab3cac388450168438bfb5f4079c10 "pdflatex"
   "setup/ufscthesisA4-alf.sty" 1739203538 16374 5b349e5bcb393dab0a782c6c89b05685 ""
   "setup/vertical_sigla_fundo_claro.pdf" 1729531502 51600 8f2bae488cfbff344ff5653db8dd9532 ""
   (generated)
