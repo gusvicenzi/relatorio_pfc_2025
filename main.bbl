@@ -328,6 +328,38 @@
       \field{title}{Architectural styles and the design of network-based software architectures}
       \field{year}{2000}
     \endentry
+    \entry{fischertec}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=afb28c4ac2ba85ca30330649644346ef}{%
+           family={Fischertec},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{afb28c4ac2ba85ca30330649644346ef}
+      \strng{fullhash}{afb28c4ac2ba85ca30330649644346ef}
+      \strng{fullhashraw}{afb28c4ac2ba85ca30330649644346ef}
+      \strng{bibnamehash}{afb28c4ac2ba85ca30330649644346ef}
+      \strng{authorbibnamehash}{afb28c4ac2ba85ca30330649644346ef}
+      \strng{authornamehash}{afb28c4ac2ba85ca30330649644346ef}
+      \strng{authorfullhash}{afb28c4ac2ba85ca30330649644346ef}
+      \strng{authorfullhashraw}{afb28c4ac2ba85ca30330649644346ef}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fischertec Tecnologia LTDA}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.fischertec.co/
+      \endverb
+      \verb{url}
+      \verb https://www.fischertec.co/
+      \endverb
+    \endentry
     \entry{Fowler02}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c3035fa4fc8a043ebf2ea4bff39adda1}{%
@@ -958,6 +990,41 @@
       \verb https://azure.microsoft.com/pt-br/
       \endverb
     \endentry
+    \entry{API_history}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5561d7d2aefc6c295b865c0bccda7bbe}{%
+           family={Mikula},
+           familyi={M\bibinitperiod},
+           given={Kate},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5561d7d2aefc6c295b865c0bccda7bbe}
+      \strng{fullhash}{5561d7d2aefc6c295b865c0bccda7bbe}
+      \strng{fullhashraw}{5561d7d2aefc6c295b865c0bccda7bbe}
+      \strng{bibnamehash}{5561d7d2aefc6c295b865c0bccda7bbe}
+      \strng{authorbibnamehash}{5561d7d2aefc6c295b865c0bccda7bbe}
+      \strng{authornamehash}{5561d7d2aefc6c295b865c0bccda7bbe}
+      \strng{authorfullhash}{5561d7d2aefc6c295b865c0bccda7bbe}
+      \strng{authorfullhashraw}{5561d7d2aefc6c295b865c0bccda7bbe}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The History and Evolution of APIs}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://traefik.io/blog/the-history-and-evolution-of-apis/
+      \endverb
+      \verb{url}
+      \verb https://traefik.io/blog/the-history-and-evolution-of-apis/
+      \endverb
+    \endentry
     \entry{MongoDB}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=206e3718af092fd1d12f80cae771ccac}{%
@@ -1279,6 +1346,38 @@
       \endverb
       \verb{url}
       \verb https://slack.com/
+      \endverb
+    \endentry
+    \entry{Sonoff}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2b2a97834942ba9b91dfdd4a76424eab}{%
+           family={Sonoff},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b2a97834942ba9b91dfdd4a76424eab}
+      \strng{fullhash}{2b2a97834942ba9b91dfdd4a76424eab}
+      \strng{fullhashraw}{2b2a97834942ba9b91dfdd4a76424eab}
+      \strng{bibnamehash}{2b2a97834942ba9b91dfdd4a76424eab}
+      \strng{authorbibnamehash}{2b2a97834942ba9b91dfdd4a76424eab}
+      \strng{authornamehash}{2b2a97834942ba9b91dfdd4a76424eab}
+      \strng{authorfullhash}{2b2a97834942ba9b91dfdd4a76424eab}
+      \strng{authorfullhashraw}{2b2a97834942ba9b91dfdd4a76424eab}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sonoff}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sonoff.tech/
+      \endverb
+      \verb{url}
+      \verb https://sonoff.tech/
       \endverb
     \endentry
     \entry{SPOTIFY}{online}{}{}

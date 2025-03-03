@@ -336,6 +336,9 @@ INPUT chapters\3-chapter.aux
 INPUT .\chapters\4-chapter.aux
 INPUT .\chapters\4-chapter.aux
 INPUT chapters\4-chapter.aux
+INPUT .\chapters\4_5-chapter_tecnologies.aux
+INPUT .\chapters\4_5-chapter_tecnologies.aux
+INPUT chapters\4_5-chapter_tecnologies.aux
 INPUT .\chapters\5-chapter.aux
 INPUT .\chapters\5-chapter.aux
 INPUT chapters\5-chapter.aux
@@ -533,6 +536,12 @@ INPUT .\images\cap4\arquitetura_geral.png
 INPUT .\images\cap4\arquitetura_geral.png
 INPUT .\images\cap4\arquitetura_geral.png
 INPUT .\images\cap4\arquitetura_geral.png
+INPUT .\chapters\4_5-chapter_tecnologies.tex
+INPUT .\chapters\4_5-chapter_tecnologies.tex
+OUTPUT chapters\4_5-chapter_tecnologies.aux
+INPUT .\chapters\4_5-chapter_tecnologies.tex
+INPUT .\chapters\4_5-chapter_tecnologies.tex
+INPUT chapters\4_5-chapter_tecnologies.tex
 INPUT .\chapters\5-chapter.tex
 INPUT .\chapters\5-chapter.tex
 OUTPUT chapters\5-chapter.aux
@@ -603,6 +612,9 @@ INPUT chapters\3-chapter.aux
 INPUT .\chapters\4-chapter.aux
 INPUT .\chapters\4-chapter.aux
 INPUT chapters\4-chapter.aux
+INPUT .\chapters\4_5-chapter_tecnologies.aux
+INPUT .\chapters\4_5-chapter_tecnologies.aux
+INPUT chapters\4_5-chapter_tecnologies.aux
 INPUT .\chapters\5-chapter.aux
 INPUT .\chapters\5-chapter.aux
 INPUT chapters\5-chapter.aux
